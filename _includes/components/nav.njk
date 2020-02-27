@@ -1,8 +1,11 @@
 <nav>
+  {# collect "eleventyNavigation" in Pages' Front Matter and add them to navigation.
+  refers to https://www.11ty.dev/docs/plugins/navigation/#copy-and-paste-templates #}
   {% set navPages = collections.all | eleventyNavigation %}
   <ul>
   {%- for entry in navPages %}
     <li>
+      {# i need to figure out why the boilerplate use data-current, intead of class #}
       <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
     </li>
   {%- endfor %}
