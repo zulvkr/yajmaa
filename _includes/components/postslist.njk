@@ -1,6 +1,11 @@
 <section>
+    {# get post from parent layout #}
 	{% for post in postslist | reverse %}
-		<article{% if post.url == url %} data-current="current item"{% endif %}>
+		{# I deleted
+		{% if post.url == url %} data-current="current item"{% endif %}
+		inside the article tag here as it is not used in CSS #}
+		<article>
+		{# this parts refer to https://www.11ty.dev/docs/collections/ #}
 			<h3>
 				<a href="{{ post.url | url }}">
 					{% if post.data.title %}

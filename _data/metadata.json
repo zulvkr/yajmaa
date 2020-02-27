@@ -1,9 +1,10 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "url": "https://eleventy-netlify-boilerplate.netlify.com",
+  "title": "Yajmaa",
+  "url": "",
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "github": "https://github.com/danurbanowicz"
-  }
+    "name": "Ivan Zulfikar",
+    "email": "ivan.zulfikar@gmail.com",
+    "github": "https://github.com/zulvkr"
+  },
+  "_comment":"this metadata is used for the entire site"
 }
