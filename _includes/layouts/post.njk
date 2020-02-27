@@ -2,26 +2,26 @@
 layout: layouts/base.njk
 section: post
 ---
-
+{# apply bulma class content #}
 <article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author.name }}
-    </small>
+  <h1 class="title is-3">{{ title }}</h1>
+  <p class="is-size-6">
+    <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author.name }}
   </p>
-
-  {{ content | safe }}
-
+  <div class="content">
+    {{ content | safe }}
+  </div>
   {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-    </p>
+    <div class="tags">
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <span class="tag">
+            <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+          </span>
+        {%- endif -%}
+      {% endfor %}
+    </div>
   {% endif %}
 
 </article>
