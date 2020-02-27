@@ -1,23 +1,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   {# get data from front-matter. Title is for posts, renderData is for tags pages, metadata should be for homepage #}
   <title>{{ title or renderData.title or metadata.title }}</title>
 
   {# add netlify identity widget https://github.com/netlify/netlify-identity-widget, proposed: make button for it#}
-  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
+  <script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  {# add buefy css temporarily https://buefy.org/documentation/start #}
+  <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+
   {# This refers to https://www.11ty.dev/docs/quicktips/inline-css/ #}
-  {% set css %}
+  {# {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
-  <style>{{ css | cssmin | safe }}</style>
-  
+  <style>{{ css | cssmin | safe }}</style> #}
+
   {# this refers to https://www.11ty.dev/docs/quicktips/inline-js/ #}
   {% set js %}
-    {% include "assets/js/inline.js" %}
+  {% include "assets/js/inline.js" %}
   {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
 
 </head>
