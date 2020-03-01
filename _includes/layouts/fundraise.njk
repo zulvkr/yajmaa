@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+featured_image: /static/img/pm3.png
+featured_image_style: contain
+---
+
+<section class="is-clipped-mobile">
+  <div class="columns">
+    <div class="column is-hidden-touch has-bottompadding has-toppadding-big is-10">
+      <h1 class="title">{{ title }}</h1>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column clearpadding-mobile-only">
+      <header>
+        {% include "components/fr-hero.njk" %}
+        <div class="is-hidden-desktop has-sidepadding-touch">
+          <h1 class="title is-size-4" style="margin: 0.7rem 0;">{{ title }}</h1>
+          {% include "components/fr-aside.njk" %}
+          <div id="fr-button-1">
+            {% include "components/fr-button.njk" %}
+          </div>
+        </div>
+      </header>
+
+      <article class="has-sidepadding-touch">
+        <p class="is-size-6">
+          <time datetime="{{ date | machineDate }}">
+            {{ date | readableDate }}
+          </time> by {{ post.data.author or metadata.author.name }}
+        </p>
+        <div class="content">
+          {{ content | safe }}
+        </div>
+        {% if tags %}
+          <div class="tags">
+            {% for tag in tags %}
+              {%- if tag != "fundraise" -%}
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                <span class="tag">
+                  <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+                </span>
+              {%- endif -%}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    </div>
+
+    <aside class="column is-4 is-hidden-touch">
+      <div class="box" style="position: -webkit-sticky; position: sticky; top: 4rem;">
+        {% include "components/fr-aside.njk" %}
+        <div id="fr-button-2">
+          {% include "components/fr-button.njk" %}
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

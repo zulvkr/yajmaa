@@ -1,0 +1,21 @@
+<div class="hero is-medium is-relative is-position-0">
+    <div class="image is-16by9 is-cover">
+        <img src="{{ featured_image | url }}" alt="utama"/>
+    </div>
+    <div class="image is-16by9 is-absolute is-position-0 is-clipped is-cover is-blur has-w100">
+        <img src='{{ featured_image | url }}' alt='utama'/>
+    </div>
+    <figure class="image is-16by9 is-absolute is-position-0 has-w100">
+        <img src='{{ featured_image | url }}' alt='utama' style="object-fit: {{ featured_image_style }};"/>
+    </figure>
+    <div class="is-absolute has-toppadding-small has-bottompadding-small has-sidepadding has-background-primary" style="opacity: 0.5;bottom: 1rem; left: 0rem; border-radius: 0 4px 4px 0">
+        <span class="is-size-6 has-text-weight-semibold has-text-white">
+            {{ engage | truncate(40) }}
+        </span>
+    </div>
+    <div class="is-absolute has-toppadding-small has-bottompadding-small has-sidepadding" style="bottom: 1rem; left: 0rem;">
+        <span class="is-size-6 has-text-weight-semibold has-text-white">
+            {{ engage | truncate(40) }}
+        </span>
+    </div>
+</div>

@@ -4,6 +4,7 @@
   "description": "A donation platform template",
   "scripts": {
     "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },

@@ -1,8 +1,10 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5a199348-9653-4489-85f7-29e61fb62b23/deploy-status)](https://app.netlify.com/sites/yajmaa/deploys)
 
-# Eleventy Netlify Boilerplate
+# Yajmaa
 
-## What is it?
+## Apakah Yajmaa itu?
+
+Yajmaa adalah template untuk membuat website wadah donasi yang sederhana dan terkonfigurasi. Dibuat dengan JAMStack dan .....
 
 A simple template for building a fast, pre-generated HTML website using the [Eleventy](https://www.11ty.io/) static site generator. With [Netlify CMS](https://www.netlifycms.org/) baked-in, ready to deploy to [Netlify](https://www.netlify.com) in a couple of clicks.
 
@@ -31,7 +33,7 @@ Based on the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) re
 
 ## Want to try it out now?
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zulvkr/yajmaa&stack=cms)
 
 Clicking the button above will deploy a copy of the demo website to your Netlify
 account (you can create an account during this process if you don't have one)

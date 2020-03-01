@@ -8,18 +8,16 @@
   {# add netlify identity widget https://github.com/netlify/netlify-identity-widget, proposed: make button for it#}
   <script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  {# add buefy css temporarily https://buefy.org/documentation/start #}
-  <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+  <link rel="stylesheet" href="/_includes/assets/css/buefy.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.min.css">
 
-  {# This refers to https://www.11ty.dev/docs/quicktips/inline-css/ #}
-  {# {% set css %}
+  {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
-  <style>{{ css | cssmin | safe }}</style> #}
+  <style>{{ css | cssmin | safe }}</style>
 
-  {# this refers to https://www.11ty.dev/docs/quicktips/inline-js/ #}
   {% set js %}
-  {% include "assets/js/inline.js" %}
+    {% include "assets/js/inline.js" %}
   {% endset %}
   <script>
     {{ js | jsmin | safe }}

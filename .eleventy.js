@@ -58,6 +58,13 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // only content in the `fundraises/` directory
+  eleventyConfig.addCollection("fundraises", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/fundraises\//) !== null;
+    });
+  });
+
   // Universal slug filter strips unsafe chars from URLs
   eleventyConfig.addFilter("slugify", function(str) {
     return slugify(str, {
