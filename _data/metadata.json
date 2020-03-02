@@ -1,10 +1,10 @@
 {
   "title": "Yajmaa",
-  "url": "",
+  "url": "https://yajmaa.netlify.com/",
   "author": {
     "name": "Ivan Zulfikar",
-    "email": "ivan.zulfikar@gmail.com",
-    "github": "https://github.com/zulvkr"
+    "email": "ivan.zulf.ikar@gmail.com",
+    "github": "https://github.com/zulvkr/yajmaa"
   },
-  "_comment":"this metadata is used for the entire site"
+  "brand_logo": "/static/img/Buefy.png"
 }

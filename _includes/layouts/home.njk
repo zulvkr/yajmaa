@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
-section: home
 ---
 
 {{ content | safe }}
+{% set fundraiseslist = collections.fundraises %}
+{% include "components/fundraiseslist.njk" %}

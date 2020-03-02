@@ -22,7 +22,7 @@
 			{% endif %}
 			<p class="is-size-6">
 				<time datetime="{{ post.date | machineDate }}">
-					{{ post.date | readableDate }} by {{ metadata.author.name }}
+					{{ post.date | readableDate }} by {{ post.data.author or metadata.author.name }}
 				</time>
 			</p>
 			{% if post.data.tags %}
