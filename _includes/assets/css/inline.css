@@ -32,23 +32,29 @@
 }
 
 .has-sidepadding {
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1 rem;
 }
 
 .has-sidepadding-small {
-  padding: 0 0.2rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.has-bottompadding {
+  padding-bottom: 1rem;
 }
 
 .has-bottompadding-small {
   padding-bottom: 0.2rem;
 }
 
-.has-toppadding-small {
-  padding-top: 0.2rem;
+.has-toppadding {
+  padding-top: 1rem;
 }
 
-.has-bottompadding {
-  padding-bottom: 1rem;
+.has-toppadding-small {
+  padding-top: 0.2rem;
 }
 
 .has-toppadding-big {
@@ -64,14 +70,31 @@
   position: absolute;
 }
 
-.is-cover>img {
+.is-cover > img {
   object-fit: cover;
 }
 
-.is-blur>img {
+.is-blur > img {
   filter: blur(8px);
 }
 
-.has-w100{
+.is-transparent {
+  opacity: 50%;
+}
+
+.has-w100 {
   width: 100%;
+}
+
+.has-topborder {
+  border-top: 1px solid hsl(0, 0%, 86%);
+}
+
+.has-bottomborder {
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+#hero-clipped {
+  -webkit-clip-path: ellipse(46% 47% at 17% 100%);
+  clip-path: ellipse(46% 47% at 17% 100%);  
 }

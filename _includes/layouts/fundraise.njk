@@ -13,7 +13,8 @@ featured_image_style: contain
   <div class="columns">
     <div class="column clearpadding-mobile-only">
       <header>
-        {% include "components/fr-hero.njk" %}
+        {% import "components/hero.njk" as hero %}
+        {{ hero.heroimage(featured_image, featured_image_style, "alt") }}
         <div class="is-hidden-desktop has-sidepadding-touch">
           <h1 class="title is-size-4" style="margin: 0.7rem 0;">{{ title }}</h1>
           {% include "components/fr-aside.njk" %}
@@ -23,27 +24,16 @@ featured_image_style: contain
         </div>
       </header>
 
-      <article class="has-sidepadding-touch">
-        <p class="is-size-6">
+      <article class="has-sidepadding-touch has-toppadding">
+        <div class="has-topborder has-bottomborder">information about author<br><br><br><br></div>
+        <p class="is-size-6 has-text-grey has-text-right has-toppadding">
           <time datetime="{{ date | machineDate }}">
             {{ date | readableDate }}
-          </time> by {{ post.data.author or metadata.author.name }}
+          </time>
         </p>
-        <div class="content">
+        <div class="content has-toppadding">
           {{ content | safe }}
         </div>
-        {% if tags %}
-          <div class="tags">
-            {% for tag in tags %}
-              {%- if tag != "fundraise" -%}
-                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                <span class="tag">
-                  <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-                </span>
-              {%- endif -%}
-            {% endfor %}
-          </div>
-        {% endif %}
       </article>
     </div>
 

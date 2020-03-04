@@ -1,5 +1,4 @@
 <!doctype html>
-{# delete {% if section %} data-current="{{ section }}"{% endif %} #}
 <html lang="en">
 	{% include "components/head.njk" %}
 	<body>
@@ -9,25 +8,23 @@
 		<main class="container">
 			{{ content | safe }}
 		</main>
-		<section class="section">
+		{# <section class="section">
 			<div class="container">
 				<h1 class="title">Section</h1>
 				<h2 class="subtitle">
         			A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
     			</h2>
 			</div>
-		</section>
+		</section> #}
 		{% include "components/footer.njk" %}
 		{# add Vue and Buefy temporarily https://buefy.org/documentation/start #}
 		<script src="/_includes/assets/js/vue.js"></script>
 		<script src="/_includes/assets/js/buefy.min.js"></script>
 		{% set app %}
-		{% include "assets/js/app.js" %}
+			{% include "assets/js/app.js" %}
 		{% endset %}
 		<script>
 			{{ app | jsmin | safe }}
 		</script>
-
 	</body>
-
 </html>
