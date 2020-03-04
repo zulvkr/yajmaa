@@ -20,6 +20,7 @@
   "homepage": "https://github.com/zulvkr/yajmaa",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "buefy": "^0.8.12",
     "luxon": "^1.21.3",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5"
