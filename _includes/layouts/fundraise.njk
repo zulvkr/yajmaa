@@ -10,11 +10,12 @@ featured_image_style: contain
       <h1 class="title">{{ title }}</h1>
     </div>
   </div>
+
   <div class="columns">
     <div class="column clearpadding-mobile-only">
       <header>
         {% import "components/hero.njk" as hero %}
-        {{ hero.heroimage(featured_image, featured_image_style, "alt") }}
+        {{ hero.heroimage(featured_image, featured_image_style, "featured image", featured_image_title) }}
         <div class="is-hidden-desktop has-sidepadding-touch">
           <h1 class="title is-size-4" style="margin: 0.7rem 0;">{{ title }}</h1>
           {% include "components/fr-aside.njk" %}

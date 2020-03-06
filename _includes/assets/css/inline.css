@@ -1,21 +1,4 @@
-@media screen and (max-width: 1023px) {
-  .has-sidepadding-touch {
-    padding: 0 1rem;
-  }
-  .is-clipped-mobile {
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  .has-rightmargin-tablet-only {
-    margin-right: 0.25rem;
-  }
-  .has-leftmargin-tablet-only {
-    margin-left: 0.25rem;
-  }
-}
-
+/* below tablet */
 @media screen and (max-width: 768px) {
   .has-topmargin-mobile-only {
     margin-top: 0.5rem;
@@ -25,6 +8,34 @@
   }
 }
 
+/* below desktop */
+@media screen and (max-width: 1023px) {
+  .has-sidepadding-touch {
+    padding: 0 1rem;
+  }
+  .is-clipped-mobile {
+    overflow: hidden;
+  }
+}
+
+/* mobile and below */
+@media screen and (max-width: 425px) {
+  .test {
+    display: block;
+  }
+}
+
+/* tablet only */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .has-rightmargin-tablet-only {
+    margin-right: 0.25rem;
+  }
+  .has-leftmargin-tablet-only {
+    margin-left: 0.25rem;
+  }
+}
+
+/* desktop and above */
 @media screen and (min-width: 1024px) {
   .has-topmargin-desktop-only {
     margin-top: 0.5rem;
@@ -84,6 +95,10 @@
 
 .has-w100 {
   width: 100%;
+}
+
+.has-w60 {
+  width: 60%;
 }
 
 .has-topborder {

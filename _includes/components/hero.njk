@@ -1,4 +1,4 @@
-{% macro heroimage(image, style, alt, title) %}
+{% macro heroimage(image, style, alt, title=false) %}
 
   {% set safehero_image = image or "not available" %}
 
@@ -21,7 +21,10 @@
       <img src='{{ safehero_image | url }}' alt="{{ safehero_alt }}" style="object-fit: {{ safehero_style }};"/>
     </figure>
     {% if title %}
-      <div class="image is-16by9 is-absolute is-position-0 has-w100 has-background-primary is-transparent" id="hero-clipped"></div>
+      <div class="image is-16by9 is-absolute has-w100 has-background-primary is-transparent" id="hero-clipped"></div>
+      <div class="is-size-3-desktop-only is-size-4-touch-only is-absolute has-text-weight-bold has-text-white has-w60" style="bottom: 1rem; left: 1rem;">
+        <p>cqwscqwc sxasxsa axsaxs rverv scswc sxscscsa</p>
+      </div>
     {% endif %}
   </div>
 
