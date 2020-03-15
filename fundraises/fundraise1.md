@@ -7,7 +7,7 @@ fr_target:
 fr_raised: Rp 10.000.000
 fr_progress: 20
 featured_image: /static/img/pm1.png
-featured_image_style: contain
+featured_image_style: cover
 featured_image_title: true
 tags:
   - tech

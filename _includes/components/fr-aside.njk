@@ -5,12 +5,13 @@
 {% endif %}
 {% endset %}
 
-<div class="has-bottompadding-small is-size-7" style="display: flex; flex-wrap: wrap; align-items: baseline;">
-    <span class="is-size-6 has-text-weight-medium has-text-primary" style="display: block; margin-right: 0.2rem;">
-        {{ fr_raised }}
-    </span>
-    <span class="has-text-dark-grey" style="display: block;">terkumpul {{ targetdesc }}</span>
+<div>
+    <div class="raised">
+        <div class="raised-highlight">
+            {{ fr_raised }}
+        </div>
+        <div>terkumpul {{ targetdesc }}</div>
+    </div>
+    {% import "components/progress.njk" as progress %}
+    {{ progress.progress(fr_target, fr_progress) }}
 </div>
-
-{% import "components/progress.njk" as progress %}
-{{ progress.progressbar(fr_target, fr_progress) }}

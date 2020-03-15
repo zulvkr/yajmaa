@@ -46,7 +46,7 @@
 				<span style="display: block;">terkumpul {{ targetdesc }}</span>
 			</div>
 			{% import "components/progress.njk" as progress %}
-			{{ progress.progressbar(fundraise.data.fr_target, fundraise.data.fr_progress) }}
+			{{ progress.progress(fundraise.data.fr_target, fundraise.data.fr_progress) }}
 		</article>
 	{% endfor %}
 </section>

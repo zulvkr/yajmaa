@@ -13,7 +13,7 @@
 		<script src="/_includes/assets/js/vue.js"></script>
 		<script src="/_includes/assets/js/buefy.min.js"></script>
 		{% set app %}
-			{% include "assets/js/app.js" %}
+		{% include "assets/js/app.js" %}
 		{% endset %}
 		<script>
 			{{ app | jsmin | safe }}
