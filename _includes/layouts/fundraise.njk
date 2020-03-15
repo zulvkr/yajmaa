@@ -4,19 +4,18 @@ featured_image: /static/img/pm3.png
 featured_image_style: contain
 ---
 
-<section class="is-clipped-mobile">
+<section class="is-clipped-touch">
   <div class="columns">
-    <div class="column is-hidden-touch has-bottompadding has-toppadding-big is-10">
-      <h1 class="title">{{ title }}</h1>
-    </div>
-  </div>
-  <div class="columns">
-    <div class="column clearpadding-mobile-only">
-      <header>
+    <div class="column">
+      <header class="fr-header" >
+        <div>
         {% import "components/hero.njk" as hero %}
-        {{ hero.heroimage(featured_image, featured_image_style, "alt") }}
-        <div class="is-hidden-desktop has-sidepadding-touch">
-          <h1 class="title is-size-4" style="margin: 0.7rem 0;">{{ title }}</h1>
+        {{ hero.hero(featured_image, featured_image_style, title) }}
+        </div>
+        <div class="fr-title first container-touch">
+          <h1>{{ title }}</h1>
+        </div>
+        <div class="is-hidden-desktop container-touch">
           {% include "components/fr-aside.njk" %}
           <div id="fr-button-1">
             {% include "components/fr-button.njk" %}
@@ -24,14 +23,17 @@ featured_image_style: contain
         </div>
       </header>
 
-      <article class="has-sidepadding-touch has-toppadding">
-        <div class="has-topborder has-bottomborder">information about author<br><br><br><br></div>
-        <p class="is-size-6 has-text-grey has-text-right has-toppadding">
+
+      <article class="container-touch">
+        <hr>
+        information about author
+        <hr>
+        <p class="is-size-6 has-text-grey has-text-right ">
           <time datetime="{{ date | machineDate }}">
             {{ date | readableDate }}
           </time>
         </p>
-        <div class="content has-toppadding">
+        <div class="content ">
           {{ content | safe }}
         </div>
       </article>

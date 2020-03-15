@@ -8,7 +8,7 @@ fr_target: Rp 150.000.000
 fr_raised: Rp 200.000.000
 fr_progress: 20
 featured_image: /static/img/2020-03-04-10.14.57-AM-1022x1024.jpg
-featured_image_style:
+featured_image_style: contain
 featured_image_title: false
 tags:
   - tech

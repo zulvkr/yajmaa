@@ -1,18 +1,18 @@
-{% macro progressbar(target, progress) %}
+{% macro progress(target, progress) %}
 
-    {% set safeprogress = progress or "100%" %}
-    {% set safetarget = target or "undefined" %}
+    {% set progress_safe = progress or "100%" %}
+    {% set target_safe = target or "undefined" %}
 
-    {% if safetarget == "undefined" %}
+    {% if target_safe == "undefined" %}
         {% set class = "is-info " %}
         {% set value %}value=100{% endset %}
     {% else %}
         {% set class = "is-primary" %}
-        {% set value %}value={{ safeprogress }}{% endset %}
+        {% set value %}value={{ progress_safe }}{% endset %}
     {% endif %}
 
     <progress class="progress {{ class }}" {{ value }} max="100" style="margin-bottom: 1rem; height: 0.4rem">
-        {{ safeprogress }}%
+        {{ progress_safe }}%
     </progress>
 
 {% endmacro %}

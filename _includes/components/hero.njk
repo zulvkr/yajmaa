@@ -1,28 +1,47 @@
-{% macro heroimage(image, style, alt, title) %}
+{% macro hero(image, style, alt) %}
 
-  {% set safehero_image = image or "not available" %}
-
+  {# setup fallback for blank or corrupted input #}
+  {% set image_safe = image or "dummy.jpg" %}
   {% if style and style == "cover" %}
-    {% set safehero_style = "cover" %}
+    {% set style_safe = "cover" %}
   {% else %}
-    {% set safehero_style = "contain" %}
+    {% set style_safe = "contain" %}
   {% endif %}
+  {% set alt_safe = alt or "not available" %}
 
-  {% set safehero_alt = alt or "not available" %}
+  <style>
+    .hero-bottom-layer > img {
+      object-fit: cover;
+    }
+    .hero-middle-layer {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .hero-middle-layer > img {
+      object-fit: cover;
+      filter: blur(3px);
+    }
+    .hero-top-layer {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .hero-top-layer > img {
+      object-fit: {{style_safe}};
+    }
+  </style>
 
   <div class="hero is-medium is-relative is-position-0">
-    <div class="image is-16by9 is-cover">
-      <img src="{{ safehero_image | url }}"/>
+    <div class="hero-bottom-layer image is-16by9">
+      <img src="{{ image_safe | url }}"/>
     </div>
-    <div class="image is-16by9 is-absolute is-position-0 is-clipped is-cover is-blur has-w100">
-      <img src='{{ safehero_image | url }}'/>
+    <div class="hero-middle-layer image is-16by9 is-absolute is-position-0 is-clipped">
+      <img src='{{ image_safe | url }}'/>
     </div>
-    <figure class="image is-16by9 is-absolute is-position-0 has-w100">
-      <img src='{{ safehero_image | url }}' alt="{{ safehero_alt }}" style="object-fit: {{ safehero_style }};"/>
+    <figure class="hero-top-layer image is-16by9 is-absolute">
+      <img src='{{ image_safe | url }}' alt="{{ alt_safe }}"/>
     </figure>
-    {% if title %}
-      <div class="image is-16by9 is-absolute is-position-0 has-w100 has-background-primary is-transparent" id="hero-clipped"></div>
-    {% endif %}
   </div>
 
 {% endmacro %}
