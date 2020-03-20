@@ -9,8 +9,8 @@ featured_image_style: contain
     <div class="column">
       <header class="fr-header" >
         <div>
-        {% import "components/hero.njk" as hero %}
-        {{ hero.hero(featured_image, featured_image_style, title) }}
+          {% import "components/hero.njk" as hero %}
+          {{ hero.hero(featured_image, featured_image_style, title) }}
         </div>
         <div class="fr-title first container-touch">
           <h1>{{ title }}</h1>
@@ -23,10 +23,26 @@ featured_image_style: contain
         </div>
       </header>
 
-
       <article class="container-touch">
         <hr>
-        information about author
+        <div class="media">
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>John Smith</strong>
+                <small>@johnsmith</small>
+                <small>31m</small>
+                <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+              </p>
+            </div>
+          </div>
+        </div>
         <hr>
         <p class="is-size-6 has-text-grey has-text-right ">
           <time datetime="{{ date | machineDate }}">
