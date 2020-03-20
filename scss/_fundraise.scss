@@ -32,18 +32,17 @@
 }
 
 .fr-button {
-  display: flex;
-  flex-wrap: wrap;
-  * {
+  > * {
     font-weight: $weight-semibold;
     width: 100%;
     &:not(:last-child) {
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
     }
   }
   @include tablet-only {
-    display: block;
-    * {
+    flex-wrap: wrap;
+    display: flex;
+    > * {
       width: auto;
       &:not(:last-child) {
         margin-bottom: 0;
@@ -61,12 +60,12 @@
   color: $grey-dark;
   font: {
     size: $size-small;
+    weight: $weight-medium;
   }
   .raised-highlight {
     color: $primary;
     font: {
       size: $size-normal;
-      weight: $weight-medium;
     }
   }
   > div:not(:last-child) {

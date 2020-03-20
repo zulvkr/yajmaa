@@ -10272,22 +10272,21 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
       .fr-title > h1 {
         font-size: 2rem; } }
 
-.fr-button {
-  display: flex;
-  flex-wrap: wrap; }
-  .fr-button * {
-    font-weight: 600;
-    width: 100%; }
-    .fr-button *:not(:last-child) {
-      margin-bottom: 0.3rem; }
-  @media screen and (min-width: 425px) and (max-width: 1023px) {
-    .fr-button {
-      display: block; }
-      .fr-button * {
-        width: auto; }
-        .fr-button *:not(:last-child) {
-          margin-bottom: 0;
-          margin-right: 0.5rem; } }
+.fr-button > * {
+  font-weight: 600;
+  width: 100%; }
+  .fr-button > *:not(:last-child) {
+    margin-bottom: 0.4rem; }
+
+@media screen and (min-width: 425px) and (max-width: 1023px) {
+  .fr-button {
+    flex-wrap: wrap;
+    display: flex; }
+    .fr-button > * {
+      width: auto; }
+      .fr-button > *:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 0.5rem; } }
 
 .raised {
   padding-bottom: 0.2rem;
@@ -10295,10 +10294,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   flex-wrap: wrap;
   align-items: baseline;
   color: #4a4a4a;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  font-weight: 500; }
   .raised .raised-highlight {
     color: #3273dc;
-    font-size: 1rem;
-    font-weight: 500; }
+    font-size: 1rem; }
   .raised > div:not(:last-child) {
     margin-right: 0.2rem; }

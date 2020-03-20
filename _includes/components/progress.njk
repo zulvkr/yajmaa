@@ -1,9 +1,9 @@
 {% macro progress(target, progress) %}
 
-    {% set progress_safe = progress or "100%" %}
-    {% set target_safe = target or "undefined" %}
+    {% set progress_safe = progress or "100" %}
+    {% set target_safe = target or undefined %}
 
-    {% if target_safe == "undefined" %}
+    {% if target_safe == undefined %}
         {% set class = "is-info " %}
         {% set value %}value=100{% endset %}
     {% else %}
