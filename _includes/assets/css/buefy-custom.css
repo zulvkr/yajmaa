@@ -10252,22 +10252,24 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
     padding-left: 1.5rem;
     padding-right: 1.5rem; } }
 
-.fr-header {
+.y-header {
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
   flex-direction: column; }
-  .fr-header > div {
+  .y-header > div {
     width: 100%; }
     @media screen and (min-width: 1024px) {
-      .fr-header > div.first {
-        order: -1; } }
+      .y-header > div.banner {
+        border-radius: 6px;
+        overflow: hidden; } }
+  .y-header-first-desktop {
+    order: -1; }
 
 .fr-title {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
   .fr-title > h1 {
-    font-size: 1.5rem;
-    font-weight: 700; }
+    font-size: 1.5rem; }
     @media screen and (min-width: 1024px) {
       .fr-title > h1 {
         font-size: 2rem; } }

@@ -61,11 +61,10 @@ collections:
             name: "hasTarget"
             widget: "boolean"
             default: true
-          - label: "Target penggalangan dana 2"
+          - label: "Target"
             name: "target"
             widget: "number"
             default: "5000000"
-            step: "50000"
           - label: "Dana terkumpul"
             name: "raised"
             widget: "number"

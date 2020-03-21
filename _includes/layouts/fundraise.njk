@@ -6,13 +6,18 @@ featured_image_style: contain
 
 <section class="is-clipped-touch">
   <div class="columns">
-    <div class="column">
-      <header class="fr-header" >
-        <div>
-          {% import "components/hero.njk" as hero %}
-          {{ hero.hero(featured_image, featured_image_style, title) }}
+    <div class="column is-8 fr-title is-hidden-touch">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-8">
+      <header>
+        <div class="banner">
+          {% import "components/_Hero.njk" as Hero %}
+          {{ Hero.hero(featured_image, featured_image_style, title) }}
         </div>
-        <div class="fr-title first container-touch">
+        <div class="fr-title container-touch is-hidden-desktop">
           <h1>{{ title }}</h1>
         </div>
         <div class="is-hidden-desktop container-touch">

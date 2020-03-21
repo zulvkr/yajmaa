@@ -1,27 +1,30 @@
 //fundraising page
-.fr-header {
+.y-header {
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   > div {
     width: 100%;
-    &.first {
+    &.banner {
       @include desktop {
-        order: -1;
+        border-radius: $radius-large;
+        overflow: hidden;
       }
     }
+  }
+  &-first-desktop {
+    order: -1;
   }
 }
 
 .fr-title {
   margin: {
-    top: $size-6;
-    bottom: $size-6;
+    top: 0.5rem;
+    bottom: 0.5rem;
   }
   > h1 {
     font: {
       size: $size-4;
-      weight: $weight-bold;
     }
     @include desktop {
       font: {

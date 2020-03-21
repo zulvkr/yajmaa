@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
-	{% include "components/head.njk" %}
+	{% include "components/Head.njk" %}
 	<body>
 		<header>
-			{% include "components/nav.njk" %}
+			{% include "components/Nav.njk" %}
 		</header>
 		<main class="container">
 			{{ content | safe }}
 		</main>
-		{% include "components/footer.njk" %}
+		{% include "components/Footer.njk" %}
 		{# add Vue and Buefy temporarily https://buefy.org/documentation/start #}
 		<script src="/_includes/assets/js/vue.js"></script>
 		<script src="/_includes/assets/js/buefy.min.js"></script>

@@ -1,13 +1,13 @@
 {% set targetDesc %}
 {% if fra.hasTarget %}
-     dari {{ fra.target }}
+     dari {{ fra.target | rupiah }}
 {% else %}
 {% endif %}
 {% endset %}
 
 <div class="raised">
   <div class="raised-highlight">
-    {{ fra.raised }}
+    {{ fra.raised | rupiah }}
   </div>
   <div>terkumpul {{ targetDesc }}</div>
 </div>
