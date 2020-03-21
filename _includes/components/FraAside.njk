@@ -11,5 +11,6 @@
   </div>
   <div>terkumpul {{ targetDesc }}</div>
 </div>
-{% import "components/_progress.njk" as progress %}
-{{ progress.progress(fra.hasTarget, fra.target, fra.raised) }}
+{% import "components/_Progress.njk" as Progress %}
+{{ Progress.progress(fra.hasTarget, fra.target, fra.raised) }}
+{% include "components/FraButton.njk" %}
