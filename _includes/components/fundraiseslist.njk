@@ -5,11 +5,7 @@
 			{# this parts refer to https://www.11ty.dev/docs/collections/ #}
 			<h3 class="is-size-4">
 				<a href="{{ fundraise.url | url }}">
-					{% if fundraise.data.title %}
 						{{ fundraise.data.title }}
-					{% else %}
-						Untitled
-					{% endif %}
 				</a>
 			</h3>
 			{% if fundraise.data.summary %}
@@ -35,18 +31,18 @@
 				</div>
 			{% endif %}
 			{% set targetdesc %}
-				{% if fundraise.data.fr_target and fundraise.data.fr_target != "undefined" %}
-    				dari {{ fundraise.data.fr_target }}
+				{% if fundraise.data.fra.target and fundraise.data.fra.target != "undefined" %}
+    				dari {{ fundraise.data.fra.target }}
 				{% else %}{% endif %}
 			{% endset %}
 			<div class="has-bottompadding-small is-size-7" style="display: flex; flex-wrap: wrap; align-items: baseline;">
 				<span class="is-size-5 has-text-weight-bold has-text-primary" style="display: block; margin-right: 0.2rem;">
-					{{ fundraise.data.fr_raised }}
+					{{ fundraise.data.fra.raised }}
 				</span>
 				<span style="display: block;">terkumpul {{ targetdesc }}</span>
 			</div>
-			{% import "components/progress.njk" as progress %}
-			{{ progress.progress(fundraise.data.fr_target, fundraise.data.fr_progress) }}
+			{% import "components/_progress.njk" as progress %}
+			{{ progress.progress(fundraise.data.fra.hasTarget, fundraise.data.fra.target, fundraise.data.raised) }}
 		</article>
 	{% endfor %}
 </section>

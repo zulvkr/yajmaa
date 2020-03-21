@@ -1,9 +1,11 @@
 ---
 title: Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020
 summary: Ifthar lintas negara 2020
-author:
 date: 2020-02-01
-engage: Ayo Bantu Saudara kita di aceh
+fra:
+  hasTarget: true
+  target: 6000000
+  raised: 5400000
 fr_target: Rp 150.000.000
 fr_raised: Rp 200.000.000
 fr_progress: 20

@@ -2,13 +2,15 @@
 title: Donasi pembangunan masjid Al Hidayah 
 summary: Berikan amal jariyah anda untuk pembangunan masjid Al Hidayah Sleman 
 date: 2020-02-01
-engage: Bangun Masjid bersama di daerah kristenisasi
+fra:
+  hasTarget: true
+  target: 10000000
+  raised: 5400000
 fr_target: 
 fr_raised: Rp 10.000.000
 fr_progress: 20
 featured_image: /static/img/pm1.png
 featured_image_style: cover
-featured_image_title: true
 tags:
   - tech
   - environment

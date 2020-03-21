@@ -1,0 +1,15 @@
+{% set targetDesc %}
+{% if fra.hasTarget %}
+     dari {{ fra.target }}
+{% else %}
+{% endif %}
+{% endset %}
+
+<div class="raised">
+  <div class="raised-highlight">
+    {{ fra.raised }}
+  </div>
+  <div>terkumpul {{ targetDesc }}</div>
+</div>
+{% import "components/_progress.njk" as progress %}
+{{ progress.progress(fra.hasTarget, fra.target, fra.raised) }}
