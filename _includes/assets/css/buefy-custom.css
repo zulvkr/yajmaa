@@ -32,7 +32,7 @@
 
 .box:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child),
 .subtitle:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .tabs:not(:last-child) {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 0rem; }
 
 .delete, .modal-close {
   -moz-appearance: none;
@@ -3734,7 +3734,7 @@ a.tag:hover {
     border-right: 1px solid #dbdbdb; }
 
 .card .media:not(:last-child) {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 0rem; }
 
 .dropdown {
   display: inline-flex;
@@ -3814,7 +3814,7 @@ button.dropdown-item {
       margin-top: 0; }
     .level.is-mobile .level-item:not(:last-child) {
       margin-bottom: 0;
-      margin-right: 0.75rem; }
+      margin-right: 0rem; }
     .level.is-mobile .level-item:not(.is-narrow) {
       flex-grow: 1; }
   @media screen and (min-width: 425px), print {
@@ -3835,7 +3835,7 @@ button.dropdown-item {
     margin-bottom: 0; }
   @media screen and (max-width: 424px) {
     .level-item:not(:last-child) {
-      margin-bottom: 0.75rem; } }
+      margin-bottom: 0rem; } }
 
 .level-left,
 .level-right {
@@ -3848,7 +3848,7 @@ button.dropdown-item {
   @media screen and (min-width: 425px), print {
     .level-left .level-item:not(:last-child),
     .level-right .level-item:not(:last-child) {
-      margin-right: 0.75rem; } }
+      margin-right: 0rem; } }
 
 .level-left {
   align-items: center;
@@ -5100,7 +5100,7 @@ a.navbar-item,
 .panel {
   font-size: 1rem; }
   .panel:not(:last-child) {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 0rem; }
 
 .panel-heading,
 .panel-tabs,
@@ -8689,7 +8689,7 @@ label.panel-block {
   align-items: center;
   display: flex; }
   .rate:not(:last-child) {
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0rem; }
   .rate.is-spaced .rate-item:not(:last-child) {
     margin-right: 0.25rem; }
   .rate.is-disabled .rate-item {
