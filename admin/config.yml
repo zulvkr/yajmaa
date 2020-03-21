@@ -37,3 +37,38 @@ collections:
           - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
+  #Our fundraising program
+  - name: "fundraises"
+    label: "Penggalangan Dana"
+    folder: "fundraises"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Judul"
+        name: "title"
+        widget: "string"
+      - label: "Tanggal"
+        name: "date"
+        widget: "datetime"
+      - label: "Ringkasan"
+        name: "summary"
+        widget: "text"
+      - label: "Target penggalangan dana"
+        name: "fr_target"
+        widget: "string"
+      - label: "Dana terkumpul"
+        name: "fr_raised"
+        widget: "string"
+      - label: "Penggalangan Dana"
+        name: "fundraising"
+        widget: "object"
+        fields:
+          - label: "Target penggalangan dana 2"
+            name: "target"
+            widget: "number"
+            default: "5000000"
+            step: "50000"
+          - label: "Dana terkumpul"
+            name: "raised"
+            widget: "number"
+            default: "2000000"

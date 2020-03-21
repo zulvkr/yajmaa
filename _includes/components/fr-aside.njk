@@ -5,13 +5,11 @@
 {% endif %}
 {% endset %}
 
-<div>
-    <div class="raised">
-        <div class="raised-highlight">
-            {{ fr_raised }}
-        </div>
-        <div>terkumpul {{ targetdesc }}</div>
-    </div>
-    {% import "components/progress.njk" as progress %}
-    {{ progress.progress(fr_target, fr_progress) }}
+<div class="raised">
+  <div class="raised-highlight">
+    {{ fr_raised }}
+  </div>
+  <div>terkumpul {{ targetdesc }}</div>
 </div>
+{% import "components/progress.njk" as progress %}
+{{ progress.progress(fr_target, fr_progress) }}
