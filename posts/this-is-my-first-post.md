@@ -1,6 +1,6 @@
 ---
-title: vcewdcewcwe
-date: 2015-01-01T00:00:00.000Z
+title: This is my first post
+date: 2020-03-20T01:23:46.226Z
 summary: Why contemplating our mortality can be a powerful catalyst for change
 tags:
   - post
