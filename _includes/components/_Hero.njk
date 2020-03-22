@@ -10,36 +10,26 @@
   {% set alt_safe = alt or "not available" %}
 
   <style>
-    .hero-bottom-layer > img {
+    .layer-bottom > img {
       object-fit: cover;
     }
-    .hero-middle-layer {
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-    .hero-middle-layer > img {
+    .layer-middle > img {
       object-fit: cover;
       filter: blur(3px);
     }
-    .hero-top-layer {
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-    .hero-top-layer > img {
+    .layer-top > img {
       object-fit: {{style_safe}};
     }
   </style>
 
-  <div class="hero is-medium is-relative is-position-0">
-    <div class="hero-bottom-layer image is-16by9">
+  <div class="hero is-medium banner card">
+    <div class="layer layer-bottom image is-16by9">
       <img src="{{ image_safe | url }}"/>
     </div>
-    <div class="hero-middle-layer image is-16by9 is-absolute is-position-0 is-clipped">
+    <div class="layer layer-middle image is-16by9 is-clipped">
       <img src='{{ image_safe | url }}'/>
     </div>
-    <figure class="hero-top-layer image is-16by9 is-absolute">
+    <figure class="layer layer-top image is-16by9 ">
       <img src='{{ image_safe | url }}' alt="{{ alt_safe }}"/>
     </figure>
   </div>

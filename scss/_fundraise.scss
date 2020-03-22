@@ -1,33 +1,36 @@
-//fundraising page
-.fr-header {
-  display: flex;
-  flex-wrap: flex;
-  flex-direction: column;
-  > div {
-    width: 100%;
-    &.first {
-      @include desktop {
-        order: -1;
-      }
+//banner component
+.banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  @include desktop {
+    border-radius: $radius-large;
+    overflow: hidden;
+  }
+  > .layer {
+    &-middle,
+    &-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
     }
   }
 }
 
 .fr-title {
-  margin: {
-    top: $size-6;
-    bottom: $size-6;
+  &-desktop {
+    font-size: $size-3;
+    font-weight: $weight-semibold;
+    line-height: 1.25em;
+    margin-top: 1.5rem;
   }
-  > h1 {
-    font: {
-      size: $size-4;
-      weight: $weight-bold;
-    }
-    @include desktop {
-      font: {
-        size: $size-3;
-      }
-    }
+  &-touch {
+    font-size: $size-4;
+    font-weight: $weight-semibold;
+    line-height: 1.2em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -52,7 +55,7 @@
   }
 }
 
-.raised {
+.fr-raised {
   padding-bottom: 0.2rem;
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +65,7 @@
     size: $size-small;
     weight: $weight-medium;
   }
-  .raised-highlight {
+  .larger {
     color: $primary;
     font: {
       size: $size-normal;

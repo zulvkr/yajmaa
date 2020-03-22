@@ -5,7 +5,6 @@ const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
-
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -19,6 +18,11 @@ module.exports = function(eleventyConfig) {
   // Date formatting (machine readable)
   eleventyConfig.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+  });
+
+  //Native currency filter
+  eleventyConfig.addFilter("rupiah", value => {
+    return "Rp "+new Intl.NumberFormat("id-ID").format(value);
   });
 
   // This refers to https://www.11ty.dev/docs/quicktips/inline-css/
@@ -93,8 +97,9 @@ module.exports = function(eleventyConfig) {
     permalink: false
   };
 
-  eleventyConfig.setLibrary("md", markdownIt(options)
-    .use(markdownItAnchor, opts)
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt(options).use(markdownItAnchor, opts)
   );
 
   return {

@@ -1,0 +1,16 @@
+{% set targetDesc %}
+{% if fra.hasTarget %}
+     dari {{ fra.target | rupiah }}
+{% else %}
+{% endif %}
+{% endset %}
+
+<div class="fr-raised">
+  <div class="larger">
+    {{ fra.raised | rupiah }}
+  </div>
+  <div>terkumpul {{ targetDesc }}</div>
+</div>
+{% import "components/_Progress.njk" as Progress %}
+{{ Progress.progress(fra.hasTarget, fra.target, fra.raised) }}
+{% include "components/FraButton.njk" %}
