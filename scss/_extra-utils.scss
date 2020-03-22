@@ -1,19 +1,20 @@
 .is-clipped-touch {
-    @include touch {
-      overflow-x: hidden;
-    }
+  @include touch {
+    overflow-x: hidden;
   }
-  
-  @mixin padding-sides($size) {
-    padding: {
-      left: $size;
-      right: $size;
-    }
+}
+
+@mixin padding-sides($size) {
+  padding: {
+    left: $size;
+    right: $size;
   }
-  
-  .container-touch {
+}
+
+.container {
+  &-touch {
     @include touch {
-      @include padding-sides($size-small);
+      @include padding-sides(0.75rem);
       max-width: 736px;
       margin: {
         left: auto;
@@ -21,6 +22,16 @@
       }
     }
     @include tablet-only {
-      @include padding-sides($size-large);
+      @include padding-sides(1.5rem);
     }
   }
+  &-desktop {
+    @include desktop {
+      max-width: $desktop - $container-offset;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+}

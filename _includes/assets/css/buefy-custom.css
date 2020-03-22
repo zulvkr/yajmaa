@@ -108,23 +108,39 @@
   position: relative;
   width: 1em; }
 
-.is-overlay, .image.is-square img,
-.image.is-square .has-ratio, .image.is-1by1 img,
-.image.is-1by1 .has-ratio, .image.is-5by4 img,
-.image.is-5by4 .has-ratio, .image.is-4by3 img,
-.image.is-4by3 .has-ratio, .image.is-3by2 img,
-.image.is-3by2 .has-ratio, .image.is-5by3 img,
-.image.is-5by3 .has-ratio, .image.is-16by9 img,
-.image.is-16by9 .has-ratio, .image.is-2by1 img,
-.image.is-2by1 .has-ratio, .image.is-3by1 img,
-.image.is-3by1 .has-ratio, .image.is-4by5 img,
-.image.is-4by5 .has-ratio, .image.is-3by4 img,
-.image.is-3by4 .has-ratio, .image.is-2by3 img,
-.image.is-2by3 .has-ratio, .image.is-3by5 img,
-.image.is-3by5 .has-ratio, .image.is-9by16 img,
-.image.is-9by16 .has-ratio, .image.is-1by2 img,
-.image.is-1by2 .has-ratio, .image.is-1by3 img,
-.image.is-1by3 .has-ratio, .modal, .modal-background, .hero-video {
+.is-overlay, .image.is-square img, .banner > .is-square.layer img,
+.image.is-square .has-ratio,
+.banner > .is-square.layer .has-ratio, .image.is-1by1 img, .banner > .is-1by1.layer img,
+.image.is-1by1 .has-ratio,
+.banner > .is-1by1.layer .has-ratio, .image.is-5by4 img, .banner > .is-5by4.layer img,
+.image.is-5by4 .has-ratio,
+.banner > .is-5by4.layer .has-ratio, .image.is-4by3 img, .banner > .is-4by3.layer img,
+.image.is-4by3 .has-ratio,
+.banner > .is-4by3.layer .has-ratio, .image.is-3by2 img, .banner > .is-3by2.layer img,
+.image.is-3by2 .has-ratio,
+.banner > .is-3by2.layer .has-ratio, .image.is-5by3 img, .banner > .is-5by3.layer img,
+.image.is-5by3 .has-ratio,
+.banner > .is-5by3.layer .has-ratio, .image.is-16by9 img, .banner > .is-16by9.layer img,
+.image.is-16by9 .has-ratio,
+.banner > .is-16by9.layer .has-ratio, .image.is-2by1 img, .banner > .is-2by1.layer img,
+.image.is-2by1 .has-ratio,
+.banner > .is-2by1.layer .has-ratio, .image.is-3by1 img, .banner > .is-3by1.layer img,
+.image.is-3by1 .has-ratio,
+.banner > .is-3by1.layer .has-ratio, .image.is-4by5 img, .banner > .is-4by5.layer img,
+.image.is-4by5 .has-ratio,
+.banner > .is-4by5.layer .has-ratio, .image.is-3by4 img, .banner > .is-3by4.layer img,
+.image.is-3by4 .has-ratio,
+.banner > .is-3by4.layer .has-ratio, .image.is-2by3 img, .banner > .is-2by3.layer img,
+.image.is-2by3 .has-ratio,
+.banner > .is-2by3.layer .has-ratio, .image.is-3by5 img, .banner > .is-3by5.layer img,
+.image.is-3by5 .has-ratio,
+.banner > .is-3by5.layer .has-ratio, .image.is-9by16 img, .banner > .is-9by16.layer img,
+.image.is-9by16 .has-ratio,
+.banner > .is-9by16.layer .has-ratio, .image.is-1by2 img, .banner > .is-1by2.layer img,
+.image.is-1by2 .has-ratio,
+.banner > .is-1by2.layer .has-ratio, .image.is-1by3 img, .banner > .is-1by3.layer img,
+.image.is-1by3 .has-ratio,
+.banner > .is-1by3.layer .has-ratio, .modal, .modal-background, .hero-video {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -2167,83 +2183,99 @@ a.box:active {
     height: 3rem;
     width: 3rem; }
 
-.image {
+.image, .banner > .layer {
   display: block;
   position: relative; }
-  .image img {
+  .image img, .banner > .layer img {
     display: block;
     height: auto;
     width: 100%; }
-    .image img.is-rounded {
+    .image img.is-rounded, .banner > .layer img.is-rounded {
       border-radius: 290486px; }
-  .image.is-square img,
-  .image.is-square .has-ratio, .image.is-1by1 img,
-  .image.is-1by1 .has-ratio, .image.is-5by4 img,
-  .image.is-5by4 .has-ratio, .image.is-4by3 img,
-  .image.is-4by3 .has-ratio, .image.is-3by2 img,
-  .image.is-3by2 .has-ratio, .image.is-5by3 img,
-  .image.is-5by3 .has-ratio, .image.is-16by9 img,
-  .image.is-16by9 .has-ratio, .image.is-2by1 img,
-  .image.is-2by1 .has-ratio, .image.is-3by1 img,
-  .image.is-3by1 .has-ratio, .image.is-4by5 img,
-  .image.is-4by5 .has-ratio, .image.is-3by4 img,
-  .image.is-3by4 .has-ratio, .image.is-2by3 img,
-  .image.is-2by3 .has-ratio, .image.is-3by5 img,
-  .image.is-3by5 .has-ratio, .image.is-9by16 img,
-  .image.is-9by16 .has-ratio, .image.is-1by2 img,
-  .image.is-1by2 .has-ratio, .image.is-1by3 img,
-  .image.is-1by3 .has-ratio {
+  .image.is-square img, .banner > .is-square.layer img,
+  .image.is-square .has-ratio,
+  .banner > .is-square.layer .has-ratio, .image.is-1by1 img, .banner > .is-1by1.layer img,
+  .image.is-1by1 .has-ratio,
+  .banner > .is-1by1.layer .has-ratio, .image.is-5by4 img, .banner > .is-5by4.layer img,
+  .image.is-5by4 .has-ratio,
+  .banner > .is-5by4.layer .has-ratio, .image.is-4by3 img, .banner > .is-4by3.layer img,
+  .image.is-4by3 .has-ratio,
+  .banner > .is-4by3.layer .has-ratio, .image.is-3by2 img, .banner > .is-3by2.layer img,
+  .image.is-3by2 .has-ratio,
+  .banner > .is-3by2.layer .has-ratio, .image.is-5by3 img, .banner > .is-5by3.layer img,
+  .image.is-5by3 .has-ratio,
+  .banner > .is-5by3.layer .has-ratio, .image.is-16by9 img, .banner > .is-16by9.layer img,
+  .image.is-16by9 .has-ratio,
+  .banner > .is-16by9.layer .has-ratio, .image.is-2by1 img, .banner > .is-2by1.layer img,
+  .image.is-2by1 .has-ratio,
+  .banner > .is-2by1.layer .has-ratio, .image.is-3by1 img, .banner > .is-3by1.layer img,
+  .image.is-3by1 .has-ratio,
+  .banner > .is-3by1.layer .has-ratio, .image.is-4by5 img, .banner > .is-4by5.layer img,
+  .image.is-4by5 .has-ratio,
+  .banner > .is-4by5.layer .has-ratio, .image.is-3by4 img, .banner > .is-3by4.layer img,
+  .image.is-3by4 .has-ratio,
+  .banner > .is-3by4.layer .has-ratio, .image.is-2by3 img, .banner > .is-2by3.layer img,
+  .image.is-2by3 .has-ratio,
+  .banner > .is-2by3.layer .has-ratio, .image.is-3by5 img, .banner > .is-3by5.layer img,
+  .image.is-3by5 .has-ratio,
+  .banner > .is-3by5.layer .has-ratio, .image.is-9by16 img, .banner > .is-9by16.layer img,
+  .image.is-9by16 .has-ratio,
+  .banner > .is-9by16.layer .has-ratio, .image.is-1by2 img, .banner > .is-1by2.layer img,
+  .image.is-1by2 .has-ratio,
+  .banner > .is-1by2.layer .has-ratio, .image.is-1by3 img, .banner > .is-1by3.layer img,
+  .image.is-1by3 .has-ratio,
+  .banner > .is-1by3.layer .has-ratio {
     height: 100%;
     width: 100%; }
-  .image.is-square, .image.is-1by1 {
+  .image.is-square, .banner > .is-square.layer, .image.is-1by1, .banner > .is-1by1.layer {
     padding-top: 100%; }
-  .image.is-5by4 {
+  .image.is-5by4, .banner > .is-5by4.layer {
     padding-top: 80%; }
-  .image.is-4by3 {
+  .image.is-4by3, .banner > .is-4by3.layer {
     padding-top: 75%; }
-  .image.is-3by2 {
+  .image.is-3by2, .banner > .is-3by2.layer {
     padding-top: 66.6666%; }
-  .image.is-5by3 {
+  .image.is-5by3, .banner > .is-5by3.layer {
     padding-top: 60%; }
-  .image.is-16by9 {
+  .image.is-16by9, .banner > .is-16by9.layer {
     padding-top: 56.25%; }
-  .image.is-2by1 {
+  .image.is-2by1, .banner > .is-2by1.layer {
     padding-top: 50%; }
-  .image.is-3by1 {
+  .image.is-3by1, .banner > .is-3by1.layer {
     padding-top: 33.3333%; }
-  .image.is-4by5 {
+  .image.is-4by5, .banner > .is-4by5.layer {
     padding-top: 125%; }
-  .image.is-3by4 {
+  .image.is-3by4, .banner > .is-3by4.layer {
     padding-top: 133.3333%; }
-  .image.is-2by3 {
+  .image.is-2by3, .banner > .is-2by3.layer {
     padding-top: 150%; }
-  .image.is-3by5 {
+  .image.is-3by5, .banner > .is-3by5.layer {
     padding-top: 166.6666%; }
-  .image.is-9by16 {
+  .image.is-9by16, .banner > .is-9by16.layer {
     padding-top: 177.7777%; }
-  .image.is-1by2 {
+  .image.is-1by2, .banner > .is-1by2.layer {
     padding-top: 200%; }
-  .image.is-1by3 {
+  .image.is-1by3, .banner > .is-1by3.layer {
     padding-top: 300%; }
-  .image.is-16x16 {
+  .image.is-16x16, .banner > .is-16x16.layer {
     height: 16px;
     width: 16px; }
-  .image.is-24x24 {
+  .image.is-24x24, .banner > .is-24x24.layer {
     height: 24px;
     width: 24px; }
-  .image.is-32x32 {
+  .image.is-32x32, .banner > .is-32x32.layer {
     height: 32px;
     width: 32px; }
-  .image.is-48x48 {
+  .image.is-48x48, .banner > .is-48x48.layer {
     height: 48px;
     width: 48px; }
-  .image.is-64x64 {
+  .image.is-64x64, .banner > .is-64x64.layer {
     height: 64px;
     width: 64px; }
-  .image.is-96x96 {
+  .image.is-96x96, .banner > .is-96x96.layer {
     height: 96px;
     width: 96px; }
-  .image.is-128x128 {
+  .image.is-128x128, .banner > .is-128x128.layer {
     height: 128px;
     width: 128px; }
 
@@ -7122,6 +7154,21 @@ label.panel-block {
   position: absolute;
   width: 100%; }
 
+.slide-enter-active {
+  transition: 150ms ease-out; }
+
+.slide-leave-active {
+  transition: 150ms ease-out;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+
+.slide-enter-to, .slide-leave {
+  max-height: 100px;
+  overflow: hidden; }
+
+.slide-enter, .slide-leave-to {
+  overflow: hidden;
+  max-height: 0; }
+
 .autocomplete {
   position: relative; }
   .autocomplete .dropdown-menu {
@@ -7224,7 +7271,7 @@ label.panel-block {
       border: 1px solid #3273dc;
       background: white;
       outline: none;
-      transition: 0.3s ease-out; }
+      transition: 150ms ease-out; }
       .carousel .carousel-indicator .indicator-item .indicator-style.is-boxes {
         height: 10px;
         width: 10px; }
@@ -7264,7 +7311,7 @@ label.panel-block {
       flex-shrink: 0; }
 
 .carousel-arrow {
-  transition: 0.5s ease-out; }
+  transition: 150ms ease-out; }
   .carousel-arrow.is-hovered {
     opacity: 0; }
   .carousel-arrow .icon {
@@ -7917,6 +7964,16 @@ label.panel-block {
     font-size: 1.25rem; }
   .datepicker.is-large {
     font-size: 1.5rem; }
+  @media screen and (min-width: 1024px) {
+    .datepicker .footer-horizontal-timepicker {
+      border: none;
+      padding-left: 10px;
+      margin-left: 5px;
+      display: flex; }
+    .datepicker .dropdown-horizonal-timepicker {
+      display: flex; }
+    .datepicker .content-horizonal-timepicker {
+      border-right: 1px solid #dbdbdb; } }
 
 .dialog .modal-card {
   max-width: 460px;
@@ -7981,15 +8038,22 @@ label.panel-block {
     .dropdown .background {
       display: none; } }
 
-.dropdown .dropdown-menu .dropdown-item.is-disabled, .dropdown .dropdown-menu .has-link a.is-disabled {
-  cursor: not-allowed; }
-  .dropdown .dropdown-menu .dropdown-item.is-disabled:hover, .dropdown .dropdown-menu .has-link a.is-disabled:hover {
-    background: inherit;
-    color: inherit; }
+.dropdown .dropdown-menu {
+  display: block; }
+  .dropdown .dropdown-menu .dropdown-item.is-disabled, .dropdown .dropdown-menu .has-link a.is-disabled {
+    cursor: not-allowed; }
+    .dropdown .dropdown-menu .dropdown-item.is-disabled:hover, .dropdown .dropdown-menu .has-link a.is-disabled:hover {
+      background: inherit;
+      color: inherit; }
+  .dropdown .dropdown-menu .has-link a {
+    padding-right: 3rem;
+    white-space: nowrap; }
 
-.dropdown .dropdown-menu .has-link a {
-  padding-right: 3rem;
-  white-space: nowrap; }
+.dropdown.is-hoverable:not(.is-active) .dropdown-menu {
+  display: none; }
+
+.dropdown.is-hoverable:hover .dropdown-menu {
+  display: inherit; }
 
 .dropdown.is-expanded {
   width: 100%; }
@@ -8255,11 +8319,11 @@ label.panel-block {
   align-items: center;
   display: none;
   justify-content: center;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 999; }
   .loading-overlay.is-active {
     display: flex; }
   .loading-overlay.is-full-page {
-    z-index: 999;
     position: fixed; }
     .loading-overlay.is-full-page .loading-icon:after {
       top: calc(50% - 2.5em);
@@ -8791,6 +8855,12 @@ label.panel-block {
       cursor: grabbing; }
       .b-slider .b-slider-thumb-wrapper.is-dragging .b-slider-thumb {
         transform: scale(1.25); }
+  .b-slider.slider-focus {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    cursor: pointer; }
   .b-slider.is-rounded .b-slider-thumb {
     border-radius: 290486px; }
   .b-slider.is-disabled .b-slider-track {
@@ -9321,7 +9391,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
       padding: 0.2em;
       background: #b5b5b5;
       border-radius: 4px;
-      transition: background 150ms ease-out; }
+      transition: background 150ms ease-out, box-shadow 150ms ease-out; }
       .switch input[type=checkbox] + .check:before {
         content: "";
         display: block;
@@ -9330,10 +9400,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
         height: 1.175em;
         background: whitesmoke;
         box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-        transition: transform 150ms ease-out, width 150ms ease-out;
-        will-change: transform; }
+        transition: transform 150ms ease-out;
+        will-change: transform;
+        transform-origin: left; }
       .switch input[type=checkbox] + .check.is-elastic:before {
-        width: 1.75em; }
+        transform: scaleX(1.5);
+        border-radius: 100%; }
     .switch input[type=checkbox]:checked + .check {
       background: #3273dc; }
       .switch input[type=checkbox]:checked + .check.is-white {
@@ -9359,32 +9431,32 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
       .switch input[type=checkbox]:checked + .check:before {
         transform: translate3d(100%, 0, 0); }
       .switch input[type=checkbox]:checked + .check.is-elastic:before {
-        transform: translate3d(36.36364%, 0, 0); }
-    .switch input[type=checkbox]:focus {
+        transform: translate3d(50%, 0, 0) scaleX(1.5); }
+    .switch input[type=checkbox]:focus, .switch input[type=checkbox]:active {
       outline: none; }
-      .switch input[type=checkbox]:focus + .check {
+      .switch input[type=checkbox]:focus + .check, .switch input[type=checkbox]:active + .check {
         box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.6); }
-      .switch input[type=checkbox]:focus:checked + .check {
+      .switch input[type=checkbox]:focus:checked + .check, .switch input[type=checkbox]:active:checked + .check {
         box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-white {
+        .switch input[type=checkbox]:focus:checked + .check.is-white, .switch input[type=checkbox]:active:checked + .check.is-white {
           box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-black {
+        .switch input[type=checkbox]:focus:checked + .check.is-black, .switch input[type=checkbox]:active:checked + .check.is-black {
           box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-light {
+        .switch input[type=checkbox]:focus:checked + .check.is-light, .switch input[type=checkbox]:active:checked + .check.is-light {
           box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-dark {
+        .switch input[type=checkbox]:focus:checked + .check.is-dark, .switch input[type=checkbox]:active:checked + .check.is-dark {
           box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-primary {
+        .switch input[type=checkbox]:focus:checked + .check.is-primary, .switch input[type=checkbox]:active:checked + .check.is-primary {
           box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-link {
+        .switch input[type=checkbox]:focus:checked + .check.is-link, .switch input[type=checkbox]:active:checked + .check.is-link {
           box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-info {
+        .switch input[type=checkbox]:focus:checked + .check.is-info, .switch input[type=checkbox]:active:checked + .check.is-info {
           box-shadow: 0 0 0.5em rgba(32, 156, 238, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-success {
+        .switch input[type=checkbox]:focus:checked + .check.is-success, .switch input[type=checkbox]:active:checked + .check.is-success {
           box-shadow: 0 0 0.5em rgba(35, 209, 96, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-warning {
+        .switch input[type=checkbox]:focus:checked + .check.is-warning, .switch input[type=checkbox]:active:checked + .check.is-warning {
           box-shadow: 0 0 0.5em rgba(255, 221, 87, 0.8); }
-        .switch input[type=checkbox]:focus:checked + .check.is-danger {
+        .switch input[type=checkbox]:focus:checked + .check.is-danger, .switch input[type=checkbox]:active:checked + .check.is-danger {
           box-shadow: 0 0 0.5em rgba(255, 56, 96, 0.8); }
   .switch .control-label {
     padding-left: 0.5em; }
@@ -9567,6 +9639,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
         cursor: pointer; }
       .b-table .table th .multi-sort-cancel-icon {
         margin-left: 10px; }
+      .b-table .table th.is-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        z-index: 3 !important;
+        background: white; }
     .b-table .table tr.is-selected .checkbox input:checked + .check {
       background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%233273dc' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center; }
     .b-table .table tr.is-selected .checkbox input + .check {
@@ -9593,51 +9671,58 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
     .b-table .table.is-bordered th.is-sortable:hover {
       border-color: #dbdbdb;
       background: whitesmoke; }
+    .b-table .table td.is-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: white; }
   .b-table .level:not(.top) {
     padding-bottom: 1.5rem; }
-  .b-table.has-sticky-header {
+  .b-table .table-wrapper.has-sticky-header {
     height: 300px;
     overflow-y: auto; }
     @media screen and (max-width: 424px) {
-      .b-table.has-sticky-header.has-mobile-cards {
+      .b-table .table-wrapper.has-sticky-header.has-mobile-cards {
         height: initial !important;
         overflow-y: initial !important; } }
-    .b-table.has-sticky-header tr th {
+    .b-table .table-wrapper.has-sticky-header tr:first-child th {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
-      z-index: 1;
+      z-index: 2;
       background: white; }
   @media screen and (max-width: 424px) {
-    .b-table.has-mobile-cards thead {
+    .b-table .table-wrapper.has-mobile-cards thead {
       display: none; }
-    .b-table.has-mobile-cards tfoot th {
+    .b-table .table-wrapper.has-mobile-cards tfoot th {
       border: 0;
       display: inherit; }
-    .b-table.has-mobile-cards tr {
+    .b-table .table-wrapper.has-mobile-cards tr {
       box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
       max-width: 100%;
       position: relative;
       display: block; }
-      .b-table.has-mobile-cards tr td {
+      .b-table .table-wrapper.has-mobile-cards tr td {
         border: 0;
         display: inherit; }
-        .b-table.has-mobile-cards tr td:last-child {
+        .b-table .table-wrapper.has-mobile-cards tr td:last-child {
           border-bottom: 0; }
-      .b-table.has-mobile-cards tr:not(:last-child) {
+      .b-table .table-wrapper.has-mobile-cards tr:not(:last-child) {
         margin-bottom: 1rem; }
-      .b-table.has-mobile-cards tr:not([class*="is-"]) {
+      .b-table .table-wrapper.has-mobile-cards tr:not([class*="is-"]) {
         background: inherit; }
-        .b-table.has-mobile-cards tr:not([class*="is-"]):hover {
+        .b-table .table-wrapper.has-mobile-cards tr:not([class*="is-"]):hover {
           background-color: inherit; }
-      .b-table.has-mobile-cards tr.detail {
+      .b-table .table-wrapper.has-mobile-cards tr.detail {
         margin-top: -1rem; }
-    .b-table.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td {
+    .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td {
       display: flex;
       width: auto;
       justify-content: space-between;
       text-align: right;
       border-bottom: 1px solid whitesmoke; }
-      .b-table.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td:before {
+      .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td:before {
         content: attr(data-label);
         font-weight: 600;
         padding-right: 0.5em;
@@ -10252,27 +10337,38 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
     padding-left: 1.5rem;
     padding-right: 1.5rem; } }
 
-.y-header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-  .y-header > div {
-    width: 100%; }
-    @media screen and (min-width: 1024px) {
-      .y-header > div.banner {
-        border-radius: 6px;
-        overflow: hidden; } }
-  .y-header-first-desktop {
-    order: -1; }
+@media screen and (min-width: 1024px) {
+  .container-desktop {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; } }
 
-.fr-title {
-  margin-top: 0.5rem;
+.banner {
+  position: relative;
+  top: 0;
+  left: 0; }
+  @media screen and (min-width: 1024px) {
+    .banner {
+      border-radius: 6px;
+      overflow: hidden; } }
+  .banner > .layer-middle, .banner > .layer-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
+.fr-title-desktop {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25em;
+  margin-top: 1.5rem; }
+
+.fr-title-touch {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-top: 1rem;
   margin-bottom: 0.5rem; }
-  .fr-title > h1 {
-    font-size: 1.5rem; }
-    @media screen and (min-width: 1024px) {
-      .fr-title > h1 {
-        font-size: 2rem; } }
 
 .fr-button > * {
   font-weight: 600;
@@ -10290,7 +10386,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
         margin-bottom: 0;
         margin-right: 0.5rem; } }
 
-.raised {
+.fr-raised {
   padding-bottom: 0.2rem;
   display: flex;
   flex-wrap: wrap;
@@ -10298,8 +10394,8 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   color: #4a4a4a;
   font-size: 0.75rem;
   font-weight: 500; }
-  .raised .raised-highlight {
+  .fr-raised .larger {
     color: #3273dc;
     font-size: 1rem; }
-  .raised > div:not(:last-child) {
+  .fr-raised > div:not(:last-child) {
     margin-right: 0.2rem; }

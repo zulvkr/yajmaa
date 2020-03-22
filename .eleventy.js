@@ -22,10 +22,7 @@ module.exports = function(eleventyConfig) {
 
   //Native currency filter
   eleventyConfig.addFilter("rupiah", value => {
-    return new Intl.NumberFormat("id-ID", {
-      style: "currency",
-      currency: "IDR"
-    }).format(value);
+    return "Rp "+new Intl.NumberFormat("id-ID").format(value);
   });
 
   // This refers to https://www.11ty.dev/docs/quicktips/inline-css/

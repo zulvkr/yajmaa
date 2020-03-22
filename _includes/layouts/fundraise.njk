@@ -5,22 +5,22 @@ featured_image_style: contain
 ---
 
 <section class="is-clipped-touch">
-  <div class="columns">
-    <div class="column is-8 fr-title is-hidden-touch">
-      <h1>{{ title }}</h1>
+  <div class="columns is-hidden-touch">
+    <div class="column is-two-thirds-desktop">
+      <h1 class="fr-title-desktop">{{ title }}</h1>
     </div>
   </div>
   <div class="columns">
-    <div class="column is-8">
+    <div class="column">
       <header>
-        <div class="banner">
+        <div>
           {% import "components/_Hero.njk" as Hero %}
-          {{ Hero.hero(featured_image, featured_image_style, title) }}
+          {{ Hero.hero(banner.image, banner.style, title) }}
         </div>
-        <div class="fr-title container-touch is-hidden-desktop">
-          <h1>{{ title }}</h1>
+        <div class="container-touch is-hidden-desktop">
+          <h1 class="fr-title-touch">{{ title }}</h1>
         </div>
-        <div class="is-hidden-desktop container-touch">
+        <div class="container-touch is-hidden-desktop">
           {% include "components/FraAside.njk" %}
         </div>
       </header>
@@ -57,7 +57,7 @@ featured_image_style: contain
       </article>
     </div>
 
-    <aside class="column is-4 is-hidden-touch">
+    <aside class="column is-one-third is-hidden-touch">
       <div class="box" style="position: -webkit-sticky; position: sticky; top: 4rem;">
         {% include "components/FraAside.njk" %}
       </div>

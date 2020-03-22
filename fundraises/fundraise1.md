@@ -3,9 +3,12 @@ title: Donasi pembangunan masjid Al Hidayah
 summary: Berikan amal jariyah anda untuk pembangunan masjid Al Hidayah Sleman 
 date: 2020-02-01
 fra:
-  hasTarget: true
+  hasTarget: false
   target: 10000000
   raised: 5400000
+banner:
+  image: /static/img/pm1.png
+  style: cover
 featured_image: /static/img/pm1.png
 featured_image_style: cover
 tags:
@@ -13,7 +16,6 @@ tags:
   - environment
   - politics
   - sport
-featured_image_style: cover
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

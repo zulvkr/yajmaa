@@ -6,6 +6,9 @@ fra:
   hasTarget: true
   target: 6000000
   raised: 5400000
+banner:
+  image: /static/img/2020-03-04-10.14.57-AM-1022x1024.jpg
+  style: cover
 featured_image: /static/img/2020-03-04-10.14.57-AM-1022x1024.jpg
 featured_image_style: contain
 featured_image_title: false
