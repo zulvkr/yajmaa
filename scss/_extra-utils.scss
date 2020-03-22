@@ -1,6 +1,6 @@
 .is-clipped-touch {
   @include touch {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 

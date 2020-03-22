@@ -8,9 +8,7 @@ fra:
   raised: 5400000
 banner:
   image: /static/img/pm1.png
-  style: cover
-featured_image: /static/img/pm1.png
-featured_image_style: cover
+  style: contain
 tags:
   - tech
   - environment

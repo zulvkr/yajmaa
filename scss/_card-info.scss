@@ -1,0 +1,10 @@
+.card-info {
+  height: 7rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: $radius;
+  font-size: $size-7;
+  > .card-title {
+    font-weight: $weight-medium;
+  }
+}

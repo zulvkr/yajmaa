@@ -22,14 +22,14 @@
     }
   </style>
 
-  <div class="hero is-medium banner">
-    <div class="layer layer-bottom is-16by9">
+  <div class="hero is-medium banner card">
+    <div class="layer layer-bottom image is-16by9">
       <img src="{{ image_safe | url }}"/>
     </div>
-    <div class="layer layer-middle is-16by9 is-clipped">
+    <div class="layer layer-middle image is-16by9 is-clipped">
       <img src='{{ image_safe | url }}'/>
     </div>
-    <figure class="layer layer-top is-16by9 ">
+    <figure class="layer layer-top image is-16by9 ">
       <img src='{{ image_safe | url }}' alt="{{ alt_safe }}"/>
     </figure>
   </div>

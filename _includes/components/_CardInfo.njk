@@ -1,0 +1,37 @@
+{% macro cardInfo(cardTitle, avatar, name, desc) %}
+
+    {% set astaga %}
+    <div class="columns">
+        <figure class="column is-narrow">
+            <p class="image is-32x32">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="column is-narrow">
+            <div class="content">
+                <p>
+                    <strong>John Smith</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {% endset %}
+
+    <style>
+        .card-info-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+
+    <div class="card card-info">
+        <h3 class="card-title">{{ cardTitle }}</h3>
+        <div class="card-info-content">
+            <figure class="image is-32x32">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+            <p>{{ desc }}</p>
+        </div>
+    </div>
+{% endmacro %}

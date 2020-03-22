@@ -12,51 +12,10 @@ featured_image_style: contain
   </div>
   <div class="columns">
     <div class="column">
-      <header>
-        <div>
-          {% import "components/_Hero.njk" as Hero %}
-          {{ Hero.hero(banner.image, banner.style, title) }}
-        </div>
-        <div class="container-touch is-hidden-desktop">
-          <h1 class="fr-title-touch">{{ title }}</h1>
-        </div>
-        <div class="container-touch is-hidden-desktop">
-          {% include "components/FraAside.njk" %}
-        </div>
-      </header>
-
-      <article class="container-touch">
-        <hr>
-        <div class="media">
-          <figure class="media-left">
-            <p class="image is-64x64">
-              <img src="https://bulma.io/images/placeholders/128x128.png">
-            </p>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>John Smith</strong>
-                <small>@johnsmith</small>
-                <small>31m</small>
-                <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              </p>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <p class="is-size-6 has-text-grey has-text-right ">
-          <time datetime="{{ date | machineDate }}">
-            {{ date | readableDate }}
-          </time>
-        </p>
-        <div class="content ">
-          {{ content | safe }}
-        </div>
-      </article>
+      {% include "components/FraHeader.njk" %}
+      {% include "components/FraInfo.njk" %}
+      {% include "components/FraContent.njk" %}
     </div>
-
     <aside class="column is-one-third is-hidden-touch">
       <div class="box" style="position: -webkit-sticky; position: sticky; top: 4rem;">
         {% include "components/FraAside.njk" %}
