@@ -1,0 +1,20 @@
+.fra-button {
+  > * {
+    font-weight: $weight-semibold;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 0.4rem;
+    }
+  }
+  @include tablet-only {
+    flex-wrap: wrap;
+    display: flex;
+    > * {
+      width: auto;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

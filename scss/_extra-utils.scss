@@ -11,18 +11,20 @@
   }
 }
 
+.padding-sides-touch {
+  @include mobile {
+    @include padding-sides(0.75rem);
+  }
+  @include tablet-only {
+    @include padding-sides(1.5rem);
+  }
+}
+
 .container {
-  &-touch {
-    @include touch {
-      @include padding-sides(0.75rem);
-      max-width: 736px;
-      margin: {
-        left: auto;
-        right: auto;
-      }
-    }
+  &-tablet-only {
     @include tablet-only {
-      @include padding-sides(1.5rem);
+      max-width: 680px;
+      margin: 0 auto;
     }
   }
   &-desktop {

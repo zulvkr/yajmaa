@@ -10,6 +10,5 @@
 @import "node_modules/bulma/sass/layout/_all";
 @import "node_modules/buefy/src/scss/buefy";
 @import "_extra-utils";
-@import "_fundraise";
-@import "_card-info";
-@import "_cards-overflow"
+@import "components/fundraise/_all";
+@import "components/macros/_all";

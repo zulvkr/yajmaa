@@ -1,28 +1,19 @@
-{% macro hero(image, style, alt) %}
+{% macro banner(image, style, alt) %}
 
-  {# setup fallback for blank or corrupted input #}
   {% set image_safe = image or "dummy.jpg" %}
   {% if style and style == "cover" %}
     {% set style_safe = "cover" %}
   {% else %}
     {% set style_safe = "contain" %}
   {% endif %}
-  {% set alt_safe = alt or "not available" %}
 
   <style>
-    .layer-bottom > img {
-      object-fit: cover;
-    }
-    .layer-middle > img {
-      object-fit: cover;
-      filter: blur(3px);
-    }
     .layer-top > img {
       object-fit: {{style_safe}};
     }
   </style>
 
-  <div class="hero is-medium banner card">
+  <div class="banner">
     <div class="layer layer-bottom image is-16by9">
       <img src="{{ image_safe | url }}"/>
     </div>

@@ -4,11 +4,11 @@
     {% set class = "is-primary" %}
     {% set progress = raised/target*100 %}
   {% else %}
-    {% set class = "is-alert" %}
+    {% set class = "is-info" %}
     {% set progress = 100 %}
   {% endif %}
 
-  <progress class="progress {{ class }}" value="{{ progress }}" max="100" style="margin-bottom: 1rem; height: 0.4rem">
+  <progress class="progress {{ class }}" value="{{ progress }}" max="100" style="height: 0.4rem">
     {{ progress }}%
   </progress>
 

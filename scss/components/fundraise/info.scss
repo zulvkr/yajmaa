@@ -1,0 +1,44 @@
+$card-height: 7rem;
+$wrapper-padding: 0.75rem;
+$wrapper-height: $card-height + (2 * $wrapper-padding);
+
+.fra-info {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: $wrapper-height;
+  > .wrapper-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    > .wrapper-2 {
+      display: flex;
+      overflow-x: scroll;
+      padding: $wrapper-padding 0;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      > .wrapper-card {
+        flex: none;
+        width: 70%;
+        @include touch {
+          padding: 0 0.5rem;
+          &:first-child {
+            padding-left: 0.75rem;
+          }
+          &:last-child {
+            padding-right: 0.75rem;
+          }
+        }
+        @include desktop {
+          margin: 0 1%;
+          width: 48%;
+        }
+      }
+    }
+  }
+}

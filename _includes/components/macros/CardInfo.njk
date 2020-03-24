@@ -1,6 +1,6 @@
 {% macro cardInfo(cardTitle, avatar, name, desc) %}
 
-    {% set astaga %}
+    {# {% set astaga %}
     <div class="columns">
         <figure class="column is-narrow">
             <p class="image is-32x32">
@@ -15,8 +15,7 @@
             </div>
         </div>
     </div>
-
-    {% endset %}
+    {% endset %} #}
 
     <style>
         .card-info-content {
@@ -34,4 +33,5 @@
             <p>{{ desc }}</p>
         </div>
     </div>
+
 {% endmacro %}
