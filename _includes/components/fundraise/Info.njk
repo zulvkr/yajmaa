@@ -1,0 +1,20 @@
+{% import "components/macros/CardInfo.njk" as CardInfo %}
+
+<div class="container-tablet-only padding-sides-touch">
+    <hr>
+    <h2 class="has-text-weight-bold">Informasi Penggalangan Dana</h1>
+</div>
+
+<div class="fra-info container-tablet-only">
+    <div class="wrapper-1">
+        <div class="wrapper-2">
+            {% for i in[1, 2, 3, 4, 5, 6,7] %}
+                <div class="wrapper-card">
+                    {{ CardInfo.cardInfo("Penggalang Dana", 0, author or metadata.author.name, "aaa") }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-tablet-only"><hr></div>

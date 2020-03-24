@@ -1,0 +1,20 @@
+.fra-aside {
+  padding-bottom: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  color: $grey-dark;
+  font: {
+    size: $size-small;
+    weight: $weight-medium;
+  }
+  > .larger {
+    color: $primary;
+    font: {
+      size: $size-normal;
+    }
+  }
+  > div:not(:last-child) {
+    margin-right: 0.2rem;
+  }
+}
