@@ -2,17 +2,18 @@
 
 <div class="container-tablet-only padding-sides-touch">
     <hr>
-    <h2 class="has-text-weight-bold">Informasi Penggalangan Dana</h1>
+    <h2 class="has-text-weight-semibold">Informasi Penggalangan Dana</h1>
 </div>
 
 <div class="fra-info container-tablet-only">
     <div class="wrapper-1">
         <div class="wrapper-2">
-            {% for i in[1, 2, 3, 4, 5, 6,7] %}
-                <div class="wrapper-card">
-                    {{ CardInfo.cardInfo("Penggalang Dana", 0, author or metadata.author.name, "aaa") }}
-                </div>
-            {% endfor %}
+            <div class="wrapper-card">
+                {{ CardInfo.cardInfo("Penggalang Dana", false, author or metadata.author.name) }}
+            </div>
+            <div class="wrapper-card">
+                {{ CardInfo.cardInfo("Penerima Manfaat", false, "Ma'had Umar bin Khattab Yogyakarta", "https://facebook.com", "facebook") }}
+            </div>
         </div>
     </div>
 </div>

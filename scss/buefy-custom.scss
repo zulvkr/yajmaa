@@ -1,14 +1,7 @@
 @charset "utf-8";
 
 @import "_custom";
-@import "node_modules/bulma/sass/utilities/_all";
-@import "node_modules/bulma/sass/base/_all";
-@import "node_modules/bulma/sass/elements/_all";
-@import "node_modules/bulma/sass/form/_all";
-@import "node_modules/bulma/sass/components/_all";
-@import "node_modules/bulma/sass/grid/_all";
-@import "node_modules/bulma/sass/layout/_all";
-@import "node_modules/buefy/src/scss/buefy";
+@import "_vendor";
 @import "_extra-utils";
 @import "components/fundraise/_all";
 @import "components/macros/_all";

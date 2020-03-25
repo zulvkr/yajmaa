@@ -1,37 +1,37 @@
-{% macro cardInfo(cardTitle, avatar, name, desc) %}
+{% macro cardInfo(cardTitle, avatar, name, link=false, linkType="whatsapp") %}
 
-    {# {% set astaga %}
-    <div class="columns">
-        <figure class="column is-narrow">
-            <p class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
-            </p>
-        </figure>
-        <div class="column is-narrow">
-            <div class="content">
-                <p>
-                    <strong>John Smith</strong>
-                </p>
+    {% if link %}
+        {% set aTagOpen %}<a href="{{ link | url }}">{% endset %}
+        {% set aTagClose %}</a>{% endset %}
+
+        {% set icon %}
+        <div class="card-header-icon">
+            <span class="icon">
+                <i class="mdi mdi-{{ linkType }}"></i>
+            </span>
+        </div>
+        {% endset %}
+    {% else %}
+    {% set aTagOpen, aTagClose, icon = "" %}
+    {% endif %}
+
+    {{ aTagOpen | safe }}
+    <div class="card card-info">
+        <header class="card-header">
+            <p class="card-header-title">{{ cardTitle }}</p>
+            {{ icon | safe }}
+         </header>
+        <div class="card-content">
+            <div class="media">
+                <figure class="media-left image is-32x32">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="{{ name }}" class="is-rounded">
+                </figure>
+                <div class="media-content">
+                    <p style="">{{ name }}</p>
+                </div>
             </div>
         </div>
     </div>
-    {% endset %} #}
-
-    <style>
-        .card-info-content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    </style>
-
-    <div class="card card-info">
-        <h3 class="card-title">{{ cardTitle }}</h3>
-        <div class="card-info-content">
-            <figure class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <p>{{ desc }}</p>
-        </div>
-    </div>
+    {{ aTagClose | safe}}
 
 {% endmacro %}
