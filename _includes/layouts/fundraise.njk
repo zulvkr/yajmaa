@@ -6,18 +6,20 @@ featured_image_style: contain
 
 <div class="is-clipped-touch">
   <div class="columns is-hidden-touch">
-    <div class="column is-two-thirds-desktop">
-      {% include "components/fundraise/Title.njk" %}
+    <div class="column is-7 is-offset-1">
+    <div style="margin: 1.5rem 0 0 0">
+        <h1 class="title is-size-3">{{ title }}</h1>
+    </div>
     </div>
   </div>
   <div class="columns">
-    <div class="column">
-      <article>
+    <div class="column is-offset-1-desktop">
+      <article class="has-margin-top-1-tablet-only">
         {% include "components/fundraise/Header.njk" %}
         {% include "components/fundraise/Content.njk" %}
       </article>
     </div>
-    <aside class="column is-one-third is-hidden-touch">
+    <aside class="column is-4 is-hidden-touch">
       <div class="box" style="position: -webkit-sticky; position: sticky; top: 4rem;">
         {% include "components/fundraise/Aside.njk" %}
       </div>

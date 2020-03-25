@@ -1,5 +1,5 @@
 .fra-banner {
-  @include desktop {
+  @include tablet {
     box-shadow: $card-shadow;
     border-radius: $radius-large;
     overflow: hidden;

@@ -1,39 +1,50 @@
+//Prevent bleeding layout ONLY in touch resolution. Overflow hidden breaks sticky in desktop resolution
 .is-clipped-touch {
   @include touch {
     overflow: hidden;
   }
 }
 
-@mixin padding-sides($size) {
-  padding: {
-    left: $size;
-    right: $size;
+//Add padding in touch resolution
+.padding-sides {
+  $padding: 0.75rem;
+  &-tablet-only {
+    @include tablet-only {
+      padding: {
+        left: $padding;
+        right: $padding;
+      }
+    }
+  }
+  &-touch {
+    @include touch {
+      padding: {
+        left: $padding;
+        right: $padding;
+      }
+    }
   }
 }
 
-.padding-sides-touch {
-  @include mobile {
-    @include padding-sides(0.75rem);
-  }
-  @include tablet-only {
-    @include padding-sides(1.5rem);
-  }
-}
-
+//Container element in tablet and desktop resolution
 .container {
   &-tablet-only {
     @include tablet-only {
-      max-width: 680px;
+      max-width: 550px;
       margin: 0 auto;
     }
   }
   &-desktop {
     @include desktop {
       max-width: $desktop - $container-offset;
-      margin: {
-        left: auto;
-        right: auto;
-      }
+      margin: 0 auto;
     }
+  }
+}
+
+//Margin with mixins
+.has-margin-top-1-tablet-only {
+  @include tablet-only {
+    margin-top: 1rem;
   }
 }

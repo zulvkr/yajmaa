@@ -10239,28 +10239,31 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   .is-clipped-touch {
     overflow: hidden; } }
 
-@media screen and (max-width: 424px) {
+@media screen and (min-width: 425px) and (max-width: 1023px) {
+  .padding-sides-tablet-only {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; } }
+
+@media screen and (max-width: 1023px) {
   .padding-sides-touch {
     padding-left: 0.75rem;
     padding-right: 0.75rem; } }
 
 @media screen and (min-width: 425px) and (max-width: 1023px) {
-  .padding-sides-touch {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; } }
-
-@media screen and (min-width: 425px) and (max-width: 1023px) {
   .container-tablet-only {
-    max-width: 680px;
+    max-width: 550px;
     margin: 0 auto; } }
 
 @media screen and (min-width: 1024px) {
   .container-desktop {
     max-width: 960px;
-    margin-left: auto;
-    margin-right: auto; } }
+    margin: 0 auto; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 425px) and (max-width: 1023px) {
+  .has-margin-top-1-tablet-only {
+    margin-top: 1rem; } }
+
+@media screen and (min-width: 425px), print {
   .fra-banner {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     border-radius: 6px;
@@ -10318,18 +10321,19 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
         display: none; }
       .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card {
         flex: none;
-        width: 70%; }
+        width: 90%; }
+        @media screen and (max-width: 424px) {
+          .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card {
+            padding: 0 0.375rem; } }
         @media screen and (max-width: 1023px) {
+          .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card:first-child {
+            margin-left: 0.75rem; }
+          .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card:last-child {
+            margin-right: 0.75rem; } }
+        @media screen and (min-width: 425px), print {
           .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card {
-            padding: 0 0.5rem; }
-            .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card:first-child {
-              padding-left: 0.75rem; }
-            .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card:last-child {
-              padding-right: 0.75rem; } }
-        @media screen and (min-width: 1024px) {
-          .fra-info > .wrapper-1 > .wrapper-2 > .wrapper-card {
-            margin: 0 1%;
-            width: 48%; } }
+            margin: 0 2%;
+            width: 46%; } }
 
 .fra-aside {
   padding-bottom: 0.2rem;
@@ -10361,10 +10365,9 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
     filter: blur(3px); }
 
 .card-info {
-  height: 7rem;
   width: 100%;
-  padding: 0.75rem;
+  height: 100%;
   border-radius: 4px;
-  font-size: 0.75rem; }
-  .card-info > .card-title {
-    font-weight: 500; }
+  font-size: 0.8em; }
+  .card-info > .card-content {
+    padding: 1rem; }
