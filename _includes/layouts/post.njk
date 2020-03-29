@@ -2,29 +2,27 @@
 layout: layouts/base.njk
 ---
 {# apply bulma class content #}
-<article>
-  <h1 class="title is-3">{{ title }}</h1>
-  <p class="is-size-6">
-    <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author.name }}
-  </p>
-  <div class="content">
-    {{ content | safe }}
-  </div>
-  {% if tags %}
-    <div class="tags">
-      {% for tag in tags %}
-        {%- if tag != "post" -%}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <span class="tag">
-            <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-          </span>
-        {%- endif -%}
-      {% endfor %}
+<div class="container-desktop">
+  <div class="is-clipped-touch" style="margin: 0 0 1.5rem 0">
+    <div class="columns">
+      <div class="column container-tablet-only is-offset-2-desktop is-8-desktop">
+        <header class="padding-sides-touch" style="margin: 2.5rem 0 3rem 0">
+          <p class="has-text-grey">
+          oleh {{ metadata.author.name }} -<time datetime="{{ date | machineDate }}">
+              {{ date | readableDate }}</time>
+          </p>
+          <h1 class="title is-size-1-desktop">{{ title }}</h1>
+        </header>
+        <article class="padding-sides-touch" >
+          <div class="content">
+            {{ content | safe }}
+          </div>
+          {% include "components/blog/tags.njk" %}
+        </article>
+      </div>
     </div>
-  {% endif %}
-
-</article>
-
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>
+  </div>
+  <nav>
+    <a href="{{ '/blog/' | url }}">← Blog index</a>
+  </nav>
+  <div class="container-desktop">

@@ -4,10 +4,8 @@
   flex-wrap: wrap;
   align-items: baseline;
   color: $grey-dark;
-  font: {
-    size: $size-small;
-    weight: $weight-medium;
-  }
+  font-size: $size-small;
+  font-weight: $weight-medium;
   > .larger {
     color: $primary;
     font: {

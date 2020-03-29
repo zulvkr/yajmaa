@@ -8,19 +8,19 @@
   {% endif %}
 
   <style>
-    .layer-top > img {
+    .layer.-top > img {
       object-fit: {{style_safe}};
     }
   </style>
 
   <div class="banner">
-    <div class="layer layer-bottom image is-16by9">
+    <div class="layer -bottom image is-16by9">
       <img src="{{ image_safe | url }}"/>
     </div>
-    <div class="layer layer-middle image is-16by9 is-clipped">
+    <div class="layer -middle image is-16by9 is-clipped">
       <img src='{{ image_safe | url }}'/>
     </div>
-    <figure class="layer layer-top image is-16by9 ">
+    <figure class="layer -top image is-16by9 ">
       <img src='{{ image_safe | url }}' alt="{{ alt_safe }}"/>
     </figure>
   </div>
