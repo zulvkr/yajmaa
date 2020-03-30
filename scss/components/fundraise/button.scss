@@ -1,15 +1,17 @@
 .fra-button {
-  > * {
+  padding: 0 0.75rem;
+  > .button {
     font-weight: $weight-semibold;
     width: 100%;
     &:not(:last-child) {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
   }
-  @include tablet-only {
+  @include tablet {
     flex-wrap: wrap;
     display: flex;
-    > * {
+    padding:0;
+    > .button {
       width: auto;
       &:not(:last-child) {
         margin-bottom: 0;

@@ -1,7 +1,46 @@
 ---
 layout: layouts/base.njk
 ---
+{% import "components/macros/Banner.njk" as Banner %}
+{% import "components/macros/CardFra.njk" as CardFra %}
+{# {% impert cardInfo(cardTitle, avatar, name, link=false, linkType="whatsapp") %} #}
 
-{{ content | safe }}
-{% set fundraiseslist = collections.fundraises %}
-{% include "components/FundraisesList.njk" %}
+<div class="is-clipped-touch">
+    <div class="has-background-white-bis">
+        <div class="container-desktop">
+            <section class="columns is-multiline">
+                <div class="column is-full-tablet is-6-desktop">
+                    <div id="carousel" style="border-radius: 6px;overflow: hidden;">
+                        {% include "components/macros/Carousel.njk" %}
+                    </div>
+                    {# <div style="border-radius: 6px;overflow: hidden;">
+                        {{ Banner.banner("/static/img/pm3.png", "contain", "title") }}
+                    </div> #}
+                </div>
+                <div class="column is-full-tablet is-6-desktop">
+                    {% include "components/home/Cta.njk" %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="container-desktop">
+    <div class="cards-carousel container-tablet-only" style="height: 25rem;">
+        <div class="wrapper-1">
+            <div class="wrapper-2">
+                {% set fundraisesList = collections.fundraises %}
+                {% for i in [1,2,3,4] %}
+                {% for fundraise in fundraisesList | reverse %}
+                    <div class="wrapper-card">
+                        {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
+                    </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    {{ content | safe }}
+</div>
+</div>

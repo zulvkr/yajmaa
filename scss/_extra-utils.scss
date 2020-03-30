@@ -48,3 +48,16 @@
     margin-top: 1rem;
   }
 }
+
+//add false-padding-right
+@mixin false-padding-right($width) {
+  @include touch {
+    &:after {
+      content: "";
+      display: block;
+      flex: none;
+      width: $width;
+      height: 1px;
+    }
+  }
+}
