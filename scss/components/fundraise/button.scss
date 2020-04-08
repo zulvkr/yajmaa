@@ -7,7 +7,7 @@
       margin-bottom: 0.5rem;
     }
   }
-  @include tablet {
+  @include tablet-only {
     flex-wrap: wrap;
     display: flex;
     padding:0;

@@ -5,42 +5,31 @@ layout: layouts/base.njk
 {% import "components/macros/CardFra.njk" as CardFra %}
 {# {% impert cardInfo(cardTitle, avatar, name, link=false, linkType="whatsapp") %} #}
 
-<div class="is-clipped-touch">
-    <div class="has-background-white-bis">
-        <div class="container-desktop">
-            <section class="columns is-multiline">
-                <div class="column is-full-tablet is-6-desktop">
-                    <div id="carousel" style="border-radius: 6px;overflow: hidden;">
-                        {% include "components/macros/Carousel.njk" %}
-                    </div>
-                    {# <div style="border-radius: 6px;overflow: hidden;">
-                        {{ Banner.banner("/static/img/pm3.png", "contain", "title") }}
-                    </div> #}
-                </div>
-                <div class="column is-full-tablet is-6-desktop">
-                    {% include "components/home/Cta.njk" %}
-                </div>
+<div class="is-clipped-touch has-background-white-bis">
+    <div class="container-desktop container-tablet-only padding-sides-touch" style="padding-top: 4rem;padding-bottom:4rem;">
+        <div class="columns">
+            <div class="column is-9-desktop">
+                {% include "components/home/Cta.njk" %}
             </div>
-        </section>
+        </div>
     </div>
 </div>
-<div class="container-desktop">
-    <div class="cards-carousel container-tablet-only" style="height: 25rem;">
+<div class="container-desktop container-tablet-only" style="padding-top: 1.5rem">
+    <div class="padding-sides-touch">
+        <h2 class="title is-size-4">Donasi terkini</h2>
+    </div>
+    <div class="cards-carousel" style="height: 20rem; margin: 1rem 0 0 0;">
         <div class="wrapper-1">
             <div class="wrapper-2">
                 {% set fundraisesList = collections.fundraises %}
-                {% for i in [1,2,3,4] %}
-                {% for fundraise in fundraisesList | reverse %}
-                    <div class="wrapper-card">
-                        {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
-                    </div>
-                {% endfor %}
+                {% for i in[1] %}
+                    {% for fundraise in fundraisesList | reverse %}
+                        <div class="wrapper-card">
+                            {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
+                        </div>
+                    {% endfor %}
                 {% endfor %}
             </div>
         </div>
     </div>
-
-
-    {{ content | safe }}
-</div>
 </div>
