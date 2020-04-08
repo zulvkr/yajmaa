@@ -1,28 +1,30 @@
 .card.-fra {
-    width: 20rem;
-
-}
-
-.card-header {
-
-}
-
-.card-header-title {
-
-  
-}
-
-.card-header-icon {
-
-  
+    width: 16.5rem;
+    border-radius: $radius;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .card-image {
 
 }
 
-.card-content {
-
+.card-content.-fra {
+ font-size: 0.8em;
+ padding: 1rem;
+ > .title {
+     font-size: 1.25em;
+     font-weight: $weight-bold;
+     height: 3rem;
+     max-height: 3rem;
+     overflow: hidden;
+ }
+ >.raised {
+     margin-top: 6px;
+     font-size: 1em;
+     font-weight: $weight-bold;
+ }
 }
 
 .card-footer {

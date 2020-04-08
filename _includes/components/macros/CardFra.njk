@@ -1,22 +1,19 @@
 {% macro cardFra(data, url)%}
 
   {% import "components/macros/Banner.njk" as Banner %}
-  <a href="{{url}}">
-    <div class="card -fra">
-      <div class="card-image -fra">
-        {{ Banner.banner(data.banner.image, data.banner.style, data.title ) }}
-      </div>
-      <div class="card-content -fra">
-        <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a>#css</a>
-          <a href="#">#responsive</a>
-          <br>
-          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-        </div>
-      </div>
+  {% import "components/macros/Progress.njk" as Progress %}
+
+  <div class="card -fra">
+    <div class="card-image -fra">
+      {{ Banner.banner(data.banner.image, data.banner.style, data.title ) }}
     </div>
-  </a>
+    <div class="card-content -fra">
+      <h3 class="title">
+        <a href="{{ url }}" class="stretched-link">{{ data.title }}</a>
+      </h3>
+      {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
+      <p class="raised">Terkumpul <br>{{ data.fra.raised | rupiah }}</p>
+    </div>
+  </div>
 
 {% endmacro %}}

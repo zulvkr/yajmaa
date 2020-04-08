@@ -1,9 +1,16 @@
 @charset "utf-8";
 
 @import "node_modules/bulma/sass/utilities/_all";
+
 @import "node_modules/bulma/sass/base/_all";
+$button-border-width: $control-border-width;
+$button-padding-vertical: calc(1.5em - #{$button-border-width});
+$button-padding-horizontal: 1.1em;
 @import "node_modules/bulma/sass/elements/_all";
 @import "node_modules/bulma/sass/form/_all";
+// Components
+$navbar-box-shadow-size: 0 0 6px 1px;
+$navbar-box-shadow-color: #24242450;
 @import "node_modules/bulma/sass/components/_all";
 @import "node_modules/bulma/sass/grid/_all";
 @import "node_modules/bulma/sass/layout/_all";
