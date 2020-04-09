@@ -6,42 +6,38 @@
     overflow: hidden;
 }
 
-.card-image {
-
-}
-
 .card-content.-fra {
- font-size: 0.8em;
- padding: 1rem;
- > .title {
-     font-size: 1.25em;
-     font-weight: $weight-bold;
-     height: 3rem;
-     max-height: 3rem;
-     overflow: hidden;
- }
- > .raised {
-     margin-top: 6px;
-     font-size: 1em;
-     font-weight: $weight-bold;
-     display: flex;
-     justify-content: space-between;
-     > .left {
-         
-     }
- }
+    font-size: 0.8em;
+    padding: 1rem;
+    > .title {
+        font-size: 1.25em;
+        font-weight: $weight-bold;
+        height: 3rem;
+        max-height: 3rem;
+        overflow: hidden;
+    }
+    > .raised {
+        margin-top: 6px;
+        font-size: 1em;
+        font-weight: $weight-bold;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.card-footer {
+// .card-image {
 
-}
+// }
 
-.card-footer-item {
+// .card-footer {
 
-  
-}
+// }
+
+// .card-footer-item {
+
+// }
 // Combinations
 
-.card .media:not(:last-child) {
+// .card .media:not(:last-child) {
 
-}
+// }

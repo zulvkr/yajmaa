@@ -12,8 +12,12 @@
         <a href="{{ url }}" class="stretched-link">{{ data.title }}</a>
       </h3>
       <div class="raised">
-      <div class="left">Terkumpul {{ data.fra.raised | rupiah }}</div>
-      <div class="right">{% if data.fra.hasTarget %}{{ data.fra.raised/data.fra.target*100+"%" }}{% endif %}</div>
+        <div>Terkumpul {{ data.fra.raised | rupiah }}</div>
+        <div>
+          {% if data.fra.hasTarget %}
+            {{ data.fra.raised/data.fra.target*100+"%" }}
+          {% endif %}
+        </div>
       </div>
       {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
     </div>

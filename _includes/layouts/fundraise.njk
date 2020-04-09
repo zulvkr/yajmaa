@@ -3,6 +3,9 @@ layout: layouts/base.njk
 featured_image: /static/img/pm3.png
 featured_image_style: contain
 ---
+{% import "components/macros/Progress.njk" as Progress %}
+{% import "components/macros/Banner.njk" as Banner %}
+
 <div class="container-desktop">
   <div class="is-clipped-touch" style="padding: 0 0 1.5rem 0">
     <div class="columns is-hidden-touch">
@@ -19,11 +22,10 @@ featured_image_style: contain
             <div class="column is-full">
               {% include "components/fundraise/Header.njk" %}
             </div>
-            <div class="column is-full is-11-desktop is-offset-1-desktop">
+            <div class="column is-full is-10-desktop is-offset-2-desktop">
               {% include "components/fundraise/Content.njk" %}
             </div>
           </div>
-
         </article>
       </div>
       <aside class="column is-4 is-hidden-touch">

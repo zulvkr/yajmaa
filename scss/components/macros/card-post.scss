@@ -1,0 +1,35 @@
+.card.-post {
+    border-radius: $radius;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    background-color: $white-ter;
+}
+
+.card-content.-post {
+    > .title {
+        font-size: 1.25em;
+        font-weight: $weight-bold;
+        // height: 3rem;
+        // max-height: 3rem;
+        // overflow: hidden;
+    }
+}
+
+// .card-image {
+
+// }
+
+// .card-footer {
+
+// }
+
+// .card-footer-item {
+
+// }
+// Combinations
+
+// .card .media:not(:last-child) {
+
+// }

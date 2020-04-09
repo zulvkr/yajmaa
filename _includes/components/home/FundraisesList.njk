@@ -1,0 +1,12 @@
+<div class="cards-carousel" style="height: 20rem; margin: 1rem 0 0 0;">
+    <div class="wrapper-1">
+        <div class="wrapper-2">
+            {% set fundraisesList = collections.fundraises %}
+            {% for fundraise in fundraisesList | reverse %}
+                <div class="wrapper-card">
+                    {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
