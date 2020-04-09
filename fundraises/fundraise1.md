@@ -1,9 +1,9 @@
 ---
-title: Donasi pembangunan masjid
+title: Donasi Pembangunan Masjid Al Hidayah
 summary: Berikan amal jariyah anda untuk pembangunan masjid Al Hidayah Sleman 
 date: 2020-02-01
 fra:
-  hasTarget: false
+  hasTarget: true
   target: 10000000
   raised: 5400000
 banner:

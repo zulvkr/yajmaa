@@ -3,10 +3,16 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  // LazyImages
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    imgSelector : ".lazy"
+  });
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
@@ -22,7 +28,8 @@ module.exports = function(eleventyConfig) {
 
   //Native currency filter
   eleventyConfig.addFilter("rupiah", value => {
-    return "Rp "+new Intl.NumberFormat("id-ID").format(value);
+    const valueRupiah = new Intl.NumberFormat("id-ID").format(value);
+    return "Rp "+ valueRupiah.replace(/,/g, ".");
   });
 
   // This refers to https://www.11ty.dev/docs/quicktips/inline-css/

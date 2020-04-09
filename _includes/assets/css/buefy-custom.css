@@ -10408,4 +10408,6 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   .card-content.-fra > .raised {
     margin-top: 6px;
     font-size: 1em;
-    font-weight: 700; }
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between; }
