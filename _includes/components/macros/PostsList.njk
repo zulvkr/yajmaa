@@ -1,0 +1,14 @@
+{% macro postsList(posts, metadata) %}
+
+{% import "components/macros/CardPost.njk" as CardPost %}
+
+    <div class="columns is-multiline">
+        {% for post in posts | reverse %}
+
+            <div class="column is-full is-6-desktop">
+                {{ CardPost.cardPost(post, metadata) }}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endmacro %}

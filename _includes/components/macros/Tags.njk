@@ -1,12 +1,14 @@
-{% if tags %}
-    <div class="tags">
-        {% for tag in tags %}
-            {%- if tag != "post" -%}
+{% macro tags(tags) %}
+
+    {% if tags %}
+        <div class="tags">
+            {% for tag in tags %}
                 {% set tagUrl %}/tags/{{ tag }}/{% endset %}
                 <span class="tag">
                     <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
                 </span>
-            {%- endif -%}
-        {% endfor %}
-    </div>
-{% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endmacro %}

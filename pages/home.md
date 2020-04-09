@@ -1,10 +1,9 @@
 ---
 layout: layouts/home.njk
-title: Lembaga Bimbingan Islam As Sunnah
+title: Yajmaa - Web Rintisan untuk Penggalangan Dana
 date: 2016-01-01T00:00:00.000Z
 cta:
-    title: Buat website untuk penggalangan donasi
-    content: 
+    title: Buat website untuk penggalangan dana
     button:
         first:
             title: Donasi
