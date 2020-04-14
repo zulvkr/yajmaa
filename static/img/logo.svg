@@ -16,9 +16,9 @@
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="C:\Users\EPAJX\Downloads\webDev\yajmaa2\logo_print.png"
-   inkscape:export-xdpi="200.01762"
-   inkscape:export-ydpi="200.01762">
+   inkscape:export-filename="C:\Users\EPAJX\Downloads\webDev\yajmaa2\favicon.png"
+   inkscape:export-xdpi="47.765404"
+   inkscape:export-ydpi="47.765404">
   <title
      id="title4579">Yajmaa Logo</title>
   <defs
@@ -30,11 +30,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-2.7608723"
-     inkscape:cy="59.573235"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-580.65779"
+     inkscape:cy="-241.25468"
      inkscape:document-units="mm"
-     inkscape:current-layer="text34"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-global="false"
      inkscape:window-width="1366"
@@ -70,18 +70,7 @@
            height="240"
            x="197.14285"
            y="368.23398" /></flowRegion><flowPara
-         id="flowPara20"></flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="77.863091"
-       y="228.96428"
-       id="text28"><tspan
-         sodipodi:role="line"
-         id="tspan26"
-         x="77.863091"
-         y="228.96428"
-         style="stroke-width:0.26458332px">aazZ</tspan></text>
-    <g
+         id="flowPara20" /></flowRoot>    <g
        aria-label="y"
        transform="scale(1.0451586,0.95679259)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35.42802048px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.88570058px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -89,7 +78,7 @@
       <g
          id="g4571">
         <path
-           style="fill:#1daa43;fill-opacity:1;stroke-width:0.26458332"
+           style="fill:#241daa;fill-opacity:1;stroke-width:0.26458332"
            inkscape:transform-center-x="1.2190476e-06"
            d="m 105.82918,40.33155 -3.61585,6.786691 -5.456903,0.85849 -7.355708,2.242123 -4.46566,-3.251571 -6.786691,-3.61585 -0.85849,-5.456907 -2.242123,-7.355707 3.251571,-4.46566 3.615851,-6.786691 5.456906,-0.858491 7.355708,-2.242123 4.465659,3.251572 6.78669,3.61585 0.85849,5.456906 2.24212,7.355708 z"
            inkscape:randomized="0"

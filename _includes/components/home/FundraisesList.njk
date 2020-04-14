@@ -1,12 +1,22 @@
-<div class="cards-carousel" style="height: 20rem; margin: 1rem 0 0 0;">
+<div class="cards-carousel" style="height: 20rem;">
     <div class="wrapper-1">
         <div class="wrapper-2">
             {% set fundraisesList = collections.fundraises %}
             {% for fundraise in fundraisesList | reverse %}
-                <div class="wrapper-card">
+                <div class="wrapper-card" style="width: 17em;">
                     {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
                 </div>
             {% endfor %}
+            <div class="wrapper-card">
+                <div style="display: flex; align-items: center; justify-content: center;flex-direction: column; padding: 1em;position: relative;height: 100%">
+                    <div class="has-text-primary">
+                        <span class="icon is-large">
+                            <i class="mdi mdi-36px mdi-arrow-right"></i>
+                        </span>
+                    </div>
+                    <div class="has-text-bold has-text-weight-bold">Lihat Semua</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020
+title: Donasi Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020 Dibatalkan
 summary: Ifthar lintas negara 2020
 date: 2020-02-01
 fra:

@@ -62,27 +62,15 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/posts\//) !== null;
-    });
+    return collection.getFilteredByGlob("posts/*.md");
   });
 
   // only content in the `fundraises/` directory
   eleventyConfig.addCollection("fundraises", function(collection) {
-    return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/fundraises\//) !== null;
-    });
-  });
-
-  // Universal slug filter strips unsafe chars from URLs
-  eleventyConfig.addFilter("slugify", function(str) {
-    return slugify(str, {
-      lower: true,
-      replacement: "-",
-      remove: /[*+~.·,()'"`´%!?¿:@]/g
-    });
+    return collection.getFilteredByGlob("fundraises/*.md");
   });
 
   // Don't process folders with static assets e.g. images

@@ -14,15 +14,15 @@ layout: layouts/base.njk
             </div>
         </div>
     </div>
-</div>
-<div class="container-desktop container-tablet-only" style="padding-top: 1.5rem">
-    <div class="padding-sides-touch">
-        <h2 class="title is-size-4">Donasi Program Ramadhan</h2>
-    </div>
-    {% include "components/home/FundraisesList.njk" %}
-    <div class="padding-sides-touch">
-        <h2 class="title is-size-4">Info Terkini</h2>
-        {{ PostsList.postsList(collections.posts, metadata) }}
-    </div>
 
+    <div class="container-desktop container-tablet-only" style="padding-top: 1.5rem">
+        <div class="padding-sides-touch">
+            <h2 class="title is-size-4">Donasi Program Ramadhan</h2>
+        </div>
+        {% include "components/home/FundraisesList.njk" %}
+        <div class="padding-sides-touch">
+            <h2 class="title is-size-4">Info Terkini</h2>
+            {{ PostsList.postsList(collections.posts, metadata) }}
+        </div>
+    </div>
 </div>
