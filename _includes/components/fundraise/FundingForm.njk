@@ -1,0 +1,10 @@
+<div id="fundingForm">
+    <div v-if="step === 1">
+        <form>
+            {% include "components/fundraise/Step1.njk" %}
+        </form>
+    </div>
+    <div v-if="step === 2">
+        {% include "components/fundraise/Step2.njk" %}
+    </div>
+</div>
