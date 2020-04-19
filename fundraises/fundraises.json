@@ -1,8 +1,0 @@
-{
-  "layout": "layouts/fundraise.njk",
-  "permalink": "fundraises/{{ title | slug }}/index.html",
-  "tags": "fundraise",
-  "fr_target": "undefined",
-  "fr_raised": "Rp 0",
-  "fr_progress": "0"
-}

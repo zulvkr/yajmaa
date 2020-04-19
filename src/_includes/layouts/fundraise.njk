@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: pagesData
+  size: 1
+  alias: pageData
+pagesData: 
+  - post
+  - funding
+permalink: fundraises/{{ title | slug }}/{{ pageData }}/
+---
+{% import "components/macros/Progress.njk" as Progress %}
+{% import "components/macros/Banner.njk" as Banner %}
+
+{% if pageData == "post" %}
+  {% include "components/fundraise/Page1.njk" %}
+{% else %}
+  {% include "components/fundraise/Page2.njk" %}
+{% endif %}

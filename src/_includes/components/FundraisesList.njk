@@ -1,0 +1,35 @@
+<section class="section">
+  {# get fundraise from parent layout #}
+  {% for fundraise in fundraiseslist | reverse %}
+    <article class="card">
+      {# this parts refer to https://www.11ty.dev/docs/collections/ #}
+      <h3 class="is-size-4">
+        <a href="{{ fundraise.url | url }}">
+          {{ fundraise.data.title }}
+        </a>
+      </h3>
+      {% if fundraise.data.summary %}
+        <p class="is-size-5">
+          {{ fundraise.data.summary }}
+        </p>
+      {% endif %}
+      <p class="is-size-6">
+        <time datetime="{{ fundraise.date | machineDate }}">
+          {{ fundraise.date | readableDate }} by {{ metadata.author.name }}
+        </time>
+      </p>
+      {% if fundraise.data.tags %}
+        <div class="tags">
+          {% for tag in fundraise.data.tags %}
+            {%- if tag != "fundraise" -%}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <span class="tag">
+                <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+              </span>
+            {%- endif -%}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>

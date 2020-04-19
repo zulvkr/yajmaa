@@ -1,0 +1,26 @@
+{% macro cardFra(data, url)%}
+
+  {% import "components/macros/Banner.njk" as Banner %}
+  {% import "components/macros/Progress.njk" as Progress %}
+
+  <div class="card -fra">
+    <div class="card-image -fra">
+      {{ Banner.banner(data.banner.image, data.banner.style, data.title ) }}
+    </div>
+    <div class="card-content -fra">
+      <h3 class="title">
+        <a href="{{ url }}" class="stretched-link">{{ data.title }}</a>
+      </h3>
+      <div class="raised">
+        <div>Terkumpul {{ data.fra.raised | rupiah }}</div>
+        <div>
+          {% if data.fra.hasTarget %}
+            {{ data.fra.raised/data.fra.target*100+"%" }}
+          {% endif %}
+        </div>
+      </div>
+      {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
+    </div>
+  </div>
+
+{% endmacro %}}

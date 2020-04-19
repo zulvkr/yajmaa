@@ -1,0 +1,10 @@
+<div class="container-tablet-only padding-sides-touch">
+    <div style="margin: 0 0 1rem 0">
+        <div class="is-size-6 has-text-grey has-text-right ">
+            <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+        </div>
+    </div>
+    <div class="content ">
+        {{ content | safe }}
+    </div>
+</div>

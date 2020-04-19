@@ -1,0 +1,6 @@
+.fra-banner {
+  @include tablet {
+    border-radius: $radius-large;
+    overflow: hidden;
+  }
+}

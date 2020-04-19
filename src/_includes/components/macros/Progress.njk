@@ -1,0 +1,15 @@
+{% macro progress(hasTarget, target, raised) %}
+
+  {% if hasTarget %}
+    {% set class = "is-primary" %}
+    {% set progress = raised/target*100 %}
+  {% else %}
+    {% set class = "is-info" %}
+    {% set progress = 100 %}
+  {% endif %}
+
+  <progress class="progress {{ class }}" value="{{ progress }}" max="100" style="height: 0.4rem">
+    {{ progress }}%
+  </progress>
+
+{% endmacro %}

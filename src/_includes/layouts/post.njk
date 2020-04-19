@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+permalink: posts/{{ title | slug }}/
+---
+{# apply bulma class content #}
+<div class="container-desktop">
+  <div class="is-clipped-touch" style="margin: 0 0 1.5rem 0">
+    <div class="columns">
+      <div class="column container-tablet-only is-offset-2-desktop is-8-desktop">
+        <header class="padding-sides-touch" style="margin: 2.5rem 0 3rem 0">
+          <p class="has-text-grey">
+          oleh {{ metadata.author.name }} -<time datetime="{{ date | machineDate }}">
+              {{ date | readableDate }}</time>
+          </p>
+          <h1 class="title is-size-1-desktop">{{ title }}</h1>
+        </header>
+        <article class="padding-sides-touch" >
+          <div class="content">
+            {{ content | safe }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <a href="{{ '/blog/' | url }}">← Blog index</a>
+  </nav>
+  <div class="container-desktop">

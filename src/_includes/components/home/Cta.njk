@@ -1,0 +1,8 @@
+<h1 class="title" style="margin-bottom: 1.8rem">{{ cta.title }}</h1>
+<h2 class="subtitle">{{ content | safe }}</h2>
+<div class="buttons has-text-weight-bold" style="margin-top: 1.5rem">
+    <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
+    {% if cta.button.second.title %}
+        <a href="{{ cta.button.second.link }}" class="button">{{ cta.button.second.title }}</a>
+    {% endif %}
+</div>

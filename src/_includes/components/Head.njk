@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# get data from front-matter. Title is for posts, renderData is for tags pages, metadata should be for homepage #}
+  <title>{{ title or renderData.title or metadata.title }}</title>
+
+  {# add netlify identity widget https://github.com/netlify/netlify-identity-widget, proposed: make button for it#}
+  {# <script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> #}
+
+  <link rel="stylesheet" href="/_includes/assets/css/buefy-custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.min.css">
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+  {% set css %}
+    {% include "assets/css/inline.css" %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
+
+  {% set js %}
+    {% include "assets/js/inline.js" %}
+  {% endset %}
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+</head>
