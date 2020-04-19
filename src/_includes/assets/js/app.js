@@ -10,7 +10,8 @@ var fundingForm = new Vue({
     amount: null,
     toggle: true,
     currency: "Rp",
-    step: 1
+    step: 1,
+    paymentMethod: false,
   },
   computed: {
     amountFormatted: function () {
@@ -32,7 +33,10 @@ var fundingForm = new Vue({
       }
     },
     nextStep: function() {
-      this.step += 1;
+      this.step++;
+    },
+    previousStep: function() {
+      this.step--;
     }
   }
 })
