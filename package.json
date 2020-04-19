@@ -1,14 +1,14 @@
 {
   "name": "yajmaa",
   "version": "0.1.0",
-  "description": "A donation platform template",
+  "description": "Situs web rintisan untuk penggalangan dana.",
   "scripts": {
-    "build": "npx eleventy",
-    "serve": "npx eleventy --serve",
-    "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy",
-    "css-build": "npx node-sass --output-style compressed scss/buefy-custom.scss _includes/assets/css/buefy-custom.css",
-    "css-watch": "npx node-sass --watch scss/buefy-custom.scss -o _includes/assets/css/ --source-map true"
+    "start": "npm run serve",
+    "build": "gulp limit thumb && npx node-sass --output-style compressed src/scss/buefy-custom.scss src/_includes/assets/css/buefy-custom.css && npx eleventy",
+    "serve": "concurrently npm:serve-*",
+    "serve-eleventy": "npx eleventy --serve",
+    "serve-css": "npx node-sass --watch src/scss/buefy-custom.scss -o _site/_includes/assets/css/ --source-map true",
+    "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
     "type": "git",
@@ -24,16 +24,19 @@
     "@11ty/eleventy": "^0.10.0",
     "buefy": "^0.8.12",
     "bulma": "^0.8.2",
+    "gulp": "^4.0.2",
     "luxon": "^1.21.3",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5",
-    "node-sass": "^4.13.1",
-    "postcss": "^7.0.27"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.4",
     "clean-css": "^4.2.1",
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
     "eleventy-plugin-lazyimages": "^1.1.1",
+    "gulp-responsive": "^3.0.1",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"
   },

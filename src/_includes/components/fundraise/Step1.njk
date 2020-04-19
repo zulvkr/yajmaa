@@ -1,8 +1,8 @@
 {# <div class="" style="padding: 1rem; margin: 1rem; border-radius: 6px"> #}
-    <div class="field card">
+    <div class="field">
         <label class="label is-hidden">Jumlah Donasi</label>
         <div class="field has-addons">
-            <p class="control">
+            <p class="control is-primary">
                 <span class="select">
                     <select v-model="currency">
                         <option>Rp</option>
@@ -10,7 +10,7 @@
                     </select>
                 </span>
             </p>
-            <p class="control is-expanded">
+            <p class="control is-expanded is-primary">
                 <input class="input has-text-weight-bold" type="number" v-model="amount" v-if="toggle" @blur="onBlurNumber" placeholder="Jumlah Donasi" lazy number>
                 <input class="input has-text-weight-bold" type="text" v-model="amountFormatted" v-if="!toggle" @focus="onFocusText" placeholder="Jumlah Donasi">
             </p>

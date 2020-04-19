@@ -14,8 +14,6 @@ module.exports = function(eleventyConfig) {
     imgSelector : ".lazy"
   });
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
@@ -32,13 +30,11 @@ module.exports = function(eleventyConfig) {
     return "Rp "+ valueRupiah.replace(/,/g, ".");
   });
 
-  // This refers to https://www.11ty.dev/docs/quicktips/inline-css/
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  // This refers to https://www.11ty.dev/docs/quicktips/inline-js/
   // Minify JS
   eleventyConfig.addFilter("jsmin", function(code) {
     let minified = UglifyJS.minify(code);
@@ -65,19 +61,18 @@ module.exports = function(eleventyConfig) {
   
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("posts/*.md");
+    return collection.getFilteredByGlob("src/posts/*.md");
   });
 
   // only content in the `fundraises/` directory
   eleventyConfig.addCollection("fundraises", function(collection) {
-    return collection.getFilteredByGlob("fundraises/*.md");
+    return collection.getFilteredByGlob("src/fundraises/*.md");
   });
 
   // Don't process folders with static assets e.g. images
-  eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("static/img");
-  eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("_includes/assets");
+  eleventyConfig.addPassthroughCopy("src/static/img");
+  eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets");
 
   // I need to know how code below works
   /* Markdown Plugins */
@@ -98,20 +93,18 @@ module.exports = function(eleventyConfig) {
   );
 
   return {
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html"],
 
     // If your site lives in a different subdirectory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about it.
     // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
-
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       data: "_data",
       output: "_site"
