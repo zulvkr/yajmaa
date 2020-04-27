@@ -1,0 +1,40 @@
+// Colors
+
+$orange:       hsl(14,  100%, 53%);
+$yellow:       hsl(48,  100%, 67%);
+$green:        #241daa;
+$turquoise:    hsl(171, 100%, 41%);
+$cyan:         hsl(204, 86%,  53%);
+$blue:         hsl(217, 71%,  53%);
+$purple:       hsl(271, 100%, 71%);
+$red:          hsl(348, 100%, 61%);
+
+$primary: $green;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+// Typography
+
+$family-sans-serif: "Nunito Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: monospace;
+$render-mode: optimizeLegibility;
+
+// Spacing
+
+$block-spacing: 0rem;
+$hr-margin: 1rem 0;
+
+// Responsiveness
+
+$gap: 32px;
+$tablet: 500px;
+$desktop: 960px + (2 * $gap);
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$link: $primary;
+
+
+

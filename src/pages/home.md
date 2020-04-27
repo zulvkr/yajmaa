@@ -16,4 +16,5 @@ cta:
             link:
 permalink: /
 ---
-Yajmaa adalah situs web rintisan untuk penggalangan dana. Dibuat dengan JAMStack.
+Yajmaa adalah situs web rintisan untuk penggalangan dana.
+Dibuat dengan JAMStack.

@@ -1,13 +1,9 @@
-<header>
-    <div class="padding-sides-tablet-only">
-        <div class="fra-banner container-tablet-only">
-            {{ Banner.banner(banner.image, banner.style, title) }}
-        </div>
+<header class="container-tablet-only">
+    <div class="fra-banner">
+        {{ Banner.banner(banner.image, banner.style, title) }}
     </div>
-    <div class="container-tablet-only padding-sides-touch is-hidden-desktop">
-        <div style="margin: 0.75rem 0 0.5rem 0">
-            <h1 class="title is-size-4">{{ title }}</h1>
-        </div>
+    <div class="container-mobile is-hidden-desktop" style="margin: 0.75rem 0 0.5rem 0">
+        <h1 class="title is-size-4" style="margin-bottom:0.5rem">{{ title }}</h1>
         {% include "components/fundraise/Aside.njk" %}
     </div>
 </header>

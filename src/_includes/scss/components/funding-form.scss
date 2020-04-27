@@ -1,0 +1,12 @@
+#fundingForm .field-label {
+    @include tablet-only {
+        flex-grow: 2;
+    }
+    text-align: left;
+}
+#fundingForm .field-label {
+    @include tablet-only {
+        flex-grow: 2;
+    }
+    text-align: left;
+}

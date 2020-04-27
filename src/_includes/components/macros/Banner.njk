@@ -7,12 +7,6 @@
     {% set style_safe = "contain" %}
   {% endif %}
 
-  <style>
-    .layer.-top > img {
-      object-fit: {{style_safe}};
-    }
-  </style>
-
   <div class="banner">
     <div class="layer -bottom image is-16by9">
       <img src="{{ image_safe | url }}" class="lazy"/>
@@ -21,7 +15,7 @@
       <img src="{{ image_safe | url }}" class="lazy"/>
     </div>
     <figure class="layer -top image is-16by9 ">
-      <img src="{{ image_safe | url }}" alt="{{ alt_safe }}" class="lazy"/>
+      <img src="{{ image_safe | url }}" alt="{{ alt_safe }}" class="lazy" style="object-fit: {{ style_safe }}"/>
     </figure>
   </div>
 

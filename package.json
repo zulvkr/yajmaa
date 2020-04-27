@@ -4,10 +4,10 @@
   "description": "Situs web rintisan untuk penggalangan dana.",
   "scripts": {
     "start": "npm run serve",
-    "build": "gulp limit thumb && npx node-sass --output-style compressed src/scss/buefy-custom.scss src/_includes/assets/css/buefy-custom.css && npx eleventy",
+    "build": "gulp limit thumb && npx node-sass --output-style compressed src/_includes/scss/main.scss -o src/_includes/assets/css/ && npx eleventy",
     "serve": "concurrently npm:serve-*",
     "serve-eleventy": "npx eleventy --serve",
-    "serve-css": "npx node-sass --watch src/scss/buefy-custom.scss -o _site/_includes/assets/css/ --source-map true",
+    "serve-css": "npx node-sass --watch src/_includes/scss/main.scss -o src/_includes/assets/css/ --source-map true",
     "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "eleventy-plugin-lazyimages": "^1.1.1",
+    "eleventy-plugin-seo": "^0.5.0",
     "gulp-responsive": "^3.0.1",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"

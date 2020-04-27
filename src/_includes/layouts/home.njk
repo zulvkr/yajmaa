@@ -1,28 +1,44 @@
----
-layout: layouts/base.njk
----
 {% import "components/macros/Banner.njk" as Banner %}
 {% import "components/macros/CardFra.njk" as CardFra %}
 {% import "components/macros/PostsList.njk" as PostsList %}
-{# {% impert cardInfo(cardTitle, avatar, name, link=false, linkType="whatsapp") %} #}
 
-<div class="is-clipped-touch has-background-white-bis">
-    <div class="container-desktop container-tablet-only padding-sides-touch" style="padding-top: 6rem;padding-bottom:4rem;">
-        <div class="columns">
-            <div class="column is-9-desktop">
-                {% include "components/home/Cta.njk" %}
-            </div>
-        </div>
-    </div>
+<!doctype html>
+<html lang="en">
+    {% include "components/Head.njk" %}
+    <body>
+        <div class="is-clipped-touch">
+            <section class="hero is-medium is-light is-bold">
+                {% include "components/home/Nav.njk" %}
+                <div class="hero-body" style="text-align:center;">
+                    <div class="container container-tablet-only container-mobile">
+                        <h1 class="title" style="margin-bottom:2rem;font-weight:800;">{{ cta.title }}</h1>
+                        <h2 class="subtitle">{{ content | safe }}</h2>
+                        <div class="cta-button" style="display: inline-block;margin-top:1.5rem;width:100%;">
+                            <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
+                            {% if cta.button.second.title %}
+                                <a href="{{ cta.button.second.link }}" class="button is-outlined is-primary">{{ cta.button.second.title }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="container-desktop container-tablet-only" style="padding-top: 1.5rem">
-        <div class="padding-sides-touch">
-            <h2 class="title is-size-4">Donasi Program Ramadhan</h2>
+            <section class="container container-tablet-only container-mobile" style="padding-top: 3rem;">
+                <div style="text-align:center;">
+                    <h2 class="title is-size-4">Donasi Program Ramadhan</h2>
+                </div>
+                <hr>
+                {% include "components/home/FundraisesList.njk" %}
+            </section>
+            <section class="container container-tablet-only container-mobile" style="padding-top: 3rem;">
+                <div style="text-align:center;">
+                    <h2 class="title is-size-4">Info Terkini</h2>
+                </div>
+                <hr>
+                {{ PostsList.postsList(collections.posts, metadata) }}
+            </section>
         </div>
-        {% include "components/home/FundraisesList.njk" %}
-        <div class="padding-sides-touch">
-            <h2 class="title is-size-4">Info Terkini</h2>
-            {{ PostsList.postsList(collections.posts, metadata) }}
-        </div>
-    </div>
-</div>
+        {% include "components/Footer.njk" %}
+        {% include "components/Script.njk" %}
+    </body>
+</html>

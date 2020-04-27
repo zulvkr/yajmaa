@@ -5,23 +5,39 @@
   {# get data from front-matter. Title is for posts, renderData is for tags pages, metadata should be for homepage #}
   <title>{{ title or renderData.title or metadata.title }}</title>
 
-  {# add netlify identity widget https://github.com/netlify/netlify-identity-widget, proposed: make button for it#}
-  {# <script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> #}
+  {# SEO #}
+  <meta name="description" content="{{ title }} - {{ metadata.title }}">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="{{ author or metadata.author.name }}">
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ title }} - {{ metadata.title }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+  <meta property="og:description" content="{{ summary or title }}">
+  <meta property="og:image" content="{{ metadata.url }}{{ banner.image }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+  <meta name="twitter:title" content="{{ title }} - {{ metadata.title }}">
+  <meta name="twitter:description" content="{{ summary or title }}">
 
-  <link rel="stylesheet" href="/_includes/assets/css/buefy-custom.css">
+  {# main css #}
+  <link rel="stylesheet" href="/_includes/assets/css/main.css">
+
+  {# font icon #}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.min.css">
-  <link rel="icon" type="image/png" href="/static/img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
-  {% set css %}
-    {% include "assets/css/inline.css" %}
-  {% endset %}
-  <style>{{ css | cssmin | safe }}</style>
 
-  {% set js %}
-    {% include "assets/js/inline.js" %}
+  {# favicon #}
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+
+  {# fonts #}
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+
+  {# inline css #}
+  {% set css %}
+  {% include "assets/css/inline.css" %}
   {% endset %}
-  <script>
-    {{ js | jsmin | safe }}
-  </script>
+  <style>
+    {{css | cssmin | safe}}
+  </style>
 
 </head>

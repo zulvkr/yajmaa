@@ -12,7 +12,7 @@ banner:
 tags:
   - tech
 ---
-
+{{ renderData.image }}
 Insya Allah, dalam momen Ramadhan tahun ini, Tim Peduli Muslim mengadakan program Ifthar dan Sahur Lintas Negara. Adapun negara sasaran program ini selain tentunya tanah air kita sendiri, adalah empat negara berikut:
 
 1. India

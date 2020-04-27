@@ -7,10 +7,10 @@ var navbar = new Vue({
 var fundingForm = new Vue({
   el: "#fundingForm",
   data: {
-    amount: null,
+    amount: '',
     toggle: true,
     currency: "Rp",
-    step: 1,
+    step: 0,
     paymentMethod: false,
   },
   computed: {
@@ -24,6 +24,7 @@ var fundingForm = new Vue({
     },
     onFocusText() {
       this.toggle = true;
+      this.amount = '';
     },
     thousandSeprator(amount) {
       if (amount !== '' || amount !== undefined || amount !== 0 || amount !== '0' || amount !== null) {

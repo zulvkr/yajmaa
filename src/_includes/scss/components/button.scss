@@ -1,0 +1,45 @@
+.fra-button {
+  padding: 0 0.75rem;
+  > .button {
+    font-weight: $weight-bold;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+  @include tablet-only {
+    flex-wrap: wrap;
+    display: flex;
+    padding:0;
+    > .button {
+      width: auto;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.cta-button {
+  padding: 0 0.75rem;
+  > .button {
+    font-weight: $weight-bold;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+  @include tablet {
+    flex-wrap: wrap;
+    display: flex;
+    padding:0;
+    > .button {
+      width: 10rem;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

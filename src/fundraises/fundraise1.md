@@ -7,7 +7,7 @@ fra:
   target: 10000000
   raised: 5400000
 banner:
-  image: /static/img/pm1.png
+  image: /static/img/white-egg-on-brown-egg-tray-4110226.jpg
   style: contain
 tags:
   - tech
