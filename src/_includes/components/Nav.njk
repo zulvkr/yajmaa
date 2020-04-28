@@ -1,24 +1,28 @@
 <div id="navbar">
     <template>
         <b-navbar spaced shadow class="is-transparent">
-                <template slot="brand">
-                    <b-navbar-item href="{{ '/' | url }}">
-                        <img src="{{ metadata.brand_logo | url }}" alt="{{ metadata.title }}">
+            <template slot="brand">
+                <b-navbar-item href="{{ '/' | url }}">
+                    <img src="{{ metadata.brand_logo | url }}" alt="{{ metadata.title }}">
+                </b-navbar-item>
+                <b-navbar-item href="{{ '/' | url }}" style="margin-right: 1em; padding-left: 0;">
+                    <h1 style="font-weight: 900;text-transform: uppercase;letter-spacing:1px;">{{ metadata.title }}</h1>
+                </b-navbar-item>
+            </template>
+            <template slot="end">
+                {# copied from https://www.11ty.dev/docs/plugins/navigation/#copy-and-paste-templates #}
+                {% set navPages = collections.all | eleventyNavigation %}
+                {% for navItem in navPages %}
+                    <b-navbar-item href="{{ navItem.url | url }}" {% if navItem.url == page.url %}active{% endif %}>
+                        {{ navItem.title }}
                     </b-navbar-item>
-                    <b-navbar-item href="{{ '/' | url }}" style="margin-right: 1em; padding-left: 0;">
-                        <h1 style="font-size: 1.25em; font-weight: 900;">{{ metadata.title }}</h1>
-                    </b-navbar-item>
-                </template>
-                <template slot="end">
-                    {# copied from https://www.11ty.dev/docs/plugins/navigation/#copy-and-paste-templates #}
-                    {% set navPages = collections.all | eleventyNavigation %}
-                    {% for navItem in navPages %}
-                        <b-navbar-item href="{{ navItem.url | url }}" class="has-text-weight-bold"
-                        {% if navItem.url == page.url %}active{% endif %}>
-                            {{ navItem.title }}
-                        </b-navbar-item>
-                    {% endfor %}
-                </template>
+                {% endfor %}
+                <b-navbar-item tag="div">
+                    <div class="buttons">
+                        <a class="button is-outlined is-dark has-text-weight-bold" style="height: 2rem;">Donasi</a>
+                    </div>
+                </b-navbar-item>
+            </template>
         </b-navbar>
     </template>
 </div>

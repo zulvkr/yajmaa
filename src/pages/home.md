@@ -7,7 +7,7 @@ cta:
     button:
         first:
             title: Donasi
-            link: /fundraise
+            link: /fundraises
         second:
             title: Kenali Kami
             link: /about

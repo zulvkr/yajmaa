@@ -1,0 +1,14 @@
+{% macro fundraisesList(fundraises) %}
+
+{% import "components/macros/CardFra.njk" as CardFra %}
+
+    <div class="columns is-multiline">
+        {% for fundraise in fundraises | reverse %}
+
+            <div class="column is-full is-6-tablet is-4-desktop">
+                {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endmacro %}

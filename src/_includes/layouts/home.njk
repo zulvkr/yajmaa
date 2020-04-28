@@ -23,19 +23,25 @@
                 </div>
             </section>
 
-            <section class="container container-tablet-only container-mobile" style="padding-top: 3rem;">
-                <div style="text-align:center;">
-                    <h2 class="title is-size-4">Donasi Program Ramadhan</h2>
+            <section style="padding-top: 3rem;padding-bottom:3rem;">
+                <div class="container container-tablet-only container-mobile">
+                    <div style="text-align:center;text-transform:uppercase;">
+                        <h2 class="title is-size-5" style="font-weight: 800;">Donasi Program Ramadhan</h2>
+                    </div>
+                    <br>
+                    {% include "components/home/FundraisesList.njk" %}
                 </div>
-                <hr>
-                {% include "components/home/FundraisesList.njk" %}
             </section>
-            <section class="container container-tablet-only container-mobile" style="padding-top: 3rem;">
-                <div style="text-align:center;">
-                    <h2 class="title is-size-4">Info Terkini</h2>
+            <section class="has-background-white-ter" style="padding-top: 3rem;">
+                <div class="container container-tablet-only container-mobile">
+                    <div style="text-align:center;text-transform:uppercase;">
+                        <h2 class="title is-size-5" style="font-weight: 800;">Info Terbaru</h2>
+                    </div>
+                    <br>
+                    <div style="padding-top: 1.5rem;padding-bottom: 1.5rem;">
+                        {{ PostsList.postsList(collections.posts, metadata) }}
+                    </div>
                 </div>
-                <hr>
-                {{ PostsList.postsList(collections.posts, metadata) }}
             </section>
         </div>
         {% include "components/Footer.njk" %}

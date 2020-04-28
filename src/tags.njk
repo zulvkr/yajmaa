@@ -16,10 +16,17 @@ renderData:
   title: "Tagged “{{ tag }}”"
 ---
 
+{% import "components/macros/PostsList.njk" as PostsList %}
+
 <h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[ tag ] %}
-{% include "components/PostsList.njk" %}
+{# {% set postslist = collections[ tag ] %} #}
+{# {% include "components/PostsList.njk" %} #}
+
+<div class="container container-mobile container-tablet-only">
+    <h1 class="title">{{ title }}</h1>
+    {{ PostsList.postsList(collections[ tag ], metadata) }}
+</div>
 
 <nav>
   <a href="{{ '/blog/' | url }}">← Blog index</a>
