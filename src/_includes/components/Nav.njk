@@ -1,6 +1,6 @@
 <div id="navbar">
     <template>
-        <b-navbar shadow class="is-transparent">
+        <b-navbar spaced shadow class="is-transparent">
                 <template slot="brand">
                     <b-navbar-item href="{{ '/' | url }}">
                         <img src="{{ metadata.brand_logo | url }}" alt="{{ metadata.title }}">
@@ -9,7 +9,7 @@
                         <h1 style="font-size: 1.25em; font-weight: 900;">{{ metadata.title }}</h1>
                     </b-navbar-item>
                 </template>
-                <template slot="start">
+                <template slot="end">
                     {# copied from https://www.11ty.dev/docs/plugins/navigation/#copy-and-paste-templates #}
                     {% set navPages = collections.all | eleventyNavigation %}
                     {% for navItem in navPages %}

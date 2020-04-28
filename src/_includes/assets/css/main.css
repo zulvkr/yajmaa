@@ -4020,7 +4020,7 @@ button.dropdown-item {
     min-height: 3.25rem;
     width: 100%; }
   .navbar.has-shadow {
-    box-shadow: 0px 5px 7px -7px rgba(47, 43, 59, 0.62); }
+    box-shadow: 0 2px 0 0 whitesmoke; }
   .navbar.is-fixed-bottom, .navbar.is-fixed-top {
     left: 0;
     position: fixed;
@@ -4029,7 +4029,7 @@ button.dropdown-item {
   .navbar.is-fixed-bottom {
     bottom: 0; }
     .navbar.is-fixed-bottom.has-shadow {
-      box-shadow: 0 -2px 0 0 rgba(47, 43, 59, 0.62); }
+      box-shadow: 0 -2px 0 0 whitesmoke; }
   .navbar.is-fixed-top {
     top: 0; }
 
@@ -6305,7 +6305,7 @@ input[type="number"] {
   position: relative;
   top: 0;
   left: 0;
-  height: 8rem; }
+  height: 23rem; }
   .cards-carousel > .wrapper-1 {
     position: absolute;
     top: 0;
@@ -6313,33 +6313,15 @@ input[type="number"] {
     height: inherit;
     width: 100%;
     overflow-x: auto;
-    padding: 0.75rem 0; }
+    padding: 1rem 0; }
     .cards-carousel > .wrapper-1 > .wrapper-2 {
       display: flex;
-      padding: 0 0.75rem;
       height: 100%; }
-      @media screen and (max-width: 1023px) {
-        .cards-carousel > .wrapper-1 > .wrapper-2:after {
-          content: "";
-          display: block;
-          flex: none;
-          width: 0.75rem;
-          height: 1px; } }
-      @media screen and (min-width: 1024px) {
-        .cards-carousel > .wrapper-1 > .wrapper-2 {
-          padding: 0; } }
-  @media screen and (min-width: 1024px) and (max-width: 1023px) {
-    .cards-carousel > .wrapper-1 > .wrapper-2:after {
-      content: "";
-      display: block;
-      flex: none;
-      width: 0;
-      height: 1px; } }
       .cards-carousel > .wrapper-1 > .wrapper-2 > .wrapper-card {
         flex: none;
         height: 100%;
         width: auto;
-        padding: 0 0.375rem; }
+        padding: 0 0.7rem; }
 
 .fra-button {
   padding: 0 0.75rem; }
