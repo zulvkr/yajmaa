@@ -24,6 +24,10 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  eleventyConfig.addFilter("thumb", path => {
+    return path.replace("/img/","/img/thumb/");
+  });
+
   //Native currency filter
   eleventyConfig.addFilter("rupiah", value => {
     const valueRupiah = new Intl.NumberFormat("id-ID").format(value);

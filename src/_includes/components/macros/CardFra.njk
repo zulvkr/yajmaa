@@ -5,7 +5,7 @@
 
   <div class="card -fra">
     <div class="card-image -fra">
-      {{ Banner.banner(data.banner.image, data.banner.style, data.title ) }}
+      {{ Banner.banner(data.banner.image | thumb, data.banner.style, data.title ) }}
     </div>
     <div class="card-content -fra">
       <h3 class="title">
