@@ -13,18 +13,21 @@
   <meta property="og:title" content="{{ title }} - {{ metadata.title }}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-  <meta property="og:description" content="{{ summary or title }}">
+  <meta property="og:description" content="{{ excerpt or title }}">
   <meta property="og:image" content="{{ metadata.url }}{{ banner.image }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="{{ metadata.url }}{{ page.url }}">
   <meta name="twitter:title" content="{{ title }} - {{ metadata.title }}">
-  <meta name="twitter:description" content="{{ summary or title }}">
+  <meta name="twitter:description" content="{{ excerpt or title }}">
 
   {# main css #}
   <link rel="stylesheet" href="/_includes/assets/css/main.css">
 
   {# font icon #}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.min.css">
+
+  {# fonts #}
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
 
   {# favicon #}
   <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
@@ -36,16 +39,13 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-config" content="/static/img/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-  
-  {# fonts #}
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
 
   {# inline css #}
-  {% set css %}
+  {# {% set css %}
   {% include "assets/css/inline.css" %}
   {% endset %}
   <style>
     {{css | cssmin | safe}}
-  </style>
+  </style> #}
 
 </head>

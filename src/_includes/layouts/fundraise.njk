@@ -8,15 +8,18 @@ pagesData:
   - post
   - funding
 permalink: fundraises/{{ title | slug }}/{{ pageData }}/
-image: aaa
-renderData:
-  image: "{{ metadata.url }}{{ banner.image }}"
 ---
 {% import "components/macros/Progress.njk" as Progress %}
 {% import "components/macros/Banner.njk" as Banner %}
-{# Paginate #}
-{% if pageData == "post" %}
-  {% include "layouts/fundraise_1.njk" %}
-{% else %}
-  {% include "layouts/fundraise_2.njk" %}
-{% endif %}
+{% import "components/macros/CardFra.njk" as CardFra %}
+
+<header>
+  {% include "components/Nav.njk" %}
+</header>
+<main>
+  {% if pageData == "post" %}
+    {% include "layouts/fundraise_1.njk" %}
+  {% else %}
+    {% include "layouts/fundraise_2.njk" %}
+  {% endif %}
+</main>

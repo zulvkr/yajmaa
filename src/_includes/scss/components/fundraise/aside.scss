@@ -1,13 +1,13 @@
 .fra-aside {
-  padding-bottom: 0.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  padding-bottom: 0.5rem;
   color: $grey-dark;
   font-size: $size-small;
   font-weight: $weight-bold;
+  > * {
+    display: inline-block;
+  }
   > .larger {
-    color: $primary;
+    color: $primary;  
     font: {
       size: $size-normal;
     }

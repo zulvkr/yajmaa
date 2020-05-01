@@ -5,9 +5,9 @@
   "scripts": {
     "start": "npm run serve",
     "build": "gulp limit thumb && npx node-sass --output-style compressed src/_includes/scss/main.scss -o src/_includes/assets/css/ && npx eleventy",
-    "serve": "concurrently npm:serve-*",
-    "serve-eleventy": "npx eleventy --serve",
-    "serve-css": "npx node-sass --watch src/_includes/scss/main.scss -o src/_includes/assets/css/ --source-map true",
+    "serve": "concurrently npm:s-*",
+    "s-11ty": "npx eleventy --serve",
+    "s-scss": "npx node-sass --watch src/_includes/scss/main.scss -o src/_includes/assets/css/ --source-map true",
     "debug": "DEBUG=* npx eleventy"
   },
   "repository": {

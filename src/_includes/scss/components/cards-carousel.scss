@@ -17,13 +17,7 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
     padding: $wrapper-padding 0;
     > .wrapper-2 {
       display: flex;
-      // padding: 0 0.75rem;
       height: 100%;
-      // @include false-padding-right(0.75rem);
-      // @include desktop {
-      //   padding: 0;
-      //   @include false-padding-right(0);
-      // }
       > .wrapper-card {
         flex: none;
         height: 100%;

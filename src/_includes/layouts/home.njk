@@ -1,50 +1,41 @@
+---
+layout: layouts/base.njk
+---
+
 {% import "components/macros/Banner.njk" as Banner %}
 {% import "components/macros/CardFra.njk" as CardFra %}
 {% import "components/macros/PostsList.njk" as PostsList %}
 
-<!doctype html>
-<html lang="en">
-    {% include "components/Head.njk" %}
-    <body>
-        <div class="is-clipped-touch">
-            <section class="hero is-medium is-light is-bold">
-                {% include "components/home/Nav.njk" %}
-                <div class="hero-body" style="text-align:center;">
-                    <div class="container container-tablet-only container-mobile">
-                        <h1 class="title" style="margin-bottom:2rem;font-weight:800;">{{ cta.title }}</h1>
-                        <h2 class="subtitle">{{ content | safe }}</h2>
-                        <div class="cta-button" style="display: inline-block;margin-top:1.5rem;width:100%;">
-                            <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
-                            {% if cta.button.second.title %}
-                                <a href="{{ cta.button.second.link }}" class="button is-outlined is-primary">{{ cta.button.second.title }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
+<header>
+    <section class="hero is-medium is-light is-bold">
+        {% include "components/Nav.njk" %}
+        <div class="hero-body has-text-centered">
+            <div class="container container-tablet-only container-mobile">
+                <h1 class="title has-text-weight-black">{{ cta.title }}</h1>
+                <h2 class="subtitle">{{ content | safe }}</h2>
+                <div class="cta-button has-text-centered">
+                    <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
+                    {% if cta.button.second.title %}
+                        <a href="{{ cta.button.second.link }}" class="button is-outlined is-primary">{{ cta.button.second.title }}</a>
+                    {% endif %}
                 </div>
-            </section>
-
-            <section style="padding-top: 3rem;padding-bottom:3rem;">
-                <div class="container container-tablet-only container-mobile">
-                    <div style="text-align:center;text-transform:uppercase;">
-                        <h2 class="title is-size-5" style="font-weight: 800;">Donasi Program Ramadhan</h2>
-                    </div>
-                    <br>
-                    {% include "components/home/FundraisesList.njk" %}
-                </div>
-            </section>
-            <section class="has-background-white-ter" style="padding-top: 3rem;">
-                <div class="container container-tablet-only container-mobile">
-                    <div style="text-align:center;text-transform:uppercase;">
-                        <h2 class="title is-size-5" style="font-weight: 800;">Info Terbaru</h2>
-                    </div>
-                    <br>
-                    <div style="padding-top: 1.5rem;padding-bottom: 1.5rem;">
-                        {{ PostsList.postsList(collections.posts, metadata) }}
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
-        {% include "components/Footer.njk" %}
-        {% include "components/Script.njk" %}
-    </body>
-</html>
+    </section>
+</header>
+<main>
+    <section class="section">
+        <div class="container container-tablet-only container-mobile">
+            <h2 class="title is-size-5 has-text-weight-black has-text-centered is-uppercase">Donasi Program Ramadhan</h2>
+            {% include "components/home/FundraisesList.njk" %}
+        </div>
+    </section>
+    <section class="has-background-white-ter section">
+        <div class="container container-tablet-only container-mobile">
+            <h2 class="title is-size-5 has-text-weight-black has-text-centered is-uppercase">Info Terbaru</h2>
+            <div class="padding-y-1">
+                {{ PostsList.postsList(collections.posts, metadata) }}
+            </div>
+        </div>
+    </section>
+</main>

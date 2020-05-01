@@ -1,23 +1,26 @@
 .fra-button {
   padding: 0 0.75rem;
+  flex-wrap: wrap;
+  display: flex;
   > .button {
     font-weight: $weight-bold;
     width: 100%;
-    &:not(:last-child) {
-      margin-bottom: 0.75rem;
-    }
+    margin-bottom: 0.75rem;
   }
   @include tablet-only {
-    flex-wrap: wrap;
-    display: flex;
-    padding:0;
+    padding: 0;
+    justify-content: flex-end;
     > .button {
       width: auto;
-      &:not(:last-child) {
-        margin-bottom: 0;
-        margin-right: 0.5rem;
-      }
+      margin-bottom: 0;
+      margin-right: 0.5rem;
     }
+  }
+}
+
+.order-2-tablet-only {
+  @include tablet-only {
+    order: 2;
   }
 }
 
@@ -31,9 +34,9 @@
     }
   }
   @include tablet {
-    flex-wrap: wrap;
-    display: flex;
-    padding:0;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
     > .button {
       width: 10rem;
       &:not(:last-child) {

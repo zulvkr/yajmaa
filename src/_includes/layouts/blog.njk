@@ -4,8 +4,14 @@ permalink: /blog/index.html
 ---
 
 {% import "components/macros/PostsList.njk" as PostsList %}
-<div class="container container-mobile container-tablet-only">
-    <h1 class="title">{{ title }}</h1>
-    {{ content | safe }}
-    {{ PostsList.postsList(collections.posts, metadata) }}
-</div>
+<header>
+    {% include "components/HeroHeader.njk" %}
+</header>
+<main>
+    <section class="section">
+        <div class="container container-mobile container-tablet-only">
+            {{ content | safe }}
+            {{ PostsList.postsList(collections.posts, metadata) }}
+        </div>
+    </section>
+</main>

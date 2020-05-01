@@ -1,7 +1,7 @@
-<div class="container container-tablet-only">
-    <div class="is-clipped-touch" style="padding: 3.5rem 0 1.5rem 0" id="fundingForm">
+<div class="container container-tablet-only" id="fundingForm">
+    <section class="section">
         <b-steps v-model="step" :has-navigation=false animated rounded label-position="bottom" size="is-small">
-            
+
             <b-step-item label="Pilihan">
                 {% include "components/fundraise/FundingApp_1.njk" %}
             </b-step-item>
@@ -13,7 +13,7 @@
             <b-step-item label="Konfirmasi">
                 <h1 class="title has-text-centered">Finish</h1>
             </b-step-item>
-            
+
         </b-steps>
-    </div>
+    </section>
 </div>

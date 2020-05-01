@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "funding-form.css",
-	"sources": [
-		"../../scss/components/funding-form.scss"
-	],
-	"names": [],
-	"mappings": ""
-}

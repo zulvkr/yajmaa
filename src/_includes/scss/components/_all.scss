@@ -1,7 +1,26 @@
 @charset "utf-8";
 
+@import "_variables";
+
+// Bulma
+@import "node_modules/bulma/sass/components/card";
+@import "node_modules/bulma/sass/components/dropdown";
+@import "node_modules/bulma/sass/components/navbar";
+
+// Unused Components
+// @import "node_modules/bulma/sass/components/tabs";
+// @import "node_modules/bulma/sass/components/breadcrumb";
+// @import "node_modules/bulma/sass/components/level";
+// @import "node_modules/bulma/sass/components/list";
+// @import "node_modules/bulma/sass/components/media";
+// @import "node_modules/bulma/sass/components/menu";
+// @import "node_modules/bulma/sass/components/message";
+// @import "node_modules/bulma/sass/components/modal";
+// @import "node_modules/bulma/sass/components/pagination";
+// @import "node_modules/bulma/sass/components/panel";
+
+// Extra components
 @import "fundraise/_all";
 @import "macros/_all";
 @import "cards-carousel";
-@import "button";
-@import "funding-form";
+@import "buttons";

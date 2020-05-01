@@ -1,0 +1,66 @@
+// Bulma
+@import "node_modules/bulma/sass/utilities/animations";
+@import "node_modules/bulma/sass/utilities/mixins";
+
+// variables for form height, including button
+$control-height: 3.2em;
+$control-line-height: 1.5;
+@import "node_modules/bulma/sass/utilities/controls";
+
+// Helper
+
+.has-text-weight-black {
+    font-weight: $weight-black !important;
+}
+
+.is-clipped-touch {
+    @include touch {
+        overflow: hidden;
+    }
+}
+
+.padding-y-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.padding-top-1-tablet-only {
+    @include tablet-only {
+        padding-top: 1rem;
+    }
+}
+
+@mixin false-padding-right($width) {
+    @include touch {
+        &:after {
+            content: "";
+            display: block;
+            flex: none;
+            width: $width;
+            height: 1px;
+        }
+    }
+}
+
+// Stretched link
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// Prevent input number spinner
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}

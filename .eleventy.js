@@ -4,7 +4,6 @@ const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
-const pluginSEO = require("eleventy-plugin-seo");
 
 module.exports = function(eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
@@ -14,8 +13,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lazyImagesPlugin, {
     imgSelector : ".lazy"
   });
-
-  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -75,7 +72,8 @@ module.exports = function(eleventyConfig) {
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("src/_includes/assets");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets/js");
 
   // I need to know how code below works
   /* Markdown Plugins */

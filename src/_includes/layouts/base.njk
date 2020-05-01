@@ -2,9 +2,6 @@
 <html lang="en">
 	{% include "components/Head.njk" %}
 	<body>
-		<header class="container">
-			{% include "components/Nav.njk" %}
-		</header>
 		{{ content | safe }}
 		{% include "components/Footer.njk" %}
 		{% include "components/Script.njk" %}

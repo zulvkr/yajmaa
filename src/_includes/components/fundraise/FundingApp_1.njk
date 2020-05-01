@@ -1,26 +1,21 @@
 <form>
-    <div class="columns is-multiline">
-        <div class="column is-full is-6-desktop is-offset-1-desktop">
-            {% include "components/fundraise/Form.njk" %}
-        </div>
-        <div class="column is-full is-4-desktop container-mobile">
-            <section class="box">
-                <h3 class="title is-size-5">Rincian Donasi</h3>
-                <hr>
-                <div style="border-radius: 4px; overflow: hidden">
-                    {{ Banner.banner(banner.image, banner.style, title) }}
-                    <p class="is-size-7 is-size-5-tablet is-size-7-desktop has-text-weight-bold">{{ title | truncate(40) }}</p>
-                    <div class="fra-button">
-                        <a href="{{ pagination.href.previous }}" class="button is-danger is-light has-text-weight-bold">Batal</a>
-                        <button class="button is-primary has-text-weight-bold" v-on:click.prevent="nextStep">
+    <div class="is-clipped-touch">
+        <div class="columns is-multiline">
+            <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
+                <div class="box">
+                    {% include "components/fundraise/Form.njk" %}
+                    <br>
+                    <div class="fra-button has-text-right">
+                        <button class="button is-primary has-text-weight-bold order-2-tablet-only" v-on:click.prevent="nextStep">
                             <span>Lanjut</span>
                             <span class="icon is-medium">
                                 <i class="mdi mdi-24px mdi-chevron-right"></i>
                             </span>
                         </button>
+                        <a href="{{ pagination.href.previous }}" class="button is-danger is-light has-text-weight-bold">Batal</a>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
 </form>
