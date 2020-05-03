@@ -1,6 +1,6 @@
 {% macro banner(image, style, alt) %}
 
-  {% set image_safe = image or "dummy.jpg" %}
+  {% set image_safe = image or "" %}
   {% if style and style == "cover" %}
     {% set style_safe = "cover" %}
   {% else %}
@@ -9,13 +9,13 @@
 
   <div class="banner">
     <div class="layer -bottom image is-16by9">
-      <img src="{{ image_safe | url }}" class="lazy"/>
+      <img src="{{ image_safe | url }}"  alt="{{ alt }}" class="lazy"/>
     </div>
     <div class="layer -middle image is-16by9 is-clipped">
-      <img src="{{ image_safe | url }}" class="lazy"/>
+      <img src="{{ image_safe | url }}"  alt="{{ alt }}" class="lazy"/>
     </div>
     <figure class="layer -top image is-16by9 ">
-      <img src="{{ image_safe | url }}" alt="{{ alt_safe }}" class="lazy" style="object-fit: {{ style_safe }}"/>
+      <img src="{{ image_safe | url }}" alt="{{ alt }}" class="lazy" style="object-fit: {{ style_safe }}"/>
     </figure>
   </div>
 

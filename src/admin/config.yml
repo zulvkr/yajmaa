@@ -1,72 +1,58 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
-# Uncomment below to enable drafts
 publish_mode: editorial_workflow
 
-media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+media_folder: "static/img"
 public: "static/img"
 
 collections:
-  # Our blog posts
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+  # Info in /posts/
+  - name: "info" # Used in routes, e.g., /admin/collections/blog
+    label: "Info" # Used in the UI
     folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal terbit", name: "date", widget: "datetime" }
+      - { label: "Kutipan", name: "excerpt", widget: "text" }
+      - { label: "Label", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Konten", name: "body", widget: "markdown" }
+  # Pages in /pages/
   - name: "pages"
-    label: "Page"
+    label: "Laman"
     folder: "src/pages"
-    create: false # Change to true to allow editors to create new pages
+    create: false
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal terbit", name: "date", widget: "datetime" }
+      - { label: "Kutipan", name: "excerpt", widget: "text" }
       - { label: "Permalink", name: "permalink", widget: "string" }
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
-  #Our fundraising program
+  # Fundraises in /fundraises/
   - name: "fundraises"
     label: "Penggalangan Dana"
     folder: "src/fundraises"
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "Judul"
-        name: "title"
-        widget: "string"
-      - label: "Tanggal"
-        name: "date"
-        widget: "datetime"
-      - label: "Ringkasan"
-        name: "summary"
-        widget: "text"
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal terbit", name: "date", widget: "datetime" }
+      - { label: "Kutipan", name: "excerpt", widget: "text" }
       - label: "Penggalangan Dana"
-        name: "fundraising"
+        name: "fra"
         widget: "object"
         fields:
-          - label: "Target ditentukan"
-            name: "hasTarget"
-            widget: "boolean"
-            default: true
-          - label: "Target"
-            name: "target"
-            widget: "number"
-            default: "5000000"
-          - label: "Dana terkumpul"
-            name: "raised"
-            widget: "number"
-            default: "2000000"
+          - { label: "Target ditentukan", name: "hasTarget", widget: "boolean", default: true }
+          - { label: "Target", name: "target", widget: "number", default: "5000000" }
+          - { label: "Terkumpul", name: "raised", widget: "number", default: "2000000"}
+      - label: "Spanduk"
+        name: "banner"
+        widget: "object"
+        fields :
+          - { label: "Gambar", name: "image", widget: "image", allow_multiple: "false" }
+          - { label: "Gaya", name: "style", widget: "select", options: [ "contain", "cover" ], default: "contain" }
+      - { label: "Label", name: "tags", widget: "list", default: ["fundraise"] }

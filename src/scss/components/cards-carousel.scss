@@ -23,6 +23,15 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
         height: 100%;
         width: auto;
         padding: 0 0.7rem;
+        .see-all {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 1em;
+          position: relative;
+          height: 100%;
+        }
       }
     }
     //hide scroll

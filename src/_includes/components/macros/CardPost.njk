@@ -1,18 +1,23 @@
 {% macro cardPost(post, metadata) %}
 
-{% import "components/macros/Tags.njk" as Tags %}
-<div class="card -post">
-    <div class="card-content -post">
-        <h3 class="title">
-            <a href="{{ post.url | url }}" class="stretched-link">{{ post.data.title or "Tanpa Judul" }}</a>
-        </h3>
-        <p class="">{{ post.data.summary or "" }}</p>
-        <div class="time">
-            <time datetime="{{ post.date | machineDate }}">
-                {{ post.date | readableDate }} by {{ post.data.author or metadata.author.name }}
-            </time>
+    {% import "components/macros/Tags.njk" as Tags %}
+    <div class="card -post">
+        <div class="card-content -post">
+            <div style="" class="post-separator"></div>
+            <a href="{{ post.url | url }}" class="stretched-link">
+                <h3 class="title" style="margin-bottom: 1rem;">
+                    {{ post.data.title or "Tanpa Judul" }}
+                </h3>
+            </a>
+            <p style="margin-bottom: 1rem;">{{ post.data.summary or "" }}</p>
+            <div class="is-size-7">
+                <p>
+                Oleh {{ post.data.author or metadata.author.name }} • <time datetime="{{ post.date | machineDate }}">
+                        {{ post.date | readableDate }}
+                </time>
+                </p>
+            </div>
+            {# <div class="tags">{{ Tags.tags(post.data.tags) }}</div> #}
         </div>
-        <div class="tags">{{ Tags.tags(post.data.tags) }}</div>
     </div>
-</div>
 {% endmacro %}

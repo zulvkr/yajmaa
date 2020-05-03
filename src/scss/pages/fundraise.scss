@@ -1,0 +1,25 @@
+.fra-aside {
+    padding-bottom: 0.5rem;
+    color: $grey-dark;
+    font-size: $size-small;
+    font-weight: $weight-bold;
+    > * {
+        display: inline-block;
+    }
+    > .larger {
+        color: $primary;
+        font: {
+            size: $size-normal;
+        }
+    }
+    > div:not(:last-child) {
+        margin-right: 0.2rem;
+    }
+}
+
+.fra-banner {
+    @include tablet {
+        border-radius: $radius-large;
+        overflow: hidden;
+    }
+}

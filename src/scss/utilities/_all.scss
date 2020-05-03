@@ -1,0 +1,19 @@
+@import "animations";
+@import "node_modules/bulma/sass/utilities/mixins";
+
+// Controls (Form and button)
+$control-height: 3.2em;
+$control-line-height: 1.5;
+@import "node_modules/bulma/sass/utilities/controls";
+
+@import "helper";
+
+// Base
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
