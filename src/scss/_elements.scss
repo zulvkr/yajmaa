@@ -26,5 +26,10 @@ $button-padding-horizontal: 1.1em;
             }
         }
     }
+    &-funding-app {
+        @include tablet-only {
+            max-width: 420px;
+            margin: auto;
+        }
+    }
 }
-

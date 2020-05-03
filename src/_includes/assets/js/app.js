@@ -1,17 +1,14 @@
-// place for vue app
-var navbar = new Vue({
-  el: "#navbar"
-});
-
-
 var fundingForm = new Vue({
   el: "#fundingForm",
   data: {
+    errors: [],
     amount: '',
-    toggle: true,
-    currency: "Rp",
+    seen: 'text',
+    currency: 'Rp',
     step: 0,
     paymentMethod: false,
+    name: null,
+    whatsapp: null,
   },
   computed: {
     amountFormatted: function () {
@@ -19,11 +16,36 @@ var fundingForm = new Vue({
     }
   },
   methods: {
+    checkForm = function() {
+      if (this.name && this.whatsapp && this.amount && this.paymentMethod && this.currency) {
+        this.errors = [];
+        this.step++;
+      }
+
+      this.errors = [];
+
+      if (!this.amount) {
+        this.errors.push('Jumlah donasi');
+      }
+      if (!this.currency) {
+        this.errors.push('Mata uang');
+      }
+      if (!this.name) {
+        this.errors.push('Nama');
+      }
+      if (!this.whatsapp) {
+        this.errors.push('Whatsapp');
+      }
+      if (!this.paymentMethod) {
+        this.errors.push('Metode pembayaran');
+      }
+
+    },
     onBlurNumber() {
-      this.toggle = false;
+      this.seen = "text";
     },
     onFocusText() {
-      this.toggle = true;
+      this.seen = "number";
       this.amount = '';
     },
     thousandSeprator(amount) {

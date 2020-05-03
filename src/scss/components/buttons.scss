@@ -9,7 +9,6 @@
   }
   @include tablet-only {
     padding: 0;
-    justify-content: flex-end;
     > .button {
       width: auto;
       margin-bottom: 0;

@@ -1,0 +1,23 @@
+$mdi-filename:         "materialdesignicons";
+$mdi-font-name:        "Material Design Icons";
+$mdi-font-family:      "materialdesignicons";
+$mdi-font-weight:      "normal";
+$mdi-font-path:        "../fonts" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "5.1.45" !default;
+
+$mdi-icons: (
+  "facebook": F020C,
+  "twitter": F0544,
+  "account": F0004,
+  "chevron-left": F0141,
+  "chevron-down": F0140,
+  "chevron-right": F0142,
+  "arrow-right": F0054,
+  "instagram": F02FE,
+  "whatsapp": F05A3,
+  "email": F01EE,
+  "telegram": F0501,
+  "bulma": F12E7
+);

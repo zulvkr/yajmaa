@@ -1,20 +1,17 @@
 <section>
-    <div class="is-clipped-touch">
+    <div class="container-funding-app is-clipped-touch">
         <div class="columns is-multiline">
             <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
-                <div class="box">
-                    <h1 class="title is-size-3-desktop is-size-4 has-text-weight-bold">Instruksi Pembayaran</h1>
+                <div class="box has-text-centered">
+                    <h1 class="title is-size-4 has-text-weight-bold">Instruksi Pembayaran</h1>
                     <p>Transfer sesuai nominal di bawah ini</p>
-                    <div class="has-text-weight-bold is-size-4" style="margin: 0.5em 0; text-align: center;">
-                        {% raw %}{{ "Rp " + amountFormatted }}
-                        {% endraw %}
+                    <div class="has-text-weight-bold is-size-4" style="margin: 0.5em 0;">
+                        {{ '{{ "Rp " + amountFormatted }}' }}
                     </div>
                     <p>
                         <span>ke rekening</span>
                         <span class="has-text-weight-bold">
-                            {% raw %}
-                                {{ paymentMethod }}
-                            {% endraw %}
+                            {{ '{{ paymentMethod }}' }} a.n. Yajmaa
                         </span>
                     </p>
                     <div style="font-weight: 700;margin: 0.5rem;padding: 0.5rem 1rem;background-color: #eeeeee;display: flex; height: 3.2em; align-items: center;">
@@ -24,14 +21,12 @@
                         </div>
                     </div>
                     <hr>
+                    <p class='has-text-weight-bold' style="margin-bottom:1rem;">Saya sudah membayar,</p>
                     <div class="fra-button">
                         <button class="button is-primary order-2-tablet-only" v-on:click.prevent="nextStep">
-                            <span>Lanjut</span>
-                            <span class="icon is-medium">
-                                <i class="mdi mdi-24px mdi-chevron-right"></i>
-                            </span>
+                            <span>Konfirmasi Pembayaran</span>
                         </button>
-                        <button v-on:click.prevent="previousStep" class="button is-primary is-light">Kembali</button>
+                        {# <button v-on:click.prevent="previousStep" class="button is-primary is-light">Kembali</button> #}
                     </div>
                 </div>
             </div>

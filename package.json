@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "description": "Situs web rintisan untuk penggalangan dana.",
   "scripts": {
-    "start": "npm run serve",
-    "build": "gulp limit thumb && npx node-sass --output-style compressed src/_includes/scss/main.scss -o src/_includes/assets/css/ && npx eleventy",
-    "serve": "concurrently npm:s-*",
+    "start": "concurrently npm:s-*",
+    "build": "npx gulp limit thumb sass && npx eleventy",
     "s-11ty": "npx eleventy --serve",
-    "s-scss": "npx node-sass --watch src/_includes/scss/main.scss -o src/_includes/assets/css/ --source-map true",
+    "s-scss": "npx gulp sass:watch",
     "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
@@ -25,10 +24,13 @@
     "buefy": "^0.8.12",
     "bulma": "^0.8.2",
     "gulp": "^4.0.2",
+    "gulp-purgecss": "^2.1.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
     "luxon": "^1.21.3",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.14.0"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.4",

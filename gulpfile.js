@@ -1,9 +1,16 @@
-var gulp = require('gulp')
-var responsive = require('gulp-responsive')
+'use strict';
+
+var gulp = require('gulp');
+var responsive = require('gulp-responsive');
+var sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const purgecss = require('gulp-purgecss')
+var sourcemaps = require('gulp-sourcemaps');
+
 
 gulp.task('limit', function () {
     return gulp
-        .src('src/static/img/*.{jpg,png,jpeg}')
+        .src('static/img/*.{jpg,png,jpeg}')
         .pipe(
             responsive(
                 {
@@ -29,7 +36,7 @@ gulp.task('limit', function () {
 
 gulp.task('thumb', function () {
     return gulp
-        .src('src/static/img/*.{jpg,png,jpeg}')
+        .src('static/img/*.{jpg,png,jpeg}')
         .pipe(
             responsive(
                 {
@@ -52,3 +59,24 @@ gulp.task('thumb', function () {
         )
         .pipe(gulp.dest('src/static/img/thumb/'))
 })
+
+gulp.task('sass', function () {
+    return gulp.src('src/scss/main.scss')
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(purgecss({
+            content: ['src/**/*.{njk,js}']
+        }))
+        .pipe(gulp.dest('src/_includes/assets/css/'));
+});
+
+gulp.task('sass:dev', function () {
+    return gulp.src('src/scss/main.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('src/_includes/assets/css/'));
+});
+
+gulp.task('sass:watch', function () {
+    gulp.watch('src/scss/**/*.scss', gulp.series(['sass:dev']));
+});

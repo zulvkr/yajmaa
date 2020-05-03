@@ -10,8 +10,8 @@
             </span>
         </p>
         <p class="control is-expanded is-primary">
-            <input class="input has-text-weight-bold" type="number" v-model="amount" v-if="toggle" @blur="onBlurNumber" placeholder="Jumlah Donasi" lazy number required="required">
-            <input class="input has-text-weight-bold" type="text" v-model="amountFormatted" v-if="!toggle" @focus="onFocusText" placeholder="Jumlah Donasi" required="required">
+            <input class="input has-text-weight-bold" type="number" v-model="amount" v-if="seen === 'number'" @blur="onBlurNumber" placeholder="Jumlah Donasi" number required="required">
+            <input class="input has-text-weight-bold" type="text" v-model="amountFormatted" v-if="seen === 'text'" @focus="onFocusText" placeholder="Jumlah Donasi" required="required">
         </p>
     </div>
 </div>
@@ -36,7 +36,7 @@
     <div class="field-body">
         <div class="field">
             <p class="control is-expanded has-icons-right">
-                <input autocomplete="name" class="input" type="text" placeholder="Nama" required="required">
+                <input v-model="name" autocomplete="name" class="input" type="text" placeholder="Nama" required="required">
                 <span class="icon is-small is-right">
                     <i class="mdi mdi-account"></i>
                 </span>
@@ -44,7 +44,7 @@
         </div>
         <div class="field">
             <p class="control is-expanded has-icons-right">
-                <input class="input" type="tel" autocomplete="tel" placeholder="Nomor Whatsapp" required="required">
+                <input v-model="whatsapp" class="input" type="tel" autocomplete="tel" placeholder="Nomor Whatsapp" required="required">
                 <span class="icon is-small is-right">
                     <i class="mdi mdi-whatsapp"></i>
                 </span>

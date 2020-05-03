@@ -61,7 +61,6 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-
   
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
@@ -75,9 +74,8 @@ module.exports = function(eleventyConfig) {
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("static");
-  eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
-  eleventyConfig.addPassthroughCopy("src/_includes/assets/js");
+  eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets");
 
   // I need to know how code below works
   /* Markdown Plugins */

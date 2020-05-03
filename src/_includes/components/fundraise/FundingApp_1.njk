@@ -1,12 +1,16 @@
 <form>
-    <div class="is-clipped-touch">
+    <div class="container-funding-app is-clipped-touch">
         <div class="columns is-multiline">
             <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
+                <div v-if="errors.length" class="has-text-danger" style="padding: 1rem;">
+                    <b>Wajib diisi: </b>
+                    <span v-for="error in errors">{{ '{{error}}' }},</span>
+                </div>
                 <div class="box">
                     {% include "components/fundraise/Form.njk" %}
                     <br>
                     <div class="fra-button has-text-right">
-                        <button class="button is-primary has-text-weight-bold order-2-tablet-only" v-on:click.prevent="nextStep">
+                        <button class="button is-primary has-text-weight-bold order-2-tablet-only" v-on:click.prevent="checkForm">
                             <span>Lanjut</span>
                             <span class="icon is-medium">
                                 <i class="mdi mdi-24px mdi-chevron-right"></i>
