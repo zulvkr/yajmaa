@@ -1,6 +1,6 @@
 ---
-title: Donasi Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020
-summary: Ifthar lintas negara 2020
+title: Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020
+excerpt: Ifthar lintas negara 2020
 date: 2020-02-01
 fra:
   hasTarget: true

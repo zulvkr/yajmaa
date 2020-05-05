@@ -1,34 +1,38 @@
 .card.-fra {
     border-radius: $radius;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     position: relative;
     overflow: hidden;
-    transform: perspective(1px) translateZ(0);
-    transition-duration: 0.15s;
-    transition-property: transform;
-    transition-timing-function: ease-out;
-    &:hover, &:focus, &:active {
-        transform: translateY(-8px);
-        // @extend %slide-top
+    box-shadow: none;
+    border: $grey-lighter 1px solid;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend %shadow-drop;
     }
-}
 
-.card-content.-fra {
-    font-size: 0.8em;
-    > .title {
-        margin-bottom: 1rem;
-        font-size: 1.25em;
-        font-weight: $weight-bold;
-        height: 3.5rem;
-        overflow: hidden;
-        a {
+    >.card-content.-body {
+        flex-grow: 1;
+        padding-bottom: 0;
+        .title {
             color: $text;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .excerpt {
+            // max-height: 4.2rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
         }
     }
-    > .raised {
-        font-size: 1em;
-        font-weight: $weight-bold;
-        display: flex;
-        justify-content: space-between;
+    >.card-content.-progress {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        .raised {
+            font-weight: $weight-bold;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

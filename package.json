@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zulvkr/yajmaa.git"
+    "url": "https://github.com/zulvkr/yajmaa.git"
   },
   "author": "Ivan Zulfikar <ivan.zulf.ikar@gmail.com> ()",
   "license": "MIT",

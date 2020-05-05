@@ -1,11 +1,12 @@
 {% macro cardPost(post, metadata) %}
 
     {% import "components/macros/Tags.njk" as Tags %}
+    
     <div class="card -post">
         <div class="card-content -post">
             <div style="" class="post-separator"></div>
             <a href="{{ post.url | url }}" class="stretched-link">
-                <h3 class="title" style="margin-bottom: 1rem;">
+                <h3 class="title is-size-5" style="margin-bottom: 1rem;">
                     {{ post.data.title or "Tanpa Judul" }}
                 </h3>
             </a>
@@ -14,7 +15,7 @@
                 <p>
                 Oleh {{ post.data.author or metadata.author.name }} • <time datetime="{{ post.date | machineDate }}">
                         {{ post.date | readableDate }}
-                </time>
+                    </time>
                 </p>
             </div>
             {# <div class="tags">{{ Tags.tags(post.data.tags) }}</div> #}

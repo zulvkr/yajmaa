@@ -13,7 +13,7 @@
         </div>
 
         <div id="navbar" class="navbar-menu">
-            <div class="navbar-end">
+            <div class="navbar-end has-text-weight-bold">
                 {% set navPages = collections.all | eleventyNavigation %}
                 {% for navItem in navPages %}
                     <a class="navbar-item {% if navItem.url == page.url %}is-active{% endif %}" href="{{ navItem.url | url }}">

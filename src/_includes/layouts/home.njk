@@ -11,7 +11,7 @@ layout: layouts/base.njk
         {% include "components/Nav.njk" %}
         <div class="hero-body has-text-centered">
             <div class="container container-tablet-only container-mobile">
-                <h1 class="title has-text-weight-black">{{ cta.title }}</h1>
+                <h1 class="title is-size-2">{{ cta.title | safe }}</h1>
                 <h2 class="subtitle">{{ content | safe }}</h2>
                 <div class="cta-button has-text-centered">
                     <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
@@ -26,14 +26,14 @@ layout: layouts/base.njk
 <main>
     <section class="section">
         <div class="container container-tablet-only container-mobile">
-            <h2 class="title is-size-5 has-text-weight-black has-text-centered is-uppercase">Donasi Program Ramadhan</h2>
+            <h2 class="title is-size-5 has-text-weight-black is-uppercase">Donasi Program Ramadhan</h2>
             {% include "components/home/FundraisesCarousel.njk" %}
         </div>
     </section>
     <hr>
     <section class="section">
         <div class="container container-tablet-only container-mobile">
-            <h2 class="title is-size-5 has-text-weight-black has-text-centered is-uppercase">Info Terbaru</h2>
+            <h2 class="title is-size-5 has-text-weight-black is-uppercase">Info Terbaru</h2>
             <div class="padding-y-1">
                 {{ PostsList.postsList(collections.posts, metadata) }}
             </div>

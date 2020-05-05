@@ -1,4 +1,4 @@
-$card-height: 21rem;
+$card-height: 27rem;
 $wrapper-padding: 1rem;
 $wrapper-height: $card-height + (2 * $wrapper-padding);
 
@@ -7,7 +7,12 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
   top: 0;
   left: 0;
   height: $wrapper-height;
-  > .wrapper-1 {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  > .wrapper-abs {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,30 +20,27 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
     width: 100%;
     overflow-x: auto;
     padding: $wrapper-padding 0;
-    > .wrapper-2 {
-      display: flex;
-      height: 100%;
-      > .wrapper-card {
-        flex: none;
-        height: 100%;
-        width: auto;
-        padding: 0 0.7rem;
-        .see-all {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          padding: 1em;
-          position: relative;
-          height: 100%;
-        }
-      }
-    }
-    //hide scroll
-    // -webkit-overflow-scrolling: touch;
-    // -ms-overflow-style: none;
-    // &::-webkit-scrollbar {
-    //   display: none;
-    // }
   }
+}
+.wrapper-flex {
+  display: flex;
+  height: 100%;
+  > .wrapper-card {
+    flex: none;
+    height: 100%;
+    width: auto;
+    padding: 0 0.7rem;
+    &:first-child {
+      margin-left: -0.7rem;
+    }
+  }
+}
+.see-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  height: 100%;
 }

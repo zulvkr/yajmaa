@@ -4,20 +4,26 @@
   {% import "components/macros/Progress.njk" as Progress %}
 
   <div class="card -fra">
-    <div class="card-image -fra">
+    <div class="card-image">
       {{ Banner.banner(data.banner.image | thumb, data.banner.style, data.title ) }}
     </div>
-    <div class="card-content -fra">
-      <h3 class="title">
-        <a href="{{ url }}" class="stretched-link">{{ data.title }}</a>
-      </h3>
-      <div class="raised">
-        <div>Terkumpul {{ data.fra.raised | rupiah }}</div>
-        <div>
-          {% if data.fra.hasTarget %}
-            {{ data.fra.raised/data.fra.target*100+"%" }}
-          {% endif %}
-        </div>
+    <div class="card-content -body">
+      {# title #}
+      <a href="{{ url }}" class="stretched-link">
+        <h3 class="title is-size-5" style="margin-bottom: 1rem;">
+          {{ data.title | truncate(70) }}
+        </h3>
+      </a>
+      {# Kutipan #}
+      <div class="excerpt">{{ (data.excerpt or "") | truncate(100) }}</div>
+    </div>
+    <div class="card-content -progress">
+      {# raised #}
+      <div class="raised is-size-7">
+        <div style="margin-bottom:0.5rem;">Terkumpul {{ data.fra.raised | rupiah }}</div>
+        {% if data.fra.hasTarget %}
+          <div>{{ (data.fra.raised/data.fra.target*100) | round }}%</div>
+        {% endif %}
       </div>
       {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
     </div>

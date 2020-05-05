@@ -16,6 +16,7 @@ $danger: $red;
 
 // Typography
 $family-sans-serif: "Nunito Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif: "Times New Roman", Times, serif;
 $weight-black: 800;
 
 // Spacing
@@ -26,7 +27,7 @@ $hr-margin: 1rem 0;
 $gap: 32px;
 $tablet: 500px;
 $desktop: 960px + (2 * $gap);
-$widescreen: 1050px + (2 * $gap);
+$widescreen: 1250px + (2 * $gap);
 $widescreen-enabled: true;
 $fullhd: 1344px + (2 * $gap);
 $fullhd-enabled: false;

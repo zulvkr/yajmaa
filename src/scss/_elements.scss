@@ -1,10 +1,16 @@
 // Button
-// $button-border-width: $control-border-width;
-// $button-padding-vertical: calc(1.5em - #{$button-border-width});
 $button-padding-horizontal: 1.1em;
 
 // Bulma
 @import "node_modules/bulma/sass/elements/_all";
+
+.content {
+    p {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6em;
+    }
+    font-size: 1.2em;
+}
 
 // Extend container responsiveness
 .container {

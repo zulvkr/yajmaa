@@ -1,9 +1,9 @@
 ---
 layout: layouts/home.njk
-title: Yajmaa - Situs Web Rintisan untuk Penggalangan Dana
+title: Yajmaa - Galang dana
 date: 2016-01-01T00:00:00.000Z
 cta:
-    title: Buat situs web penggalangan dana
+    title: Buat website untuk penggalangan dana, Gratis
     button:
         first:
             title: Donasi
@@ -16,5 +16,5 @@ cta:
             link:
 permalink: /
 ---
-Yajmaa adalah situs web rintisan untuk penggalangan dana.
-Dibuat dengan JAMStack.
+Yajmaa adalah template website untuk penggalangan dana.
+Menggunakan Eleventy, Bulma dan NetlifyCMS.

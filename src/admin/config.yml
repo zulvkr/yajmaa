@@ -1,5 +1,7 @@
 backend:
+  # Pick repo to use, use test repo for netlifyCMS development
   name: git-gateway
+  # name: test-repo 
   branch: master
 
 publish_mode: editorial_workflow
@@ -55,4 +57,6 @@ collections:
         fields :
           - { label: "Gambar", name: "image", widget: "image", allow_multiple: "false" }
           - { label: "Gaya", name: "style", widget: "select", options: [ "contain", "cover" ], default: "contain" }
-      - { label: "Label", name: "tags", widget: "list", default: ["fundraise"] }
+      - { label: "Label", name: "tags", widget: "list" }
+      - { label: "Konten", name: "body", widget: "markdown" }
+

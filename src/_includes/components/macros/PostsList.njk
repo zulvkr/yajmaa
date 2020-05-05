@@ -5,7 +5,7 @@
     <div class="columns is-multiline">
         {% for post in posts | reverse %}
 
-            <div class="column is-full is-6-desktop">
+            <div class="column is-full is-6-tablet is-4-desktop">
                 {{ CardPost.cardPost(post, metadata) }}
             </div>
         {% endfor %}

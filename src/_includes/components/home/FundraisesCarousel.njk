@@ -1,9 +1,9 @@
 <div class="cards-carousel">
-    <div class="wrapper-1">
-        <div class="wrapper-2">
+    <div class="wrapper-abs">
+        <div class="wrapper-flex">
             {% set fundraisesList = collections.fundraises %}
             {% for fundraise in fundraisesList | reverse %}
-                <div class="wrapper-card" style="width: 20rem;">
+                <div class="wrapper-card" style="width: 22rem;">
                     {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
                 </div>
             {% endfor %}
