@@ -10,7 +10,7 @@
     <div class="card-content -body">
       {# title #}
       <a href="{{ url }}" class="stretched-link">
-        <h3 class="title is-size-5" style="margin-bottom: 1rem;">
+        <h3 class="title is-size-5">
           {{ data.title | truncate(70) }}
         </h3>
       </a>
@@ -25,7 +25,14 @@
           <div>{{ (data.fra.raised/data.fra.target*100) | round }}%</div>
         {% endif %}
       </div>
-      {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
+      <div style="margin-bottom:0.5rem">
+        {{ Progress.progress(data.fra.hasTarget, data.fra.target, data.fra.raised) }}
+      </div>
+      <div style="height: 27px;text-align:right;">
+        {% if data.limitDate.hasLimit %}
+          <span class="diffDays fra-aside">{{ data.limitDate.date | machineDate }}</span>
+        {% endif %}
+      </div>
     </div>
   </div>
 

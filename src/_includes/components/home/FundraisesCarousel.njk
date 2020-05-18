@@ -3,7 +3,7 @@
         <div class="wrapper-flex">
             {% set fundraisesList = collections.fundraises %}
             {% for fundraise in fundraisesList | reverse %}
-                <div class="wrapper-card" style="width: 22rem;">
+                <div class="wrapper-card" style="width: 21rem;">
                     {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
                 </div>
             {% endfor %}

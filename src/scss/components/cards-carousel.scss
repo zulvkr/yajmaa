@@ -1,4 +1,4 @@
-$card-height: 27rem;
+$card-height: 26rem;
 $wrapper-padding: 1rem;
 $wrapper-height: $card-height + (2 * $wrapper-padding);
 
@@ -7,11 +7,6 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
   top: 0;
   left: 0;
   height: $wrapper-height;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
   > .wrapper-abs {
     position: absolute;
     top: 0;
@@ -20,6 +15,11 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
     width: 100%;
     overflow-x: auto;
     padding: $wrapper-padding 0;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 .wrapper-flex {

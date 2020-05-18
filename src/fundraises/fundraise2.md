@@ -2,6 +2,9 @@
 title: Ifthar dan Sahur Ramadhan Lintas Negara 1441 / 2020
 excerpt: Ifthar lintas negara 2020
 date: 2020-02-01
+limitDate:
+  hasLimit: true
+  date: 2020-05-30
 fra:
   hasTarget: true
   target: 6000000

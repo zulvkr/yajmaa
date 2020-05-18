@@ -1,7 +1,7 @@
 .fra-aside {
     padding-bottom: 0.5rem;
     color: $grey-dark;
-    font-size: $size-small;
+    font-size: 0.8rem;
     font-weight: $weight-bold;
     > * {
         display: inline-block;
@@ -9,7 +9,7 @@
     > .larger {
         color: $primary;
         font: {
-            size: $size-normal;
+            size: 1.1rem;
         }
     }
     > div:not(:last-child) {
