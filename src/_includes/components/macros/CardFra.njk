@@ -10,12 +10,12 @@
     <div class="card-content -body">
       {# title #}
       <a href="{{ url }}" class="stretched-link">
-        <h3 class="title is-size-5">
-          {{ data.title | truncate(70) }}
+        <h3 class="title is-size-6">
+          {{ data.title | truncate(60) }}
         </h3>
       </a>
       {# Kutipan #}
-      <div class="excerpt">{{ (data.excerpt or "") | truncate(100) }}</div>
+      <div class="excerpt">{{ (data.excerpt or "") | truncate(70) }}</div>
     </div>
     <div class="card-content -progress">
       {# raised #}

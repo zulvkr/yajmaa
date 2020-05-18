@@ -48,3 +48,17 @@ for (i = 0; i < classDiff.length; i++) {
     classDiff[i].innerHTML = timeIcon + 'Donasi telah ditutup';
   }
 }
+
+// horizontal scroll button
+var buttonRight = document.getElementById('slideRight');
+var buttonLeft = document.getElementById('slideLeft');
+
+buttonRight.onclick = function () {
+  document.getElementById('container').scrollLeft += 50;
+};
+buttonLeft.onclick = function () {
+  document.getElementById('container').scrollLeft -= 50;
+};
+if (document.getElementById('container').scrollLeft === 0) {
+  document.getElementById('slideLeft').setAttribute("class","is-hidden")
+};

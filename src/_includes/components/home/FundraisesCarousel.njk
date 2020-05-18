@@ -1,5 +1,15 @@
 <div class="cards-carousel">
-    <div class="wrapper-abs">
+<div id="slideLeft">
+<span class="icon is-medium">
+  <i class="mdi mdi-24px mdi-chevron-left"></i>
+</span>
+</div>
+<div id="slideRight">
+<span class="icon is-medium">
+  <i class="mdi mdi-24px mdi-chevron-right"></i>
+</span>
+</div>
+    <div class="wrapper-abs" id="container">
         <div class="wrapper-flex">
             {% set fundraisesList = collections.fundraises %}
             {% for fundraise in fundraisesList | reverse %}

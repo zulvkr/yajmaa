@@ -1,4 +1,4 @@
-$card-height: 26rem;
+$card-height: 23rem;
 $wrapper-padding: 1rem;
 $wrapper-height: $card-height + (2 * $wrapper-padding);
 
@@ -43,4 +43,24 @@ $wrapper-height: $card-height + (2 * $wrapper-padding);
   padding: 1rem;
   position: relative;
   height: 100%;
+}
+
+%scroll-button {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  border-radius: 999px;
+  z-index: 99;
+  height: 2rem;
+  width: 2rem;
+  @extend %shadow-drop;
+}
+#slideRight {
+  @extend %scroll-button;
+  right: -2px;
+}
+#slideLeft {
+  @extend %scroll-button;
+  left: -2px;
 }
