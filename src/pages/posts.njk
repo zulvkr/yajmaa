@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+permalink: /info/index.html
+title: Info
+eleventyNavigation:
+  key: Info
+  order: 2
+---
+
+{% import "components/macros/PostsList.njk" as PostsList %}
+<header>
+    {% include "components/HeroHeader.njk" %}
+</header>
+<main>
+    <section class="section">
+        <div class="container container-mobile container-tablet-only">
+            {{ content | safe }}
+            {{ PostsList.postsList(collections.posts, metadata) }}
+        </div>
+    </section>
+</main>

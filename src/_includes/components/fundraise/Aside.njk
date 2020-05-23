@@ -15,11 +15,18 @@
   {{ Progress.progress(fra.hasTarget, fra.target, fra.raised) }}
 </div>
 {% if limitDate.hasLimit %}
-<div style="margin-bottom:1rem;text-align:right;">
-  <span class="diffDays fra-aside">{{ limitDate.date | machineDate }}</span>
-</div>
+  <div style="margin-bottom:1rem;text-align:right;">
+    <span class="diffDays fra-aside">{{ limitDate.date | machineDate }}</span>
+  </div>
 {% endif %}
 <div class="fra-button" style="margin-top:1rem;">
   <a class="button is-primary" href="{{ pagination.href.next }}">Donasi Sekarang</a>
-  <a class="button is-outlined is-primary">Bagikan</a>
+  <a class="button is-success is-light"
+    href="https://api.whatsapp.com/send?text={{ metadata.url }}{{ page.url }}"
+    data-action="share/whatsapp/share">
+    <span class="icon is-small">
+      <i class="mdi mdi-whatsapp"></i>
+    </span>
+    <span>Bagikan</span>
+  </a>
 </div>

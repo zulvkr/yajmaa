@@ -1,0 +1,15 @@
+<section class="hero is-light is-bold">
+    {% include "components/Nav.njk" %}
+    <div class="hero-body has-text-centered">
+        <div class="container container-tablet-only container-mobile">
+            <h1 class="title has-text-weight-black is-size-4 is-size-3-tablet">{{ pages.home.cta.title }}</h1>
+            <h2 class="subtitle is-size-6 is-size-5-tablet">{{ pages.home.cta.subtitle }}</h2>
+            <div class="cta-button has-text-centered">
+                <a href="{{ cta.button.first.link }}" class="button is-primary">{{ cta.button.first.title }}</a>
+                {% if cta.button.second.title %}
+                    <a href="{{ cta.button.second.link }}" class="button is-outlined is-primary">{{ cta.button.second.title }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

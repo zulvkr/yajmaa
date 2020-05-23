@@ -7,9 +7,13 @@ layout: layouts/base.njk
 <main>
     <section class="section">
         <div class="container container-tablet-only container-mobile">
-            <article class="content">
-                {{ content | safe }}
-            </article>
+            <div class="columns">
+                <div class="column is-full is-8-desktop">
+                    <article class="content">
+                        {{ content | safe }}
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
 </main>

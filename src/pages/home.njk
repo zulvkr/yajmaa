@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Yajmaa - Template Laman Donasi
+cta:
+    button:
+        first:
+            title: Donasi
+            link: /fundraises
+        second:
+            title: Kenali Kami
+            link: /about
+        third:
+            title:
+            link:
+permalink: /
+---
+
+{% import "components/macros/Banner.njk" as Banner %}
+{% import "components/macros/CardFra.njk" as CardFra %}
+{% import "components/macros/PostsList.njk" as PostsList %}
+
+<header>
+    {% include "components/home/Header.njk" %}
+</header>
+<main>
+    {% include "components/home/FundraisesSection.njk" %}
+    <div class="container container-tablet-only container-mobile"><hr></div>
+    {% include "components/home/PostsSection.njk" %}
+</main>

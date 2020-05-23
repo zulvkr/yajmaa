@@ -5,13 +5,13 @@ const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // LazyImages
   eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector : ".lazy"
+    imgSelector: ".lazy"
   });
 
   // Date formatting (human readable)
@@ -25,22 +25,22 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("thumb", path => {
-    return path.replace("/img/","/img/thumb/");
+    return path.replace("/img/", "/img/thumb/");
   });
 
   //Native currency filter
   eleventyConfig.addFilter("rupiah", value => {
     const valueRupiah = new Intl.NumberFormat("id-ID").format(value);
-    return "Rp "+ valueRupiah.replace(/,/g, ".");
+    return "Rp " + valueRupiah.replace(/,/g, ".");
   });
 
   // Minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
   // Minify JS
-  eleventyConfig.addFilter("jsmin", function(code) {
+  eleventyConfig.addFilter("jsmin", function (code) {
     let minified = UglifyJS.minify(code);
     if (minified.error) {
       console.log("UglifyJS error: ", minified.error);
@@ -50,7 +50,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath.indexOf(".html") > -1) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
@@ -61,15 +61,25 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-  
+
   // only content in the `posts/` directory
-  eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/posts/*.md");
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md");
+  });
+
+  // only content in the `posts/` directory and limit to 6
+  eleventyConfig.addCollection("sixPosts", function (collectionApi) {
+    const allPosts = collectionApi.getFilteredByGlob("src/posts/*.md");
+    let six =[];
+    for (i=0; i < 6; i++) {
+      six.unshift(allPosts[i]);
+    };
+    return six;
   });
 
   // only content in the `fundraises/` directory
-  eleventyConfig.addCollection("fundraises", function(collection) {
-    return collection.getFilteredByGlob("src/fundraises/*.md");
+  eleventyConfig.addCollection("fundraises", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/fundraises/*.md");
   });
 
   // Don't process folders with static assets e.g. images

@@ -22,18 +22,6 @@ collections:
       - { label: "Kutipan", name: "excerpt", widget: "text" }
       - { label: "Label", name: "tags", widget: "list", default: ["post"] }
       - { label: "Konten", name: "body", widget: "markdown" }
-  # Pages in /pages/
-  - name: "pages"
-    label: "Laman"
-    folder: "src/pages"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal terbit", name: "date", widget: "datetime" }
-      - { label: "Kutipan", name: "excerpt", widget: "text" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
   # Fundraises in /fundraises/
   - name: "fundraises"
     label: "Penggalangan Dana"

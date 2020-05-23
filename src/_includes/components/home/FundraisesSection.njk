@@ -1,0 +1,24 @@
+<section class="section">
+    <div class="container container-tablet-only container-mobile">
+        <h2 class="title is-size-4 is-marginless">{{ pages.home.fundraises.title }}</h2>
+    </div>
+    <div class="cards-carousel">
+        <div class="wrapper-flex container container-tablet-only container-mobile">
+            {% for fundraise in collections.fundraises %}
+                <div class="wrapper-card" style="width: 21rem;">
+                    {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
+                </div>
+            {% endfor %}
+            <div class="wrapper-card">
+                <a href="{{ '/fundraises' | url }}">
+                    <div class="see-all" style="">
+                        <span class="icon is-large">
+                            <i class="mdi mdi-36px mdi-arrow-right"></i>
+                        </span>
+                        <p class="has-text-bold has-text-weight-bold">Lihat Semua</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

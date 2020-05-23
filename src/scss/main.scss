@@ -1,13 +1,19 @@
 @charset "utf-8";
 
-@import "_variables";
+// Bulma
 @import "utilities/_all";
-@import "node_modules/bulma/sass/base/_all";
+@import "_base";
 @import "_elements";
-@import "node_modules/bulma/sass/form/_all";
+@import "vendor/bulma/form/_all";
 @import "components/_all";
-@import "node_modules/bulma/sass/grid/columns";
+@import "vendor/bulma/grid/columns";
 @import "_layout";
-@import "_buefy";
-@import "mdi-icon/materialdesignicons.scss";
+
+// Buefy
+@import "vendor/buefy/buefy";
+
+// MDI icon fonts
+@import "vendor/mdi-icon/materialdesignicons";
+
+// Extra style for page
 @import "pages/_all"

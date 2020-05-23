@@ -1,5 +1,2 @@
 $section-padding: 3rem 0;
-
-@import "node_modules/bulma/sass/layout/hero";
-@import "node_modules/bulma/sass/layout/section";
-@import "node_modules/bulma/sass/layout/footer";
+@import "vendor/bulma/layout/_all";

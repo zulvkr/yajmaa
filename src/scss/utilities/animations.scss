@@ -1,5 +1,4 @@
-// Animation
-@import "node_modules/bulma/sass/utilities/animations";
+@import "../vendor/bulma/utilities/animations";
 @keyframes shadow-drop {
     0% {
         box-shadow: none;
