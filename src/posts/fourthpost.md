@@ -19,4 +19,4 @@ Leverage agile frameworks to provide a robust synopsis for high level overviews.
 
 
 
-![amazing](/static/img/pexels-photo-2262800.jpeg "YTuhuhuu")
+![amazing](/_includes/assets/img/pexels-photo-2262800.jpeg "YTuhuhuu")

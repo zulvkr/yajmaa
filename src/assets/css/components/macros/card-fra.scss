@@ -1,0 +1,40 @@
+.card.-fra {
+    border-radius: $radius-large;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-top: $grey-lighter 1px solid;
+    box-shadow: $solid-shadow;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend %shadow-drop;
+    }
+    > .card-content {
+        padding: 1.2rem;
+    }
+    > .card-content.-body {
+        flex-grow: 1;
+        padding-bottom: 0;
+        .title {
+            color: $text;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+        }
+        .excerpt {
+            font-size: 0.8em;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+        }
+    }
+    > .card-content.-progress {
+        padding-top: 0;
+        .raised {
+            font-weight: $weight-bold;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

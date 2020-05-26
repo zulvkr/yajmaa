@@ -6,13 +6,26 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function (eleventyConfig) {
+
+  // A useful way to reference the context we are runing eleventy in
+  let env = process.env.ELEVENTY_ENV;
+
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // LazyImages
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: ".lazy"
-  });
+  // Use LazyImages Plugin https://github.com/liamfiddler/eleventy-plugin-lazyimages#readme
+
+  if (env == "prod") {
+    eleventyConfig.addPlugin(lazyImagesPlugin, {
+      imgSelector: ".lazy",
+      transformImgPath: (imgPath) => {
+        if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+          return `_site${imgPath}`;
+        }
+        return imgPath;
+      },
+    });
+  }
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -24,8 +37,14 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  // Modify image path to thumbnail folder
   eleventyConfig.addFilter("thumb", path => {
     return path.replace("/img/", "/img/thumb/");
+  });
+
+  // JSON to string
+  eleventyConfig.addFilter("jsonStringify", jsonObj => {
+    return JSON.stringify(jsonObj);
   });
 
   //Native currency filter
@@ -70,8 +89,8 @@ module.exports = function (eleventyConfig) {
   // only content in the `posts/` directory and limit to 6
   eleventyConfig.addCollection("sixPosts", function (collectionApi) {
     const allPosts = collectionApi.getFilteredByGlob("src/posts/*.md");
-    let six =[];
-    for (i=0; i < 6; i++) {
+    let six = [];
+    for (i = 0; i < 6; i++) {
       six.unshift(allPosts[i]);
     };
     return six;
@@ -82,8 +101,7 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/fundraises/*.md");
   });
 
-  // Don't process folders with static assets e.g. images
-  eleventyConfig.addPassthroughCopy("static");
+  // Copy folders with static assets except img folder
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/_includes/assets");
 
@@ -91,6 +109,12 @@ module.exports = function (eleventyConfig) {
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItAttrs = require('markdown-it-attrs');
+  let emoji = require('markdown-it-emoji');
+  let markdownContainer = require('markdown-it-container');
+  let markdownItClass = require('@toycode/markdown-it-class');
+  
+  let classMapping = { img: 'lazy' }
   let options = {
     html: true,
     breaks: true,
@@ -102,7 +126,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary(
     "md",
-    markdownIt(options).use(markdownItAnchor, opts)
+    markdownIt(options)
+      .use(markdownItAnchor, opts)
+      .use(markdownItAttrs)
+      .use(emoji)
+      .use(markdownContainer, "container")
+      .use(markdownItClass, classMapping)
   );
 
   return {

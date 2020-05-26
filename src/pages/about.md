@@ -1,9 +1,9 @@
 ---
 title: Tentang Yajmaa
+layout: layouts/post.njk
 date: 2019-01-08
 permalink: /about/index.html
 excerpt: Yajmaa adalah
-excludeFromCollections: true
 eleventyNavigation:
   key: Tentang
   order: 1

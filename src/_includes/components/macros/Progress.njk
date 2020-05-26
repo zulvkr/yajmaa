@@ -8,7 +8,7 @@
     {% set progress = 100 %}
   {% endif %}
 
-  <progress class="progress {{ class }}" value="{{ progress }}" max="100" style="height: 0.4rem">
+  <progress class="progress {{ class }}" value="{{ progress | round(0, "floor") }}" max="100" style="height: 0.4rem">
     {{ progress }}%
   </progress>
 

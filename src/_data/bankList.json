@@ -1,0 +1,23 @@
+{
+    "banks": [
+        {
+            "name": "Bank Syariah Mandiri",
+            "accountNumber": "7714414474",
+            "accountName": "Masjid Al Hidayah Krajan",
+            "notes": "kode bank: 451"
+        },
+        {
+            "name": "BNI Syariah",
+            "accountNumber": "0951059214",
+            "accountName": "Masjid Al Hidayah",
+            "notes": "kode bank: 427"
+        },
+        {
+            "name": "Bank BRI",
+            "accountNumber": "9743796479744",
+            "accountName": "Yayasan Saripati",
+            "notes": ""
+        }
+    ],
+    "currency": ["Rp"]
+}

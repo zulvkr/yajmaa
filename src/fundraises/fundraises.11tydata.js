@@ -1,7 +1,3 @@
 module.exports = {
-    layout: "layouts/fundraise.njk",
-    // eleventy computed data available in 0.11.0
-    // eleventyComputed: {
-    //     trial: "test2"
-    // },
+    layout: "layouts/fundraise.njk"
 };

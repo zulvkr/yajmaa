@@ -1,12 +1,12 @@
 <form>
-    <div class="container-funding-app is-clipped-touch">
-        <div class="columns is-multiline">
+    <div class="container-funding-app container-touch">
+        <div class="columns">
             <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
-                <div v-if="errors.length" class="has-text-danger" style="padding: 1rem;">
+                <div v-if="errors.length" class="has-text-danger has-background-white-bis" style="padding: 1rem;margin: 1rem 0 1rem 0;">
                     <b>Wajib diisi: </b>
                     <span v-for="error in errors">{{ '{{error}}' }},</span>
                 </div>
-                <div class="box">
+                <div>
                     {% include "components/fundraise/Form.njk" %}
                     <br>
                     <div class="fra-button has-text-right">

@@ -4,9 +4,12 @@
   "description": "Situs web rintisan untuk penggalangan dana.",
   "scripts": {
     "start": "concurrently npm:s-*",
-    "build": "npx gulp limit thumb sass && npx eleventy",
     "s-11ty": "npx eleventy --serve",
     "s-scss": "npx gulp sass:watch",
+    "s-js": "npx gulp js:watch",
+    "s-img": "npx gulp img:watch",
+    "build": "npx gulp limit thumb passthrough sass js && cross-env ELEVENTY_ENV=prod npx eleventy ",
+    "clean": "rm -rf _site",
     "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
@@ -21,8 +24,12 @@
   "homepage": "https://github.com/zulvkr/yajmaa",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
     "buefy": "^0.8.19",
     "bulma": "^0.8.2",
+    "cross-env": "^7.0.2",
     "gulp": "^4.0.2",
     "gulp-purgecss": "^2.2.0",
     "gulp-sass": "^4.1.0",
@@ -30,17 +37,31 @@
     "luxon": "^1.24.1",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.3.0",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "vue": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.4",
+    "@toycode/markdown-it-class": "^1.2.4",
+    "axios": "^0.19.2",
     "clean-css": "^4.2.1",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
     "eleventy-plugin-lazyimages": "^1.1.1",
     "eleventy-plugin-seo": "^0.5.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-newer": "^1.4.0",
     "gulp-responsive": "^3.0.1",
+    "gulp-terser": "^1.2.0",
     "html-minifier": "^4.0.0",
+    "markdown-it-attrs": "^3.0.2",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-emoji": "^1.4.0",
+    "require": "^2.4.20",
     "uglify-es": "^3.3.9"
   },
   "keywords": [

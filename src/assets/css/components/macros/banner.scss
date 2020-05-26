@@ -1,0 +1,21 @@
+.banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  > .layer {
+    &.-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    &.-blur {
+      @extend .-top;
+      > img {
+        object-fit: cover;
+        filter: blur(10px);
+        transform: scale(1.2);
+      }
+    }
+  }
+}

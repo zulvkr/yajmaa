@@ -1,16 +1,44 @@
 backend:
   # Pick repo to use, use test repo for netlifyCMS development
-  name: git-gateway
-  # name: test-repo 
+
+  # name: git-gateway
+  name: test-repo
+
   branch: master
 
-publish_mode: editorial_workflow
+# Uncomment to allow editorial workflow
+# publish_mode: editorial_workflow
 
-media_folder: "static/img"
-public: "static/img"
+media_folder: "src/assets/img"
+public: "_includes/assets/img"
 
 collections:
-  # Info in /posts/
+  # settings in _data
+  - name: "settings"
+    label: "Pengaturan"
+    files: 
+      - name: "metadata"
+        label: "Metadata"
+        file: "src/_data/metadata.json"
+        fields:
+          - {name: title, label: Nama website, widget: string}
+          - {name: url, label: Url, widget: string}
+          - name: author
+            label: Pemilik website
+            widget: object
+            fields:
+              - {name: name, label: Nama, widget: string}
+              - {name: email, label: Email, widget: string}
+              - {name: github, label: Github, widget: string}
+          - {name: brand_logo, label: Logo, widget: image}
+      
+      # - name: "homepage"
+      #   label: "Halaman"
+      #   file: "src/_data/pages/home.json"
+      #   fields:
+      #     - 
+
+  # posts in /posts/
   - name: "info" # Used in routes, e.g., /admin/collections/blog
     label: "Info" # Used in the UI
     folder: "src/posts" # The path to the folder where the documents are stored
@@ -22,6 +50,20 @@ collections:
       - { label: "Kutipan", name: "excerpt", widget: "text" }
       - { label: "Label", name: "tags", widget: "list", default: ["post"] }
       - { label: "Konten", name: "body", widget: "markdown" }
+
+  # Pages in /pages/
+  - name: "pages"
+    label: "Halaman"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal terbit", name: "date", widget: "datetime" }
+      - { label: "Kutipan", name: "excerpt", widget: "text" }
+      - { label: "Label", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
   # Fundraises in /fundraises/
   - name: "fundraises"
     label: "Penggalangan Dana"
@@ -47,4 +89,3 @@ collections:
           - { label: "Gaya", name: "style", widget: "select", options: [ "contain", "cover" ], default: "contain" }
       - { label: "Label", name: "tags", widget: "list" }
       - { label: "Konten", name: "body", widget: "markdown" }
-

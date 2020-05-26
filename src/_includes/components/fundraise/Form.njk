@@ -3,15 +3,20 @@
     <div class="field has-addons">
         <p class="control is-primary">
             <span class="select">
-                <select v-model="currency">
-                    <option>Rp</option>
-                    <option>USD</option>
+                <select v-model="form.currency">
+                    <option v-for="(value) in currencies">
+                        {{ '{{ value }}' }}
+                    </option>
                 </select>
             </span>
         </p>
         <p class="control is-expanded is-primary">
-            <input class="input has-text-weight-bold" type="number" v-model="amount" v-if="seen === 'number'" @blur="onBlurNumber" placeholder="Jumlah Donasi" number required="required">
-            <input class="input has-text-weight-bold" type="text" v-model="amountFormatted" v-if="seen === 'text'" @focus="onFocusText" placeholder="Jumlah Donasi" required="required">
+            <cleave
+                class="input has-text-weight-bold" 
+                v-model="form.amount"
+                :options="options.amount"
+                placeholder="Jumlah Donasi"
+                required="required">
         </p>
     </div>
 </div>
@@ -21,10 +26,11 @@
     <div class="field">
         <p class="control">
             <div class="select is-fullwidth">
-                <select v-model="paymentMethod" required="required">
-                    <option>Bank Mandiri</option>
-                    <option>Bank BNI Syariah</option>
-                    <option>PayPal</option>
+                <select v-model="form.paymentMethod" required="required">
+                    <option v-for="({name}, index) in banks" 
+                        :value="index+1">
+                        {{ '{{ name }}' }}
+                    </option>
                 </select>
             </div>
         </p>
@@ -36,7 +42,12 @@
     <div class="field-body">
         <div class="field">
             <p class="control is-expanded has-icons-right">
-                <input v-model="name" autocomplete="name" class="input" type="text" placeholder="Nama" required="required">
+                <input v-model="form.name"
+                    autocomplete="name"
+                    class="input"
+                    type="text"
+                    placeholder="Nama"
+                    required="required">
                 <span class="icon is-small is-right">
                     <i class="mdi mdi-account"></i>
                 </span>
@@ -44,7 +55,13 @@
         </div>
         <div class="field">
             <p class="control is-expanded has-icons-right">
-                <input v-model="whatsapp" class="input" type="tel" autocomplete="tel" placeholder="Nomor Whatsapp" required="required">
+                <input
+                    v-model="form.whatsapp"
+                    class="input"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="Nomor Whatsapp"
+                    required="required">
                 <span class="icon is-small is-right">
                     <i class="mdi mdi-whatsapp"></i>
                 </span>

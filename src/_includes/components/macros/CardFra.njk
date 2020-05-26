@@ -14,15 +14,13 @@
           {{ data.title | truncate(60) }}
         </h3>
       </a>
-      {# Kutipan #}
-      <div class="excerpt">{{ (data.excerpt or "") | truncate(70) }}</div>
     </div>
     <div class="card-content -progress">
       {# raised #}
       <div class="raised is-size-7">
         <div style="margin-bottom:0.5rem;">Terkumpul {{ data.fra.raised | rupiah }}</div>
         {% if data.fra.hasTarget %}
-          <div>{{ (data.fra.raised/data.fra.target*100) | round }}%</div>
+          <div>{{ (data.fra.raised/data.fra.target*100) | round(0, "floor") }}%</div>
         {% endif %}
       </div>
       <div style="margin-bottom:0.5rem">

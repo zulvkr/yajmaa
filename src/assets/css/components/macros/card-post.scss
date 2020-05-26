@@ -1,0 +1,26 @@
+.card.-post {
+    border-radius: $radius;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-top: $grey-lighter 1px solid;
+    box-shadow: $solid-shadow;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend %shadow-drop;
+    }
+
+    .card-content {
+        .title {
+            color: $text;
+        }
+    }
+
+    .post-separator {
+        width: 3rem;
+        height: 3px;
+        background-color: $primary;
+        margin-bottom: 1.2rem;
+    }
+}

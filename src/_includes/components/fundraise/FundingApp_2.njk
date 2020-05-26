@@ -1,33 +1,32 @@
 <section>
-    <div class="container-funding-app is-clipped-touch">
-        <div class="columns is-multiline">
+    <div class="container-funding-app container-touch">
+        <div class="columns">
             <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
-                <div class="box has-text-centered">
-                    <h1 class="title is-size-4 has-text-weight-bold">Instruksi Pembayaran</h1>
-                    <p>Transfer sesuai nominal di bawah ini</p>
-                    <div class="has-text-weight-bold is-size-4" style="margin: 0.5em 0;">
-                        {{ '{{ "Rp " + amountFormatted }}' }}
+                <div>
+                    <div style="max-width: 150px;margin: 0 0 1rem;">
+                        <img src="/_includes/assets/img/undraw_Credit_card_3ed6.svg"/>
                     </div>
-                    <p>
-                        <span>ke rekening</span>
-                        <span class="has-text-weight-bold">
-                            {{ '{{ paymentMethod }}' }} a.n. Yajmaa
-                        </span>
+                    <p class="has-text-weight-bold is-size-4">
+                        {{ '{{ "Rp " + amountFormatted }}' }}
                     </p>
-                    <div style="font-weight: 700;margin: 0.5rem;padding: 0.5rem 1rem;background-color: #eeeeee;display: flex; height: 3.2em; align-items: center;">
-                        <div style="flex-grow: 1">89039998208202</div>
-                        <div>
-                            <a>SALIN</a>
+                    <p class="has-text-weight-bold has-text-primary">
+                        Transfer ke {{ '{{ banks[form.paymentMethod-1].name }}' }}<br>
+                    a.n. {{ '{{ banks[form.paymentMethod-1].accountName }}' }}
+                    </p>
+                    <div class="field margin" style="margin-top: 1rem">
+                        <div class="control">
+                            <input class="input" type="text" v-model="banks[form.paymentMethod-1].accountNumber" readonly>
                         </div>
                     </div>
+                    <p v-if="banks[form.paymentMethod-1].notes">
+                        {{ '{{ banks[form.paymentMethod-1].notes}}' }}
+                    </p>
                     <hr>
-                    <p class='has-text-weight-bold' style="margin-bottom:1rem;">Saya sudah membayar,</p>
-                    <div class="fra-button">
-                        <button class="button is-primary order-2-tablet-only" v-on:click.prevent="nextStep">
-                            <span>Konfirmasi Pembayaran</span>
-                        </button>
-                        {# <button v-on:click.prevent="previousStep" class="button is-primary is-light">Kembali</button> #}
-                    </div>
+                    <p class='has-text-weight-bold' style="margin-bottom:0.5rem;">Saya sudah membayar,</p>
+                    <button class="button is-primary order-2-tablet-only is-fullwidth" v-on:click.prevent="nextStep">
+                        <span>Konfirmasi Pembayaran</span>
+                    </button>
+                    {# <button v-on:click.prevent="previousStep" class="button is-primary is-light">Kembali</button> #}
                 </div>
             </div>
         </div>

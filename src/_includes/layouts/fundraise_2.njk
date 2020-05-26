@@ -1,19 +1,26 @@
+{# Pass eleventy data to runtime #}
+<script>
+    var bank = {{ bank | jsonStringify | safe }}
+    var bankList = {{ bankList | jsonStringify | safe }}
+</script>
 <div class="container container-tablet-only" id="fundingForm">
-    <section class="section">
-        <b-steps v-model="step" :has-navigation=false animated rounded label-position="bottom" size="is-small">
+    <template>
+        <section class="section">
+            <b-steps v-model="step" :has-navigation=false animated rounded label-position="bottom" size="is-small">
 
-            <b-step-item label="Pilihan">
-                {% include "components/fundraise/FundingApp_1.njk" %}
-            </b-step-item>
+                <b-step-item label="Pilihan">
+                    {% include "components/fundraise/FundingApp_1.njk" %}
+                </b-step-item>
 
-            <b-step-item label="Pembayaran">
-                {% include "components/fundraise/FundingApp_2.njk" %}
-            </b-step-item>
+                <b-step-item label="Pembayaran">
+                    {% include "components/fundraise/FundingApp_2.njk" %}
+                </b-step-item>
 
-            <b-step-item label="Konfirmasi">
-                <h1 class="title has-text-centered">Finish</h1>
-            </b-step-item>
+                <b-step-item label="Konfirmasi">
+                    <h1 class="title has-text-centered">Finish</h1>
+                </b-step-item>
 
-        </b-steps>
-    </section>
+            </b-steps>
+        </section>
+    </template>
 </div>

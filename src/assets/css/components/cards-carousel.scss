@@ -1,0 +1,36 @@
+$card-height: 24rem;
+$wrapper-padding: 1rem;
+$wrapper-height: $card-height + (2 * $wrapper-padding);
+
+.cards-carousel {
+  overflow-x: auto;
+  padding: $wrapper-padding 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.wrapper-flex {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  > .wrapper-card {
+    flex: none;
+    height: auto;
+    width: 21rem;
+    padding: 0 0.7rem;
+    &:first-child {
+      margin-left: -0.7rem;
+    }
+  }
+}
+.see-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  height: 100%;
+}

@@ -1,0 +1,24 @@
+{
+    "cta": {
+        "title": "Buat laman donasi, Gratis",
+        "subtitle": "Yajmaa adalah template website donasi yang cepat dan responsif. Dilengkapi panel admin.",
+        "buttons": [
+            {
+                "isActive": "true",
+                "title": "Donasi",
+                "link": "/fundraises"
+            },
+            {
+                "isActive": "true",
+                "title": "Kenali Kami",
+                "link": "/about"
+            }
+        ]
+    },
+    "fundraises": {
+        "title": "Donasi"
+    },
+    "posts": {
+        "title": "Info"
+    }
+}

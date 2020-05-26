@@ -1,7 +1,7 @@
 <div class="container-tablet-only container-mobile">
     <div style="margin: 0 0 1rem 0">
         <div class="is-size-6 has-text-grey has-text-right ">
-            <time datetime="{{ (date or page.date) | machineDate }}">{{ (date or page.date) | readableDate }}</time>
+            <span>Update terakhir: </span><time datetime="{{ (date or page.date) | machineDate }}">{{ (date or page.date) | readableDate }}</time>
         </div>
     </div>
     <div class="content ">

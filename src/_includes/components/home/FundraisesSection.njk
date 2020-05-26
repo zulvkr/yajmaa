@@ -5,11 +5,11 @@
     <div class="cards-carousel">
         <div class="wrapper-flex container container-tablet-only container-mobile">
             {% for fundraise in collections.fundraises %}
-                <div class="wrapper-card" style="width: 21rem;">
+                <div class="wrapper-card">
                     {{ CardFra.cardFra(fundraise.data, fundraise.url) }}
                 </div>
             {% endfor %}
-            <div class="wrapper-card">
+            <div class="wrapper-card" style="width:9.5rem">
                 <a href="{{ '/fundraises' | url }}">
                     <div class="see-all" style="">
                         <span class="icon is-large">
