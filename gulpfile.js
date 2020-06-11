@@ -5,6 +5,7 @@ const newer = require('gulp-newer');
 
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const packageImporter = require('node-sass-package-importer');
 const purgecss = require('gulp-purgecss')
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -77,9 +78,15 @@ task('thumb', () =>
 // Compile CSS and reduce the file with purge
 task('sass', () =>
     src('src/assets/css/main.scss')
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed',
+            importer: packageImporter()
+        }).on('error', sass.logError))
         .pipe(purgecss({
-            content: ['src/**/*.{njk,js}']
+            content: [
+                'src/**/*.{njk,js}',
+            ],
+            whitelistPatterns: [/^(zoom|fade|slide)/],
         }))
         .pipe(dest('src/_includes/assets/css/'))
 )
@@ -87,7 +94,10 @@ task('sass', () =>
 // Compile CSS and create sourcemaps for development
 task('sass:dev', () =>
     src('src/assets/css/main.scss')
-        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'compressed',
+            importer: packageImporter()
+        }).on('error', sass.logError))
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(dest('src/_includes/assets/css/'))

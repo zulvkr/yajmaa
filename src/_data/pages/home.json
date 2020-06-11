@@ -1,12 +1,12 @@
 {
     "cta": {
         "title": "Buat laman donasi, Gratis",
-        "subtitle": "Yajmaa adalah template website donasi yang cepat dan responsif. Dilengkapi panel admin.",
+        "subtitle": "Yajmaa adalah template website statis donasi yang ringan dilengkapi dengan panel admin",
         "buttons": [
             {
                 "isActive": "true",
-                "title": "Donasi",
-                "link": "/fundraises"
+                "title": "Deploy to Netlify ",
+                "link": "https://app.netlify.com/start/deploy?repository=https://github.com/zulvkr/yajmaa&stack=cms"
             },
             {
                 "isActive": "true",

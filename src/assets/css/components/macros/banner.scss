@@ -13,7 +13,7 @@
       @extend .-top;
       > img {
         object-fit: cover;
-        filter: blur(10px);
+        filter: blur(4px);
         transform: scale(1.2);
       }
     }

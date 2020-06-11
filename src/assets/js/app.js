@@ -36,6 +36,10 @@ if (document.querySelector("#fundingForm")) {
           numeral: true,
           numeralDecimalMark: ',',
           delimiter: '.'
+        },
+        cardNumber: {
+          blocks: [4, 4, 4, 4, 4, 4, 4, 4, 4],
+          uppercase: true
         }
       },
       currency: currencies[0],

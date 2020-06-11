@@ -1,8 +1,4 @@
-// Button
-$button-padding-horizontal: 1.1em;
-
-// Bulma
-@import "vendor/bulma/elements/_all";
+// Use custom font in content
 
 .content {
     p {
@@ -12,7 +8,9 @@ $button-padding-horizontal: 1.1em;
     font-size: 1em;
 }
 
-// Extend container responsiveness
+// Extend Container for responsiveness
+// and specific sections
+
 .container {
     &-tablet-only {
         @include tablet-only {

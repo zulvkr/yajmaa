@@ -2,31 +2,46 @@
     <div class="container-funding-app container-touch">
         <div class="columns">
             <div class="column is-full is-6-desktop is-offset-3-desktop" style="padding:1rem;">
-                <div>
+                <div style="padding:0 1rem">
                     <div style="max-width: 150px;margin: 0 0 1rem;">
                         <img src="/_includes/assets/img/undraw_Credit_card_3ed6.svg"/>
                     </div>
                     <p class="has-text-weight-bold is-size-4">
                         {{ '{{ "Rp " + amountFormatted }}' }}
                     </p>
-                    <p class="has-text-weight-bold has-text-primary">
+                    <p class="has-text-weight-bold has-text-primary" style="margin: 0 0 1rem;">
                         Transfer ke {{ '{{ banks[form.paymentMethod-1].name }}' }}<br>
                     a.n. {{ '{{ banks[form.paymentMethod-1].accountName }}' }}
                     </p>
-                    <div class="field margin" style="margin-top: 1rem">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <cleave 
+                                class="input has-text-weight-bold"
+                                :value="banks[form.paymentMethod-1].accountNumber"
+                                :options="options.cardNumber"
+                                readonly/></div>
                         <div class="control">
-                            <input class="input" type="text" v-model="banks[form.paymentMethod-1].accountNumber" readonly>
+                            <a class="button is-primary">Salin</a>
                         </div>
                     </div>
-                    <p v-if="banks[form.paymentMethod-1].notes">
+
+                    <p v-if="banks[form.paymentMethod-1].notes" style="margin: 0 0 1rem;">
                         {{ '{{ banks[form.paymentMethod-1].notes}}' }}
                     </p>
                     <hr>
-                    <p class='has-text-weight-bold' style="margin-bottom:0.5rem;">Saya sudah membayar,</p>
-                    <button class="button is-primary order-2-tablet-only is-fullwidth" v-on:click.prevent="nextStep">
-                        <span>Konfirmasi Pembayaran</span>
-                    </button>
-                    {# <button v-on:click.prevent="previousStep" class="button is-primary is-light">Kembali</button> #}
+                    <div class="box">
+                        <p class='has-text-weight-bold' style="margin-bottom:0.5rem;">Saya sudah membayar,</p>
+                        <a class="button is-whatsapp is-fullwidth"
+                                href="https://api.whatsapp.com/send?text={{ excerpt }} {{ metadata.url }}{{ page.url }}"
+                                data-action="share/whatsapp/share"
+                                target="_blank"
+                                @click="nextStep">
+                            <span class="icon is-small">
+                                <i class="mdi mdi-whatsapp"></i>
+                            </span>
+                            <span>Konfirmasi Pembayaran</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

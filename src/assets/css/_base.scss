@@ -1,16 +1,5 @@
-@import "vendor/bulma/base/_all";
-
-// Base
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 // Helper
+
 .has-text-weight-black {
     font-weight: $weight-black !important;
 }
@@ -42,4 +31,19 @@ input[type="number"] {
     pointer-events: auto;
     content: "";
     background-color: rgba(0, 0, 0, 0);
+}
+
+// Animations
+
+@keyframes shadow-drop {
+    0% {
+        box-shadow: $solid-shadow;
+    }
+    100% {
+        box-shadow: $solid-shadow, $blur-shadow;
+    }
+}
+
+%shadow-drop {
+    animation: shadow-drop 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

@@ -9,7 +9,7 @@
 
   <div class="banner">
     <div class="layer -blank image is-16by9">
-      <div></div>
+      <img src="{{ image_safe | url }}"  alt="{{ alt }}" class="lazy"/>
     </div>
     <div class="layer -blur image is-16by9 is-clipped">
       <img src="{{ image_safe | url }}"  alt="{{ alt }}" class="lazy"/>

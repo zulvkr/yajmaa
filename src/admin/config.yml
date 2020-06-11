@@ -1,8 +1,8 @@
 backend:
   # Pick repo to use, use test repo for netlifyCMS development
 
-  # name: git-gateway
-  name: test-repo
+  name: git-gateway
+  # name: test-repo
 
   branch: master
 

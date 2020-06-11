@@ -1,17 +1,26 @@
-<section class="hero is-light is-bold">
-    {% include "components/Nav.njk" %}
+{% include "components/Nav.njk" %}
+
+<section class="hero is-white">
     <div class="hero-body has-text-centered">
         <div class="container container-tablet-only container-mobile">
             <h1 class="title has-text-weight-black is-size-4 is-size-3-tablet">{{ pages.home.cta.title }}</h1>
             <h2 class="subtitle is-size-6 is-size-5-tablet">{{ pages.home.cta.subtitle }}</h2>
             <div class="cta-button has-text-centered">
                 {# Conditionally render buttons #}
-                {% if pages.home.cta.buttons[0].isActive %}
-                    <a href="{{ pages.home.cta.buttons[0].link }}" class="button is-primary">{{ pages.home.cta.buttons[0].title }}</a>
+                {% if pages
+                    .home
+                    .cta
+                    .buttons[0]
+                    .isActive %}
+                    <a href="{{ pages.home.cta.buttons[0].link | url }}" class="button is-primary">{{ pages.home.cta.buttons[0].title }}</a>
                 {% endif %}
 
-                {% if pages.home.cta.buttons[0].isActive %}
-                    <a href="{{ pages.home.cta.buttons[1].title }}" class="button is-outlined is-primary">{{ pages.home.cta.buttons[1].title }}</a>
+                {% if pages
+                    .home
+                    .cta
+                    .buttons[1]
+                    .isActive %}
+                    <a href="{{ pages.home.cta.buttons[1].link | url }}" class="button is-outlined is-primary">{{ pages.home.cta.buttons[1].title }}</a>
                 {% endif %}
             </div>
         </div>

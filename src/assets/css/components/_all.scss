@@ -1,24 +1,5 @@
 @charset "utf-8";
 
-// variables
-$navbar-padding-vertical: 0.5rem;
-
-// Bulma
-@import "../vendor/bulma/components/card";
-@import "../vendor/bulma/components/dropdown";
-@import "../vendor/bulma/components/navbar";
-@import "../vendor/bulma/components/tabs";
-@import "../vendor/bulma/components/breadcrumb";
-@import "../vendor/bulma/components/level";
-@import "../vendor/bulma/components/list";
-@import "../vendor/bulma/components/media";
-@import "../vendor/bulma/components/menu";
-@import "../vendor/bulma/components/message";
-@import "../vendor/bulma/components/modal";
-@import "../vendor/bulma/components/pagination";
-@import "../vendor/bulma/components/panel";
-
-// Extra components
 @import "macros/_all";
 @import "cards-carousel";
 @import "buttons";
