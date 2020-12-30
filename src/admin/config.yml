@@ -85,7 +85,7 @@ collections:
         name: "banner"
         widget: "object"
         fields :
-          - { label: "Gambar", name: "image", widget: "image", allow_multiple: "false" }
+          - { label: "Gambar", name: "image", widget: "image", allow_multiple: false }
           - { label: "Gaya", name: "style", widget: "select", options: [ "contain", "cover" ], default: "contain" }
       - { label: "Label", name: "tags", widget: "list" }
       - { label: "Konten", name: "body", widget: "markdown" }
